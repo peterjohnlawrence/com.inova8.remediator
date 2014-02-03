@@ -1,0 +1,12 @@
+prefix people:<http://inova8.com/schema/people-schema#>
+prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+select * 
+{
+?Person people:hasChild ?Child .
+?Person people:hasSpouse ?Spouse .
+?Child people:hasCollege ?College .
+?Child people:PlaysIn ?Movie .
+<http://inova8.com/data/movies#movie_100> <http://inova8.com/schema/movie-schema#movie_Title> "Alexander the Great".
+?Book people:bookAuthor ?Child .
+} 

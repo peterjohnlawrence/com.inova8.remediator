@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------------------------------
+| Person                                          | Child                                             |
+=======================================================================================================
+| <http://inova8.com/data/kennedys#EdwardKennedy> | <http://inova8.com/data/kennedys#EdwardKennedyJr> |
+| <http://inova8.com/data/kennedys#EdwardKennedy> | <http://inova8.com/data/kennedys#PatrickJKennedy> |
+| <http://inova8.com/data/kennedys#EdwardKennedy> | <http://inova8.com/data/kennedys#KaraKennedy>     |
+-------------------------------------------------------------------------------------------------------
+
+

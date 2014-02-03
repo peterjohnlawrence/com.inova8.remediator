@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:books="http://inova8.com/data/books#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:book="http://inova8.com/schema/book-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://inova8.com/data/books">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://inova8.com/schema/book-schema"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+  </owl:Ontology>
+  <book:Book rdf:ID="Book_9">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >True Compass: A Memoir</rdfs:label>
+    <book:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >True Compass: A Memoir</book:title>
+    <book:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >978-1408702284</book:isbn>
+    <book:writtenBy>
+      <book:Author rdf:ID="Author_4">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Edward M. Kennedy</rdfs:label>
+      </book:Author>
+    </book:writtenBy>
+  </book:Book>
+  <book:Book rdf:ID="Book_8">
+    <book:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Profiles In Courage For Our Time</book:title>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Profiles In Courage For Our Time</rdfs:label>
+    <book:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >978-0786886784</book:isbn>
+    <book:writtenBy>
+      <book:Author rdf:ID="Author_3">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Caroline Kennedy</rdfs:label>
+      </book:Author>
+    </book:writtenBy>
+  </book:Book>
+  <book:Book rdf:ID="Book_6">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A Family Christmas</rdfs:label>
+    <book:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A Family Christmas</book:title>
+    <book:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >978-1401322274</book:isbn>
+    <book:writtenBy rdf:resource="#Author_3"/>
+  </book:Book>
+  <book:Book rdf:ID="Book_7">
+    <book:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Best-Loved Poems of Jacqueline Kennedy Onassis</book:title>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Best-Loved Poems of Jacqueline Kennedy Onassis</rdfs:label>
+    <book:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >978-1401302481</book:isbn>
+    <book:writtenBy rdf:resource="#Author_3"/>
+  </book:Book>
+  <book:Book rdf:ID="Book_4">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Thirteen Days: A Memoir of the Cuban Missile Crisis</rdfs:label>
+    <book:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Thirteen Days: A Memoir of the Cuban Missile Crisis</book:title>
+    <book:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >978-0393318340</book:isbn>
+    <book:writtenBy>
+      <book:Author rdf:ID="Author_2">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Robert F. Kennedy</rdfs:label>
+      </book:Author>
+    </book:writtenBy>
+  </book:Book>
+  <book:Book rdf:ID="Book_3">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Why England Slept</rdfs:label>
+    <book:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Why England Slept</book:title>
+    <book:writtenBy>
+      <book:Author rdf:ID="Author_1">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >John F. Kennedy</rdfs:label>
+      </book:Author>
+    </book:writtenBy>
+  </book:Book>
+  <book:Book rdf:ID="Book_2">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A Nation of Immigrants</rdfs:label>
+    <book:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A Nation of Immigrants</book:title>
+    <book:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >978-0061447549</book:isbn>
+    <book:writtenBy rdf:resource="#Author_1"/>
+  </book:Book>
+  <book:Book rdf:ID="Book_5">
+    <book:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Enemy Within: The Mcclellan Committee's Crusade Against Jimmy Hoffa And Corrupt Labor Unions</book:title>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Enemy Within: The Mcclellan Committee's Crusade Against Jimmy Hoffa And Corrupt Labor Unions</rdfs:label>
+    <book:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >978-0306805905</book:isbn>
+    <book:writtenBy rdf:resource="#Author_2"/>
+  </book:Book>
+  <book:Book rdf:ID="Book_1">
+    <book:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Profiles in Courage</book:title>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Profiles in Courage</rdfs:label>
+    <book:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >978-0060854935</book:isbn>
+    <book:writtenBy rdf:resource="#Author_1"/>
+  </book:Book>
+  <book:Book rdf:ID="Book_10">
+    <book:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Our Day And Generation</book:title>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Our Day And Generation</rdfs:label>
+    <book:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >978-0671241339</book:isbn>
+    <book:writtenBy rdf:resource="#Author_4"/>
+  </book:Book>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

@@ -1,0 +1,509 @@
+<rdf:RDF
+    xmlns:kennedys="http://inova8.com/data/kennedys#"
+    xmlns:people="http://inova8.com/schema/people-schema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:movie="http://inova8.com/schema/movie-schema#"
+    xmlns:kennedy="http://inova8.com/schema/kennedy-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:book="http://inova8.com/schema/book-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <rdfs:Class rdf:about="http://inova8.com/schema/movie-schema#movie">
+    <rdfs:label>movie</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inova8.com/schema/people-schema#Movie"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://inova8.com/schema/movie-schema#person">
+    <rdfs:label>person</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inova8.com/schema/people-schema#Person"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://inova8.com/schema/book-schema#Publisher">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Publisher</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inova8.com/schema/people-schema#Profession"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/people-schema#Portrayal">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Portrayal</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/kennedy-schema#Person">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inova8.com/schema/people-schema#Person"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Person</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/people-schema#Gender">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Gender</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/kennedy-schema#College">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inova8.com/schema/people-schema#College"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >College</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/people-schema#Movie">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Movie</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/kennedy-schema#Profession">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inova8.com/schema/people-schema#Profession"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Profession</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/people-schema#Book"/>
+  <owl:Class rdf:about="http://inova8.com/schema/people-schema#Profession">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Profession</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/movie-schema#PersonPortrayal">
+    <rdfs:subClassOf rdf:resource="http://inova8.com/schema/people-schema#Portrayal"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/book-schema#Book">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Book</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://inova8.com/schema/people-schema#Book"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/kennedy-schema#Patriarch">
+    <rdfs:subClassOf rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Patriarch</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/kennedy-schema#Gender">
+    <rdfs:subClassOf rdf:resource="http://inova8.com/schema/people-schema#Gender"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Gender</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/book-schema#Author">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Author</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://inova8.com/schema/people-schema#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/kennedy-schema#Matriarch">
+    <rdfs:subClassOf rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Matriarch</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/people-schema#College">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >College</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://inova8.com/schema/people-schema#Person">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Person</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#hasProduced">
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Produced</rdfs:label>
+    <rdfs:range rdf:resource="http://inova8.com/schema/people-schema#Movie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#hasParent">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has parent</rdfs:label>
+    <rdfs:range rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#hasChild">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has child</rdfs:label>
+    <rdfs:range rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/book-schema#publishedBy">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >published by</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/book-schema#Book"/>
+    <rdfs:range rdf:resource="http://inova8.com/schema/book-schema#Publisher"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/kennedy-schema#spouse">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#hasSpouse"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >spouse</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#portrayedPerson">
+    <rdfs:range rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >person portrayed</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Portrayal"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#inMovie">
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Portrayal"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >in a movie</rdfs:label>
+    <rdfs:range rdf:resource="http://inova8.com/schema/people-schema#Movie"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/kennedy-schema#child">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#hasChild"/>
+    <rdfs:range rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >child</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/movie-schema#portrayedPerson">
+    <rdfs:range rdf:resource="http://inova8.com/schema/movie-schema#person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >portrayed person</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/movie-schema#PersonPortrayal"/>
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#portrayedPerson"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/book-schema#writtenBy">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >written by</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/book-schema#Book"/>
+    <rdfs:range rdf:resource="http://inova8.com/schema/book-schema#Author"/>
+    <owl:inverseOf rdf:resource="http://inova8.com/schema/book-schema#writtenBy"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#bookAuthor"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/movie-schema#playedBy">
+    <rdfs:range rdf:resource="http://inova8.com/schema/movie-schema#person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >played by</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/movie-schema#PersonPortrayal"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#playedBy"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/movie-schema#portrayingMovie">
+    <rdfs:range rdf:resource="http://inova8.com/schema/movie-schema#movie"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >portraying movie</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/movie-schema#PersonPortrayal"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#hasCollege">
+    <rdfs:range rdf:resource="http://inova8.com/schema/people-schema#College"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has college</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/kennedy-schema#gender">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#hasGender"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >gender</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+    <rdfs:range rdf:resource="http://inova8.com/schema/kennedy-schema#Gender"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#bookAuthor">
+    <rdfs:range rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Book"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/kennedy-schema#photo">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#hasPhoto"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#College"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >photo</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#hasSpouse">
+    <rdfs:range rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has spouse</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#hasGender">
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has gender</rdfs:label>
+    <rdfs:range rdf:resource="http://inova8.com/schema/people-schema#Gender"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#hasProfession">
+    <rdfs:range rdf:resource="http://inova8.com/schema/people-schema#Profession"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has profession</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#hasPhoto">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has photo</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#College"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/kennedy-schema#parent">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#hasParent"/>
+    <rdfs:range rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >parent</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/kennedy-schema#profession">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#hasProfession"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >profession</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+    <rdfs:range rdf:resource="http://inova8.com/schema/kennedy-schema#Profession"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/kennedy-schema#almaMater">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#hasCollege"/>
+    <rdfs:range rdf:resource="http://inova8.com/schema/kennedy-schema#College"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >alma mater</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://inova8.com/schema/people-schema#playedBy">
+    <rdfs:range rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >played by</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Portrayal"/>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+  <rdf:Property rdf:about="http://inova8.com/schema/movie-schema#playsin">
+    <rdfs:domain rdf:resource="http://inova8.com/schema/movie-schema#person"/>
+    <rdfs:range rdf:resource="http://inova8.com/schema/movie-schema#movie"/>
+    <rdfs:label>playsin</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://inova8.com/schema/people-schema#PlaysIn"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://inova8.com/schema/movie-schema#produces">
+    <rdfs:range rdf:resource="http://inova8.com/schema/movie-schema#movie"/>
+    <rdfs:label>produces</rdfs:label>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/movie-schema#person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#hasProduced"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://inova8.com/schema/people-schema#PlaysIn">
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >plays in</rdfs:label>
+    <rdfs:range rdf:resource="http://inova8.com/schema/people-schema#Movie"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://inova8.com/schema/movie-schema#person_pID">
+    <rdfs:label>person_pID</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/movie-schema#person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://inova8.com/schema/movie-schema#movie_Title">
+    <rdfs:domain rdf:resource="http://inova8.com/schema/movie-schema#movie"/>
+    <rdfs:label>movie_Title</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://inova8.com/schema/movie-schema#person_birthdate">
+    <rdfs:domain rdf:resource="http://inova8.com/schema/movie-schema#person"/>
+    <rdfs:label>person_birthdate</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://inova8.com/schema/movie-schema#movie_mID">
+    <rdfs:domain rdf:resource="http://inova8.com/schema/movie-schema#movie"/>
+    <rdfs:label>movie_mID</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://inova8.com/schema/movie-schema#person_Name">
+    <rdfs:label>person_Name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/movie-schema#person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#middleName">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >middle name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#name">
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#College"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Profession"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/book-schema#publicationDate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >publication date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/book-schema#Book"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#bookPubDate"/>
+    </rdfs:subPropertyOf>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/book-schema#title">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >title</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/book-schema#Book"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#bookTitle"/>
+    </rdfs:subPropertyOf>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/kennedy-schema#deathYear">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#deathYear"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >death year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/book-schema#isbn">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >isbn</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/book-schema#Book"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#bookisbn"/>
+    </rdfs:subPropertyOf>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#birthday">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >birthday</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/kennedy-schema#middleInitial">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#middleName"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >middle initial</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/kennedy-schema#lastName">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#lastName"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >last name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/movie-schema#releaseYear">
+    <rdfs:domain rdf:resource="http://inova8.com/schema/movie-schema#movie"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >release year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#fullName">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >full name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/kennedy-schema#suffix">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#suffix"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >suffix</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/kennedy-schema#middleName">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#middleName"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >middle name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#bookisbn">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Book"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/kennedy-schema#name">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#fullName"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#lastName">
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >last name</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#firstName">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >first name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#bookPubDate">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Book"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/kennedy-schema#birthYear">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#birthYear"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >birth year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#title">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >title</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Movie"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#deathYear">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >death year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#ivyLeague">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ivy league</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#College"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/kennedy-schema#firstName">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#firstName"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >first name</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#suffix">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >suffix</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#bookTitle">
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/kennedy-schema#ivyLeague">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#ivyLeague"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/kennedy-schema#College"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ivy league</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://inova8.com/schema/people-schema#birthYear">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >birth year</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>

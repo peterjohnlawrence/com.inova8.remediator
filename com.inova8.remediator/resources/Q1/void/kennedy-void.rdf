@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://inova8.com/void/kennedy-void#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:movie-void="http://inova8.com/void/movie-void#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:book-void="http://inova8.com/void/book-void#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://inova8.com/void/kennedy-void">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+    <owl:imports rdf:resource="http://rdfs.org/ns/void"/>
+    <owl:imports rdf:resource="http://inova8.com/schema/kennedy-schema"/>
+    <owl:imports rdf:resource="http://inova8.com/void/movie-void"/>
+    <owl:imports rdf:resource="http://inova8.com/void/book-void"/>
+  </owl:Ontology>
+  <void:Dataset rdf:about="http://rdfs.org/ns/void#Kennedy">
+    <void:vocabulary rdf:resource="http://inova8.com/schema/kennedy-schema"/>
+    <void:sparqlEndpoint rdf:resource="http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/kennedys"/>
+    <void:uriSpace rdf:resource="http://inova8.com/data/kennedys"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Kennedy</rdfs:label>
+    <void:classPartition>
+      <void:Dataset rdf:about="http://rdfs.org/ns/void#KennedyPerson">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Kennedy</rdfs:label>
+        <void:class rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+      </void:Dataset>
+    </void:classPartition>
+  </void:Dataset>
+  <void:Linkset rdf:about="http://rdfs.org/ns/void#KennedyPerson-MoviePerson">
+    <void:objectsTarget rdf:resource="http://rdfs.org/ns/void#MoviePerson"/>
+    <void:subjectsTarget rdf:resource="http://rdfs.org/ns/void#KennedyPerson"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >KennedyPerson-MoviePerson</rdfs:label>
+    <void:sparqlEndpoint rdf:resource="http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/instance-linking/kennedyperson-movieperson"/>
+  </void:Linkset>
+  <void:Linkset rdf:about="http://rdfs.org/ns/void#KennedyPerson-BookAuthor">
+    <void:objectsTarget rdf:resource="http://rdfs.org/ns/void#BookAuthor"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >KennedyPerson-BookAuthor</rdfs:label>
+    <void:subjectsTarget rdf:resource="http://rdfs.org/ns/void#KennedyPerson"/>
+    <void:sparqlEndpoint rdf:resource="http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/instance-linking/kennedyperson-bookauthor"/>
+  </void:Linkset>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

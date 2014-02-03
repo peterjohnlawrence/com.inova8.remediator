@@ -1,0 +1,2155 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://inova8.com/data/kennedys#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:kennedy="http://inova8.com/schema/kennedy-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://inova8.com/data/kennedys">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://inova8.com/schema/kennedy-schema"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+  </owl:Ontology>
+  <kennedy:Person rdf:ID="DavidKennedy">
+    <kennedy:parent>
+      <kennedy:Person rdf:ID="EthelSkakel">
+        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Skakel</kennedy:lastName>
+        <kennedy:profession>
+          <kennedy:Profession rdf:ID="non-profit">
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >non-profit</rdfs:label>
+          </kennedy:Profession>
+        </kennedy:profession>
+        <kennedy:child>
+          <kennedy:Person rdf:ID="MatthewKennedy">
+            <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >M</kennedy:middleInitial>
+            <kennedy:parent rdf:resource="#EthelSkakel"/>
+            <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Kennedy</kennedy:lastName>
+            <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Matthew</kennedy:firstName>
+            <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Matthew Kennedy</kennedy:name>
+            <kennedy:parent>
+              <kennedy:Person rdf:ID="RobertKennedy">
+                <kennedy:spouse rdf:resource="#EthelSkakel"/>
+                <kennedy:child>
+                  <kennedy:Person rdf:ID="RobertKennedyJr">
+                    <kennedy:gender>
+                      <kennedy:Gender rdf:ID="male">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >male</rdfs:label>
+                      </kennedy:Gender>
+                    </kennedy:gender>
+                    <kennedy:profession>
+                      <kennedy:Profession rdf:ID="professor">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >professor</rdfs:label>
+                      </kennedy:Profession>
+                    </kennedy:profession>
+                    <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/250px-RobertFKennedyJr.jpg"/>
+                    <kennedy:spouse>
+                      <kennedy:Person rdf:ID="MaryRichardson">
+                        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Mary</kennedy:firstName>
+                        <kennedy:spouse rdf:resource="#RobertKennedyJr"/>
+                        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Richardson</kennedy:lastName>
+                        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1960</kennedy:birthYear>
+                        <kennedy:gender>
+                          <kennedy:Gender rdf:ID="female">
+                            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >female</rdfs:label>
+                          </kennedy:Gender>
+                        </kennedy:gender>
+                        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Mary Richardson</kennedy:name>
+                      </kennedy:Person>
+                    </kennedy:spouse>
+                    <kennedy:almaMater>
+                      <kennedy:College rdf:ID="UniversityOfVirginia">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >University of Virginia</rdfs:label>
+                      </kennedy:College>
+                    </kennedy:almaMater>
+                    <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1954</kennedy:birthYear>
+                    <kennedy:parent rdf:resource="#RobertKennedy"/>
+                    <kennedy:profession>
+                      <kennedy:Profession rdf:ID="broadcaster">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >broadcaster</rdfs:label>
+                      </kennedy:Profession>
+                    </kennedy:profession>
+                    <kennedy:suffix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Jr</kennedy:suffix>
+                    <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</kennedy:lastName>
+                    <kennedy:spouse>
+                      <kennedy:Person rdf:ID="EmilyBlack">
+                        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1957</kennedy:birthYear>
+                        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Emily</kennedy:firstName>
+                        <kennedy:spouse rdf:resource="#RobertKennedyJr"/>
+                        <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Ruth</kennedy:middleName>
+                        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Black</kennedy:lastName>
+                        <kennedy:gender rdf:resource="#female"/>
+                        <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >R</kennedy:middleInitial>
+                        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Emily Black</kennedy:name>
+                      </kennedy:Person>
+                    </kennedy:spouse>
+                    <kennedy:profession>
+                      <kennedy:Profession rdf:ID="attorney">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >attorney</rdfs:label>
+                      </kennedy:Profession>
+                    </kennedy:profession>
+                    <kennedy:almaMater>
+                      <kennedy:College rdf:ID="Harvard">
+                        <kennedy:ivyLeague rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</kennedy:ivyLeague>
+                        <rdfs:label>Harvard University</rdfs:label>
+                      </kennedy:College>
+                    </kennedy:almaMater>
+                    <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Robert</kennedy:firstName>
+                    <kennedy:parent rdf:resource="#EthelSkakel"/>
+                    <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Robert Kennedy Jr</kennedy:name>
+                  </kennedy:Person>
+                </kennedy:child>
+                <kennedy:gender rdf:resource="#male"/>
+                <kennedy:almaMater rdf:resource="#UniversityOfVirginia"/>
+                <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Robert Kennedy</kennedy:name>
+                <kennedy:child>
+                  <kennedy:Person rdf:ID="DouglasKennedy">
+                    <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Douglas</kennedy:firstName>
+                    <kennedy:parent rdf:resource="#EthelSkakel"/>
+                    <kennedy:almaMater>
+                      <kennedy:College rdf:ID="Brown">
+                        <kennedy:ivyLeague rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</kennedy:ivyLeague>
+                        <rdfs:label>Brown University</rdfs:label>
+                      </kennedy:College>
+                    </kennedy:almaMater>
+                    <kennedy:gender rdf:resource="#male"/>
+                    <kennedy:parent rdf:resource="#RobertKennedy"/>
+                    <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Douglas Kennedy</kennedy:name>
+                    <kennedy:profession>
+                      <kennedy:Profession rdf:ID="reporter">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >reporter</rdfs:label>
+                      </kennedy:Profession>
+                    </kennedy:profession>
+                    <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Harriman</kennedy:middleName>
+                    <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</kennedy:lastName>
+                    <kennedy:spouse>
+                      <kennedy:Person rdf:ID="MollyStark">
+                        <kennedy:spouse rdf:resource="#DouglasKennedy"/>
+                        <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Elizabeth</kennedy:middleName>
+                        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1968</kennedy:birthYear>
+                        <kennedy:gender rdf:resource="#female"/>
+                        <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >E</kennedy:middleInitial>
+                        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Stark</kennedy:lastName>
+                        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Molly</kennedy:firstName>
+                        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Molly Stark</kennedy:name>
+                      </kennedy:Person>
+                    </kennedy:spouse>
+                    <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1967</kennedy:birthYear>
+                    <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >H</kennedy:middleInitial>
+                  </kennedy:Person>
+                </kennedy:child>
+                <kennedy:profession>
+                  <kennedy:Profession rdf:ID="senator">
+                    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >senator</rdfs:label>
+                  </kennedy:Profession>
+                </kennedy:profession>
+                <kennedy:parent>
+                  <kennedy:Matriarch rdf:ID="RoseFitzgerald">
+                    <kennedy:child>
+                      <kennedy:Person rdf:ID="EdwardKennedy">
+                        <kennedy:parent rdf:resource="#RoseFitzgerald"/>
+                        <kennedy:child>
+                          <kennedy:Person rdf:ID="KaraKennedy">
+                            <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Kara</kennedy:firstName>
+                            <kennedy:spouse>
+                              <kennedy:Person rdf:ID="MichaelAllen">
+                                <kennedy:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1958</kennedy:birthYear>
+                                <kennedy:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Michael</kennedy:firstName>
+                                <kennedy:spouse rdf:resource="#KaraKennedy"/>
+                                <kennedy:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Allen</kennedy:lastName>
+                                <kennedy:gender rdf:resource="#male"/>
+                                <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >Michael Allen</kennedy:name>
+                              </kennedy:Person>
+                            </kennedy:spouse>
+                            <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Kennedy</kennedy:lastName>
+                            <kennedy:parent rdf:resource="#EdwardKennedy"/>
+                            <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Kara Kennedy</kennedy:name>
+                            <kennedy:gender rdf:resource="#female"/>
+                            <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                            >1960</kennedy:birthYear>
+                            <kennedy:parent>
+                              <kennedy:Person rdf:ID="VirginiaBennett">
+                                <kennedy:child rdf:resource="#KaraKennedy"/>
+                                <kennedy:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Virginia</kennedy:firstName>
+                                <kennedy:child>
+                                  <kennedy:Person rdf:ID="EdwardKennedyJr">
+                                    <kennedy:almaMater>
+                                      <kennedy:College rdf:ID="Yale">
+                                        <kennedy:ivyLeague rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#boolean"
+                                        >true</kennedy:ivyLeague>
+                                        <rdfs:label>Yale</rdfs:label>
+                                      </kennedy:College>
+                                    </kennedy:almaMater>
+                                    <kennedy:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1961</kennedy:birthYear>
+                                    <kennedy:gender rdf:resource="#male"/>
+                                    <kennedy:profession>
+                                      <kennedy:Profession rdf:ID="business">
+                                        <rdfs:label rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >business</rdfs:label>
+                                      </kennedy:Profession>
+                                    </kennedy:profession>
+                                    <kennedy:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Edward Kennedy Jr</kennedy:name>
+                                    <kennedy:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Kennedy</kennedy:lastName>
+                                    <kennedy:suffix rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Jr</kennedy:suffix>
+                                    <kennedy:profession rdf:resource="#attorney"/>
+                                    <kennedy:almaMater>
+                                      <kennedy:College rdf:ID="UniversityOfConnecticut">
+                                        <kennedy:ivyLeague rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#boolean"
+                                        >false</kennedy:ivyLeague>
+                                        <rdfs:label>University of Connecticut</rdfs:label>
+                                      </kennedy:College>
+                                    </kennedy:almaMater>
+                                    <kennedy:parent rdf:resource="#VirginiaBennett"/>
+                                    <kennedy:spouse>
+                                      <kennedy:Person rdf:ID="KatherineGershman">
+                                        <kennedy:middleName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Anne</kennedy:middleName>
+                                        <kennedy:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1959</kennedy:birthYear>
+                                        <kennedy:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Katherine</kennedy:firstName>
+                                        <kennedy:spouse rdf:resource="#EdwardKennedyJr"/>
+                                        <kennedy:profession rdf:resource="#professor"/>
+                                        <kennedy:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Katherine Gershman</kennedy:name>
+                                        <kennedy:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Gershman</kennedy:lastName>
+                                        <kennedy:gender rdf:resource="#female"/>
+                                        <kennedy:middleInitial
+                                         rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                        >A</kennedy:middleInitial>
+                                      </kennedy:Person>
+                                    </kennedy:spouse>
+                                    <kennedy:almaMater>
+                                      <kennedy:College rdf:ID="WesleyanUniversity">
+                                        <kennedy:ivyLeague rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#boolean"
+                                        >false</kennedy:ivyLeague>
+                                        <rdfs:label>Wesleyan University</rdfs:label>
+                                      </kennedy:College>
+                                    </kennedy:almaMater>
+                                    <kennedy:parent rdf:resource="#EdwardKennedy"/>
+                                    <kennedy:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Edward</kennedy:firstName>
+                                  </kennedy:Person>
+                                </kennedy:child>
+                                <kennedy:almaMater>
+                                  <kennedy:College rdf:ID="ManhattanvilleCollege">
+                                    <kennedy:ivyLeague rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >false</kennedy:ivyLeague>
+                                    <rdfs:label>Manhattanville College</rdfs:label>
+                                  </kennedy:College>
+                                </kennedy:almaMater>
+                                <kennedy:spouse rdf:resource="#EdwardKennedy"/>
+                                <kennedy:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Bennett</kennedy:lastName>
+                                <kennedy:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1936</kennedy:birthYear>
+                                <kennedy:gender rdf:resource="#female"/>
+                                <kennedy:child>
+                                  <kennedy:Person rdf:ID="PatrickJKennedy">
+                                    <kennedy:parent rdf:resource="#EdwardKennedy"/>
+                                    <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/160px-Patrick_J._Kennedy,.JPG"/>
+                                    <kennedy:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Patrick J. Kennedy</kennedy:name>
+                                    <kennedy:middleName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Joseph</kennedy:middleName>
+                                    <kennedy:gender rdf:resource="#male"/>
+                                    <kennedy:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1967</kennedy:birthYear>
+                                    <kennedy:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Patrick</kennedy:firstName>
+                                    <kennedy:profession>
+                                      <kennedy:Profession rdf:ID="congressman">
+                                        <rdfs:label rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >congressman</rdfs:label>
+                                      </kennedy:Profession>
+                                    </kennedy:profession>
+                                    <kennedy:parent rdf:resource="#VirginiaBennett"/>
+                                    <kennedy:middleInitial rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >J</kennedy:middleInitial>
+                                    <kennedy:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Kennedy</kennedy:lastName>
+                                  </kennedy:Person>
+                                </kennedy:child>
+                                <kennedy:profession>
+                                  <kennedy:Profession rdf:ID="model">
+                                    <rdfs:label rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >model</rdfs:label>
+                                  </kennedy:Profession>
+                                </kennedy:profession>
+                                <kennedy:middleInitial rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >J</kennedy:middleInitial>
+                                <kennedy:profession>
+                                  <kennedy:Profession rdf:ID="home-maker">
+                                    <rdfs:label rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >home-maker</rdfs:label>
+                                  </kennedy:Profession>
+                                </kennedy:profession>
+                                <kennedy:middleName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Joan</kennedy:middleName>
+                                <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >Virginia Bennett</kennedy:name>
+                              </kennedy:Person>
+                            </kennedy:parent>
+                            <kennedy:middleName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Anne</kennedy:middleName>
+                            <kennedy:middleInitial rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >A</kennedy:middleInitial>
+                          </kennedy:Person>
+                        </kennedy:child>
+                        <kennedy:parent>
+                          <kennedy:Patriarch rdf:ID="JosephKennedy">
+                            <kennedy:child rdf:resource="#RobertKennedy"/>
+                            <kennedy:gender rdf:resource="#male"/>
+                            <kennedy:almaMater rdf:resource="#Harvard"/>
+                            <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Kennedy</kennedy:lastName>
+                            <kennedy:spouse rdf:resource="#RoseFitzgerald"/>
+                            <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                            >1888</kennedy:birthYear>
+                            <kennedy:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                            >1969</kennedy:deathYear>
+                            <kennedy:child>
+                              <kennedy:Person rdf:ID="JeanKennedy">
+                                <kennedy:child>
+                                  <kennedy:Person rdf:ID="StephenSmithJr">
+                                    <kennedy:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Stephen</kennedy:firstName>
+                                    <kennedy:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Smith</kennedy:lastName>
+                                    <kennedy:gender rdf:resource="#male"/>
+                                    <kennedy:suffix rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Jr</kennedy:suffix>
+                                    <kennedy:parent>
+                                      <kennedy:Person rdf:ID="StephenSmith">
+                                        <kennedy:middleInitial
+                                         rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                        >E</kennedy:middleInitial>
+                                        <kennedy:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Stephen</kennedy:firstName>
+                                        <kennedy:spouse rdf:resource="#JeanKennedy"/>
+                                        <kennedy:gender rdf:resource="#female"/>
+                                        <kennedy:child>
+                                          <kennedy:Person rdf:ID="AmandaSmith">
+                                            <kennedy:parent rdf:resource="#JeanKennedy"/>
+                                            <kennedy:spouse>
+                                              <kennedy:Person rdf:ID="CartHood">
+                                                <kennedy:spouse rdf:resource="#AmandaSmith"/>
+                                                <kennedy:middleName
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Harmon</kennedy:middleName>
+                                                <kennedy:lastName
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Hood</kennedy:lastName>
+                                                <kennedy:firstName
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Cart</kennedy:firstName>
+                                                <kennedy:birthYear
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >1966</kennedy:birthYear>
+                                                <kennedy:gender rdf:resource="#male"/>
+                                                <kennedy:middleInitial
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >H</kennedy:middleInitial>
+                                                <kennedy:name
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Cart Hood</kennedy:name>
+                                              </kennedy:Person>
+                                            </kennedy:spouse>
+                                            <kennedy:middleName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Mary</kennedy:middleName>
+                                            <kennedy:parent rdf:resource="#StephenSmith"/>
+                                            <kennedy:firstName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Amanda</kennedy:firstName>
+                                            <kennedy:middleInitial
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >M</kennedy:middleInitial>
+                                            <kennedy:gender rdf:resource="#female"/>
+                                            <kennedy:name rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >Amanda Smith</kennedy:name>
+                                            <kennedy:lastName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Smith</kennedy:lastName>
+                                            <kennedy:birthYear
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                            >1967</kennedy:birthYear>
+                                          </kennedy:Person>
+                                        </kennedy:child>
+                                        <kennedy:middleName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Edward</kennedy:middleName>
+                                        <kennedy:deathYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1990</kennedy:deathYear>
+                                        <kennedy:profession>
+                                          <kennedy:Profession rdf:ID="campaign-organizer">
+                                            <rdfs:label rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >campaign-organizer</rdfs:label>
+                                          </kennedy:Profession>
+                                        </kennedy:profession>
+                                        <kennedy:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1927</kennedy:birthYear>
+                                        <kennedy:child rdf:resource="#StephenSmithJr"/>
+                                        <kennedy:child>
+                                          <kennedy:Person rdf:ID="KymSmith">
+                                            <kennedy:middleName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Maria</kennedy:middleName>
+                                            <kennedy:name rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >Kym Smith</kennedy:name>
+                                            <kennedy:spouse>
+                                              <kennedy:Person rdf:ID="AlfredTucker">
+                                                <kennedy:lastName
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Tucker</kennedy:lastName>
+                                                <kennedy:firstName
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Alfred</kennedy:firstName>
+                                                <kennedy:birthYear
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >1967</kennedy:birthYear>
+                                                <kennedy:gender rdf:resource="#male"/>
+                                                <kennedy:spouse rdf:resource="#KymSmith"/>
+                                                <kennedy:name
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Alfred Tucker</kennedy:name>
+                                              </kennedy:Person>
+                                            </kennedy:spouse>
+                                            <kennedy:parent rdf:resource="#JeanKennedy"/>
+                                            <kennedy:gender rdf:resource="#female"/>
+                                            <kennedy:firstName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Kym</kennedy:firstName>
+                                            <kennedy:lastName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Smith</kennedy:lastName>
+                                            <kennedy:middleInitial
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >M</kennedy:middleInitial>
+                                            <kennedy:parent rdf:resource="#StephenSmith"/>
+                                            <kennedy:birthYear
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                            >1972</kennedy:birthYear>
+                                          </kennedy:Person>
+                                        </kennedy:child>
+                                        <kennedy:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Stephen Smith</kennedy:name>
+                                        <kennedy:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Smith</kennedy:lastName>
+                                        <kennedy:child>
+                                          <kennedy:Person rdf:ID="WilliamSmith">
+                                            <kennedy:parent rdf:resource="#StephenSmith"/>
+                                            <kennedy:firstName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >William</kennedy:firstName>
+                                            <kennedy:middleName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Kennedy</kennedy:middleName>
+                                            <kennedy:parent rdf:resource="#JeanKennedy"/>
+                                            <kennedy:middleInitial
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >K</kennedy:middleInitial>
+                                            <kennedy:birthYear
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                            >1960</kennedy:birthYear>
+                                            <kennedy:gender rdf:resource="#male"/>
+                                            <kennedy:lastName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Smith</kennedy:lastName>
+                                            <kennedy:profession>
+                                              <kennedy:Profession rdf:ID="doctor">
+                                                <rdfs:label rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >doctor</rdfs:label>
+                                              </kennedy:Profession>
+                                            </kennedy:profession>
+                                            <kennedy:name rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >William Smith</kennedy:name>
+                                          </kennedy:Person>
+                                        </kennedy:child>
+                                      </kennedy:Person>
+                                    </kennedy:parent>
+                                    <kennedy:parent rdf:resource="#JeanKennedy"/>
+                                    <kennedy:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1957</kennedy:birthYear>
+                                    <kennedy:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Stephen Smith Jr</kennedy:name>
+                                  </kennedy:Person>
+                                </kennedy:child>
+                                <kennedy:child rdf:resource="#AmandaSmith"/>
+                                <kennedy:gender rdf:resource="#female"/>
+                                <kennedy:profession>
+                                  <kennedy:Profession rdf:ID="writer">
+                                    <rdfs:label rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >writer</rdfs:label>
+                                  </kennedy:Profession>
+                                </kennedy:profession>
+                                <kennedy:parent rdf:resource="#JosephKennedy"/>
+                                <kennedy:parent rdf:resource="#RoseFitzgerald"/>
+                                <kennedy:profession>
+                                  <kennedy:Profession rdf:ID="ambassador">
+                                    <rdfs:label rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >ambassador</rdfs:label>
+                                  </kennedy:Profession>
+                                </kennedy:profession>
+                                <kennedy:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1928</kennedy:birthYear>
+                                <kennedy:almaMater rdf:resource="#ManhattanvilleCollege"/>
+                                <kennedy:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Kennedy</kennedy:lastName>
+                                <kennedy:middleName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Ann</kennedy:middleName>
+                                <kennedy:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Jean</kennedy:firstName>
+                                <kennedy:spouse rdf:resource="#StephenSmith"/>
+                                <kennedy:child rdf:resource="#WilliamSmith"/>
+                                <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >Jean Kennedy</kennedy:name>
+                                <kennedy:profession rdf:resource="#non-profit"/>
+                                <kennedy:child rdf:resource="#KymSmith"/>
+                                <kennedy:middleInitial rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >A</kennedy:middleInitial>
+                              </kennedy:Person>
+                            </kennedy:child>
+                            <kennedy:child>
+                              <kennedy:Person rdf:ID="EuniceKennedy">
+                                <kennedy:spouse>
+                                  <kennedy:Person rdf:ID="RobertShriver">
+                                    <kennedy:spouse rdf:resource="#EuniceKennedy"/>
+                                    <kennedy:child>
+                                      <kennedy:Person rdf:ID="TimothyShriver">
+                                        <kennedy:profession rdf:resource="#non-profit"/>
+                                        <kennedy:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Timothy Shriver</kennedy:name>
+                                        <kennedy:gender rdf:resource="#male"/>
+                                        <kennedy:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1959</kennedy:birthYear>
+                                        <kennedy:profession>
+                                          <kennedy:Profession rdf:ID="teacher">
+                                            <rdfs:label rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >teacher</rdfs:label>
+                                          </kennedy:Profession>
+                                        </kennedy:profession>
+                                        <kennedy:middleInitial
+                                         rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                        >P</kennedy:middleInitial>
+                                        <kennedy:parent rdf:resource="#RobertShriver"/>
+                                        <kennedy:almaMater>
+                                          <kennedy:College rdf:ID="CatholicUniversity">
+                                            <kennedy:ivyLeague
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                                            >false</kennedy:ivyLeague>
+                                            <rdfs:label>Catholic University</rdfs:label>
+                                          </kennedy:College>
+                                        </kennedy:almaMater>
+                                        <kennedy:almaMater rdf:resource="#Yale"/>
+                                        <kennedy:middleName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Perry</kennedy:middleName>
+                                        <kennedy:almaMater rdf:resource="#UniversityOfConnecticut"/>
+                                        <kennedy:parent rdf:resource="#EuniceKennedy"/>
+                                        <kennedy:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Timothy</kennedy:firstName>
+                                        <kennedy:spouse>
+                                          <kennedy:Person rdf:ID="LindaPotter">
+                                            <kennedy:spouse rdf:resource="#TimothyShriver"/>
+                                            <kennedy:birthYear
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                            >1956</kennedy:birthYear>
+                                            <kennedy:middleInitial
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >S</kennedy:middleInitial>
+                                            <kennedy:firstName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Linda</kennedy:firstName>
+                                            <kennedy:gender rdf:resource="#female"/>
+                                            <kennedy:middleName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Sophia</kennedy:middleName>
+                                            <kennedy:lastName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Potter</kennedy:lastName>
+                                            <kennedy:name rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >Linda Potter</kennedy:name>
+                                          </kennedy:Person>
+                                        </kennedy:spouse>
+                                        <kennedy:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Shriver</kennedy:lastName>
+                                      </kennedy:Person>
+                                    </kennedy:child>
+                                    <kennedy:child>
+                                      <kennedy:Person rdf:ID="MariaShriver">
+                                        <kennedy:almaMater>
+                                          <kennedy:College rdf:ID="GeorgetownUniversity">
+                                            <kennedy:ivyLeague
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                                            >false</kennedy:ivyLeague>
+                                            <rdfs:label>Georgetown University</rdfs:label>
+                                          </kennedy:College>
+                                        </kennedy:almaMater>
+                                        <kennedy:gender rdf:resource="#female"/>
+                                        <kennedy:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Shriver</kennedy:lastName>
+                                        <kennedy:parent rdf:resource="#RobertShriver"/>
+                                        <rdfs:label>Maria Shriver</rdfs:label>
+                                        <kennedy:profession rdf:resource="#reporter"/>
+                                        <kennedy:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Maria Shriver</kennedy:name>
+                                        <kennedy:middleInitial
+                                         rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                        >O</kennedy:middleInitial>
+                                        <kennedy:spouse>
+                                          <kennedy:Person rdf:ID="ArnoldSchwarzenegger">
+                                            <kennedy:lastName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Schwarzenegger</kennedy:lastName>
+                                            <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/Arnold_Schwarzenegger_2004-01-30.jpg"/>
+                                            <kennedy:gender rdf:resource="#male"/>
+                                            <kennedy:profession>
+                                              <kennedy:Profession rdf:ID="governor">
+                                                <rdfs:label rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >governor</rdfs:label>
+                                              </kennedy:Profession>
+                                            </kennedy:profession>
+                                            <kennedy:profession>
+                                              <kennedy:Profession rdf:ID="body-builder">
+                                                <rdfs:label rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >body-builder</rdfs:label>
+                                              </kennedy:Profession>
+                                            </kennedy:profession>
+                                            <kennedy:spouse rdf:resource="#MariaShriver"/>
+                                            <kennedy:middleInitial
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >A</kennedy:middleInitial>
+                                            <kennedy:profession>
+                                              <kennedy:Profession rdf:ID="actor">
+                                                <rdfs:label rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >actor</rdfs:label>
+                                              </kennedy:Profession>
+                                            </kennedy:profession>
+                                            <kennedy:middleName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Alois</kennedy:middleName>
+                                            <kennedy:almaMater>
+                                              <kennedy:College rdf:ID="UniversityOfWisconsin">
+                                                <kennedy:ivyLeague
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >false</kennedy:ivyLeague>
+                                                <rdfs:label>University of Wisconsin</rdfs:label>
+                                              </kennedy:College>
+                                            </kennedy:almaMater>
+                                            <kennedy:name rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >Arnold Schwarzenegger</kennedy:name>
+                                            <kennedy:firstName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Arnold</kennedy:firstName>
+                                            <kennedy:birthYear
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                            >1947</kennedy:birthYear>
+                                          </kennedy:Person>
+                                        </kennedy:spouse>
+                                        <kennedy:parent rdf:resource="#EuniceKennedy"/>
+                                        <kennedy:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1955</kennedy:birthYear>
+                                        <kennedy:middleName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Owings</kennedy:middleName>
+                                        <kennedy:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Maria</kennedy:firstName>
+                                      </kennedy:Person>
+                                    </kennedy:child>
+                                    <kennedy:child>
+                                      <kennedy:Person rdf:ID="AnthonyShriver">
+                                        <kennedy:middleName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Kennedy</kennedy:middleName>
+                                        <kennedy:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Shriver</kennedy:lastName>
+                                        <kennedy:parent rdf:resource="#EuniceKennedy"/>
+                                        <kennedy:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Anthony</kennedy:firstName>
+                                        <kennedy:gender rdf:resource="#male"/>
+                                        <kennedy:middleInitial
+                                         rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                        >K</kennedy:middleInitial>
+                                        <kennedy:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1965</kennedy:birthYear>
+                                        <kennedy:spouse>
+                                          <kennedy:Person rdf:ID="AlinaMojica">
+                                            <kennedy:birthYear
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                            >1965</kennedy:birthYear>
+                                            <kennedy:lastName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Mojica</kennedy:lastName>
+                                            <kennedy:spouse rdf:resource="#AnthonyShriver"/>
+                                            <kennedy:gender rdf:resource="#female"/>
+                                            <kennedy:firstName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Alina</kennedy:firstName>
+                                            <kennedy:name rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >Alina Mojica</kennedy:name>
+                                          </kennedy:Person>
+                                        </kennedy:spouse>
+                                        <kennedy:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Anthony Shriver</kennedy:name>
+                                        <kennedy:parent rdf:resource="#RobertShriver"/>
+                                      </kennedy:Person>
+                                    </kennedy:child>
+                                    <kennedy:deathYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >2011</kennedy:deathYear>
+                                    <kennedy:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Robert Shriver</kennedy:name>
+                                    <kennedy:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1915</kennedy:birthYear>
+                                    <kennedy:profession>
+                                      <kennedy:Profession rdf:ID="navy">
+                                        <rdfs:label rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >navy</rdfs:label>
+                                      </kennedy:Profession>
+                                    </kennedy:profession>
+                                    <kennedy:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Robert</kennedy:firstName>
+                                    <kennedy:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Shriver</kennedy:lastName>
+                                    <kennedy:profession>
+                                      <kennedy:Profession rdf:ID="peace-corp">
+                                        <rdfs:label rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >peace-corp</rdfs:label>
+                                      </kennedy:Profession>
+                                    </kennedy:profession>
+                                    <kennedy:child>
+                                      <kennedy:Person rdf:ID="MarkShriver">
+                                        <kennedy:parent rdf:resource="#RobertShriver"/>
+                                        <kennedy:parent rdf:resource="#EuniceKennedy"/>
+                                        <kennedy:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Shriver</kennedy:lastName>
+                                        <kennedy:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Mark</kennedy:firstName>
+                                        <kennedy:middleName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Kennedy</kennedy:middleName>
+                                        <kennedy:gender rdf:resource="#male"/>
+                                        <kennedy:spouse>
+                                          <kennedy:Person rdf:ID="JeannieRipp">
+                                            <kennedy:gender rdf:resource="#female"/>
+                                            <kennedy:lastName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Ripp</kennedy:lastName>
+                                            <kennedy:firstName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Jeannie</kennedy:firstName>
+                                            <kennedy:birthYear
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                            >1965</kennedy:birthYear>
+                                            <kennedy:spouse rdf:resource="#MarkShriver"/>
+                                            <kennedy:name rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >Jeannie Ripp</kennedy:name>
+                                          </kennedy:Person>
+                                        </kennedy:spouse>
+                                        <kennedy:middleInitial
+                                         rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                        >K</kennedy:middleInitial>
+                                        <kennedy:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1964</kennedy:birthYear>
+                                        <kennedy:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Mark Shriver</kennedy:name>
+                                      </kennedy:Person>
+                                    </kennedy:child>
+                                    <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/2002F_Shriver12.jpg"/>
+                                    <kennedy:middleName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Sargent</kennedy:middleName>
+                                    <kennedy:child>
+                                      <kennedy:Person rdf:ID="RobertShriverIII">
+                                        <kennedy:profession>
+                                          <kennedy:Profession rdf:ID="goverment">
+                                            <rdfs:label rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >goverment</rdfs:label>
+                                          </kennedy:Profession>
+                                        </kennedy:profession>
+                                        <kennedy:profession>
+                                          <kennedy:Profession rdf:ID="producer">
+                                            <rdfs:label rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >producer</rdfs:label>
+                                          </kennedy:Profession>
+                                        </kennedy:profession>
+                                        <kennedy:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Robert</kennedy:firstName>
+                                        <kennedy:parent rdf:resource="#RobertShriver"/>
+                                        <kennedy:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Shriver</kennedy:lastName>
+                                        <kennedy:gender rdf:resource="#male"/>
+                                        <kennedy:parent rdf:resource="#EuniceKennedy"/>
+                                        <kennedy:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1954</kennedy:birthYear>
+                                        <kennedy:profession rdf:resource="#attorney"/>
+                                        <kennedy:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Robert Shriver III</kennedy:name>
+                                        <kennedy:almaMater rdf:resource="#Yale"/>
+                                        <kennedy:suffix rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >III</kennedy:suffix>
+                                      </kennedy:Person>
+                                    </kennedy:child>
+                                    <kennedy:gender rdf:resource="#male"/>
+                                    <kennedy:profession rdf:resource="#ambassador"/>
+                                    <kennedy:middleInitial rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >S</kennedy:middleInitial>
+                                    <kennedy:almaMater rdf:resource="#Yale"/>
+                                  </kennedy:Person>
+                                </kennedy:spouse>
+                                <kennedy:parent rdf:resource="#RoseFitzgerald"/>
+                                <kennedy:child rdf:resource="#RobertShriverIII"/>
+                                <kennedy:parent rdf:resource="#JosephKennedy"/>
+                                <kennedy:child rdf:resource="#AnthonyShriver"/>
+                                <kennedy:deathYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >2009</kennedy:deathYear>
+                                <kennedy:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Kennedy</kennedy:lastName>
+                                <kennedy:profession>
+                                  <kennedy:Profession rdf:ID="volunteer">
+                                    <rdfs:label rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >volunteer</rdfs:label>
+                                  </kennedy:Profession>
+                                </kennedy:profession>
+                                <kennedy:child rdf:resource="#MarkShriver"/>
+                                <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/180px-Eunice-zurab.jpg"/>
+                                <kennedy:child rdf:resource="#MariaShriver"/>
+                                <kennedy:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Eunice</kennedy:firstName>
+                                <kennedy:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1921</kennedy:birthYear>
+                                <kennedy:gender rdf:resource="#female"/>
+                                <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >Eunice Kennedy</kennedy:name>
+                                <kennedy:middleInitial rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >M</kennedy:middleInitial>
+                                <kennedy:child rdf:resource="#TimothyShriver"/>
+                                <kennedy:middleName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Mary</kennedy:middleName>
+                              </kennedy:Person>
+                            </kennedy:child>
+                            <kennedy:child rdf:resource="#EdwardKennedy"/>
+                            <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/Joseph_Kennedy.jpg"/>
+                            <kennedy:profession>
+                              <kennedy:Profession rdf:ID="banker">
+                                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >banker</rdfs:label>
+                              </kennedy:Profession>
+                            </kennedy:profession>
+                            <kennedy:child>
+                              <kennedy:Person rdf:ID="KathleenAKennedy">
+                                <kennedy:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Kennedy</kennedy:lastName>
+                                <kennedy:profession rdf:resource="#volunteer"/>
+                                <kennedy:middleName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Agnes</kennedy:middleName>
+                                <kennedy:spouse>
+                                  <kennedy:Person rdf:ID="WilliamCavendish">
+                                    <kennedy:spouse rdf:resource="#KathleenAKennedy"/>
+                                    <kennedy:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Cavendish</kennedy:lastName>
+                                    <kennedy:middleName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >John Robert</kennedy:middleName>
+                                    <kennedy:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1917</kennedy:birthYear>
+                                    <kennedy:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >William Cavendish</kennedy:name>
+                                    <kennedy:middleInitial rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >JR</kennedy:middleInitial>
+                                    <kennedy:deathYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1944</kennedy:deathYear>
+                                    <kennedy:gender rdf:resource="#male"/>
+                                    <kennedy:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >William</kennedy:firstName>
+                                    <kennedy:profession>
+                                      <kennedy:Profession rdf:ID="army">
+                                        <rdfs:label rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >army</rdfs:label>
+                                      </kennedy:Profession>
+                                    </kennedy:profession>
+                                  </kennedy:Person>
+                                </kennedy:spouse>
+                                <kennedy:deathYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1948</kennedy:deathYear>
+                                <kennedy:middleInitial rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >A</kennedy:middleInitial>
+                                <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >Kathleen A. Kennedy</kennedy:name>
+                                <kennedy:parent rdf:resource="#JosephKennedy"/>
+                                <kennedy:parent rdf:resource="#RoseFitzgerald"/>
+                                <kennedy:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Kathleen</kennedy:firstName>
+                                <kennedy:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1920</kennedy:birthYear>
+                                <kennedy:gender rdf:resource="#female"/>
+                              </kennedy:Person>
+                            </kennedy:child>
+                            <kennedy:middleName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Patrick</kennedy:middleName>
+                            <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Joseph</kennedy:firstName>
+                            <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Joseph Kennedy</kennedy:name>
+                            <kennedy:child>
+                              <kennedy:Person rdf:ID="JohnKennedy">
+                                <kennedy:deathYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1963</kennedy:deathYear>
+                                <kennedy:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Kennedy</kennedy:lastName>
+                                <kennedy:almaMater rdf:resource="#Harvard"/>
+                                <kennedy:spouse>
+                                  <kennedy:Person rdf:ID="JacquelineBouvier">
+                                    <kennedy:child>
+                                      <kennedy:Person rdf:ID="PatrickBKennedy">
+                                        <kennedy:middleName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Bouvier</kennedy:middleName>
+                                        <kennedy:deathYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1963</kennedy:deathYear>
+                                        <kennedy:middleInitial
+                                         rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                        >B</kennedy:middleInitial>
+                                        <kennedy:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Kennedy</kennedy:lastName>
+                                        <kennedy:parent rdf:resource="#JacquelineBouvier"/>
+                                        <kennedy:parent rdf:resource="#JohnKennedy"/>
+                                        <kennedy:gender rdf:resource="#male"/>
+                                        <kennedy:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1963</kennedy:birthYear>
+                                        <kennedy:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Patrick B. Kennedy</kennedy:name>
+                                        <kennedy:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Patrick</kennedy:firstName>
+                                      </kennedy:Person>
+                                    </kennedy:child>
+                                    <kennedy:profession>
+                                      <kennedy:Profession rdf:ID="photographer">
+                                        <rdfs:label rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >photographer</rdfs:label>
+                                      </kennedy:Profession>
+                                    </kennedy:profession>
+                                    <kennedy:spouse>
+                                      <kennedy:Person rdf:ID="AristotleOnassis">
+                                        <kennedy:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Onassis</kennedy:lastName>
+                                        <kennedy:spouse rdf:resource="#JacquelineBouvier"/>
+                                        <kennedy:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Aristotle</kennedy:firstName>
+                                        <kennedy:gender rdf:resource="#male"/>
+                                        <kennedy:deathYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1975</kennedy:deathYear>
+                                        <kennedy:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Aristotle Onassis</kennedy:name>
+                                        <kennedy:profession>
+                                          <kennedy:Profession rdf:ID="shipping">
+                                            <rdfs:label rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >shipping</rdfs:label>
+                                          </kennedy:Profession>
+                                        </kennedy:profession>
+                                        <kennedy:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1906</kennedy:birthYear>
+                                        <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/AristotleOnassis.jpg"/>
+                                      </kennedy:Person>
+                                    </kennedy:spouse>
+                                    <kennedy:deathYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1994</kennedy:deathYear>
+                                    <kennedy:profession rdf:resource="#home-maker"/>
+                                    <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/175px-Whitehouseportraitjackie_curvecorrected.jpg"/>
+                                    <kennedy:almaMater>
+                                      <kennedy:College rdf:ID="GeorgeWashingtonU">
+                                        <kennedy:ivyLeague rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#boolean"
+                                        >false</kennedy:ivyLeague>
+                                        <rdfs:label>George Washington University</rdfs:label>
+                                      </kennedy:College>
+                                    </kennedy:almaMater>
+                                    <kennedy:gender rdf:resource="#female"/>
+                                    <kennedy:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1929</kennedy:birthYear>
+                                    <kennedy:child>
+                                      <kennedy:Person rdf:ID="CarolineKennedy">
+                                        <kennedy:profession rdf:resource="#non-profit"/>
+                                        <kennedy:almaMater>
+                                          <kennedy:College rdf:ID="Columbia">
+                                            <kennedy:ivyLeague
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                                            >true</kennedy:ivyLeague>
+                                            <rdfs:label>Columbia University</rdfs:label>
+                                          </kennedy:College>
+                                        </kennedy:almaMater>
+                                        <kennedy:middleName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Bouvier</kennedy:middleName>
+                                        <kennedy:parent rdf:resource="#JacquelineBouvier"/>
+                                        <kennedy:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1957</kennedy:birthYear>
+                                        <kennedy:spouse>
+                                          <kennedy:Person rdf:ID="EdwinSchlossberg">
+                                            <kennedy:middleInitial
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >A</kennedy:middleInitial>
+                                            <kennedy:middleName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Arthur</kennedy:middleName>
+                                            <kennedy:firstName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Edwin</kennedy:firstName>
+                                            <kennedy:lastName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Schlossberg</kennedy:lastName>
+                                            <kennedy:birthYear
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                            >1945</kennedy:birthYear>
+                                            <kennedy:gender rdf:resource="#male"/>
+                                            <kennedy:spouse rdf:resource="#CarolineKennedy"/>
+                                            <kennedy:name rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >Edwin Schlossberg</kennedy:name>
+                                          </kennedy:Person>
+                                        </kennedy:spouse>
+                                        <kennedy:almaMater rdf:resource="#Harvard"/>
+                                        <kennedy:parent rdf:resource="#JohnKennedy"/>
+                                        <kennedy:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Kennedy</kennedy:lastName>
+                                        <kennedy:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Caroline Kennedy</kennedy:name>
+                                        <kennedy:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Caroline</kennedy:firstName>
+                                        <kennedy:gender rdf:resource="#female"/>
+                                        <kennedy:middleInitial
+                                         rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                        >B</kennedy:middleInitial>
+                                      </kennedy:Person>
+                                    </kennedy:child>
+                                    <kennedy:middleName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Lee</kennedy:middleName>
+                                    <kennedy:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Jacqueline Bouvier</kennedy:name>
+                                    <kennedy:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Bouvier</kennedy:lastName>
+                                    <kennedy:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Jacqueline</kennedy:firstName>
+                                    <kennedy:middleInitial rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >L</kennedy:middleInitial>
+                                    <kennedy:child>
+                                      <kennedy:Person rdf:ID="JohnKennedyJr">
+                                        <kennedy:profession>
+                                          <kennedy:Profession rdf:ID="district-attorney">
+                                            <rdfs:label rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >district-attorney</rdfs:label>
+                                          </kennedy:Profession>
+                                        </kennedy:profession>
+                                        <kennedy:profession>
+                                          <kennedy:Profession rdf:ID="publisher">
+                                            <rdfs:label rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >publisher</rdfs:label>
+                                          </kennedy:Profession>
+                                        </kennedy:profession>
+                                        <kennedy:spouse>
+                                          <kennedy:Person rdf:ID="CarolynBessette">
+                                            <kennedy:almaMater>
+                                              <kennedy:College rdf:ID="BostonUniversity">
+                                                <kennedy:ivyLeague
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                                >false</kennedy:ivyLeague>
+                                                <rdfs:label>Boston University</rdfs:label>
+                                              </kennedy:College>
+                                            </kennedy:almaMater>
+                                            <kennedy:profession rdf:resource="#model"/>
+                                            <kennedy:firstName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Carolyn</kennedy:firstName>
+                                            <kennedy:lastName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Bessette</kennedy:lastName>
+                                            <kennedy:gender rdf:resource="#female"/>
+                                            <kennedy:birthYear
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                            >1966</kennedy:birthYear>
+                                            <kennedy:profession>
+                                              <kennedy:Profession rdf:ID="PR"/>
+                                            </kennedy:profession>
+                                            <kennedy:deathYear
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                            >1999</kennedy:deathYear>
+                                            <kennedy:name rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >Carolyn Bessette</kennedy:name>
+                                            <kennedy:spouse rdf:resource="#JohnKennedyJr"/>
+                                          </kennedy:Person>
+                                        </kennedy:spouse>
+                                        <kennedy:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1960</kennedy:birthYear>
+                                        <kennedy:suffix rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Jr</kennedy:suffix>
+                                        <kennedy:deathYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1999</kennedy:deathYear>
+                                        <kennedy:parent rdf:resource="#JohnKennedy"/>
+                                        <kennedy:almaMater rdf:resource="#Brown"/>
+                                        <kennedy:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >John</kennedy:firstName>
+                                        <kennedy:almaMater>
+                                          <kennedy:College rdf:ID="NYU">
+                                            <kennedy:ivyLeague
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                                            >false</kennedy:ivyLeague>
+                                            <rdfs:label>New York University</rdfs:label>
+                                          </kennedy:College>
+                                        </kennedy:almaMater>
+                                        <kennedy:parent rdf:resource="#JacquelineBouvier"/>
+                                        <kennedy:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Kennedy</kennedy:lastName>
+                                        <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/180px-JFKJr2.jpg"/>
+                                        <kennedy:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >John Kennedy Jr</kennedy:name>
+                                        <kennedy:gender rdf:resource="#male"/>
+                                      </kennedy:Person>
+                                    </kennedy:child>
+                                    <kennedy:profession>
+                                      <kennedy:Profession rdf:ID="editor">
+                                        <rdfs:label rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >editor</rdfs:label>
+                                      </kennedy:Profession>
+                                    </kennedy:profession>
+                                    <kennedy:spouse rdf:resource="#JohnKennedy"/>
+                                  </kennedy:Person>
+                                </kennedy:spouse>
+                                <kennedy:middleName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Fitzgerald</kennedy:middleName>
+                                <kennedy:profession rdf:resource="#navy"/>
+                                <kennedy:profession rdf:resource="#congressman"/>
+                                <kennedy:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >John</kennedy:firstName>
+                                <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/204px-John_F._Kennedy,_White_House_color_photo_portrait.jpg"/>
+                                <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >John Kennedy</kennedy:name>
+                                <kennedy:middleInitial rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >F</kennedy:middleInitial>
+                                <kennedy:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1917</kennedy:birthYear>
+                                <kennedy:almaMater>
+                                  <kennedy:College rdf:ID="Princeton">
+                                    <kennedy:ivyLeague rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</kennedy:ivyLeague>
+                                    <rdfs:label>Princeton</rdfs:label>
+                                  </kennedy:College>
+                                </kennedy:almaMater>
+                                <kennedy:child rdf:resource="#JohnKennedyJr"/>
+                                <kennedy:parent rdf:resource="#RoseFitzgerald"/>
+                                <kennedy:parent rdf:resource="#JosephKennedy"/>
+                                <kennedy:gender rdf:resource="#male"/>
+                                <kennedy:child rdf:resource="#PatrickBKennedy"/>
+                                <kennedy:profession rdf:resource="#senator"/>
+                                <kennedy:profession>
+                                  <kennedy:Profession rdf:ID="president">
+                                    <rdfs:label rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >president</rdfs:label>
+                                  </kennedy:Profession>
+                                </kennedy:profession>
+                                <kennedy:child rdf:resource="#CarolineKennedy"/>
+                              </kennedy:Person>
+                            </kennedy:child>
+                            <kennedy:child>
+                              <kennedy:Person rdf:ID="JosephKennedyJr">
+                                <kennedy:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1915</kennedy:birthYear>
+                                <kennedy:gender rdf:resource="#male"/>
+                                <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >Joseph Kennedy Jr</kennedy:name>
+                                <kennedy:almaMater rdf:resource="#Harvard"/>
+                                <kennedy:suffix rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Jr</kennedy:suffix>
+                                <kennedy:parent rdf:resource="#RoseFitzgerald"/>
+                                <kennedy:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Kennedy</kennedy:lastName>
+                                <kennedy:parent rdf:resource="#JosephKennedy"/>
+                                <kennedy:deathYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1944</kennedy:deathYear>
+                                <kennedy:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Joseph</kennedy:firstName>
+                                <kennedy:profession rdf:resource="#navy"/>
+                              </kennedy:Person>
+                            </kennedy:child>
+                            <kennedy:child>
+                              <kennedy:Person rdf:ID="PatriciaKennedy">
+                                <kennedy:almaMater>
+                                  <kennedy:College rdf:ID="RosemontCollege">
+                                    <kennedy:ivyLeague rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >false</kennedy:ivyLeague>
+                                    <rdfs:label>Rosemont College</rdfs:label>
+                                  </kennedy:College>
+                                </kennedy:almaMater>
+                                <kennedy:profession rdf:resource="#producer"/>
+                                <kennedy:parent rdf:resource="#RoseFitzgerald"/>
+                                <kennedy:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Kennedy</kennedy:lastName>
+                                <kennedy:child>
+                                  <kennedy:Person rdf:ID="ChristopherLawford">
+                                    <kennedy:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Lawford</kennedy:lastName>
+                                    <kennedy:middleInitial rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >K</kennedy:middleInitial>
+                                    <kennedy:middleName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Kennedy</kennedy:middleName>
+                                    <kennedy:spouse>
+                                      <kennedy:Person rdf:ID="JeanOlsson">
+                                        <kennedy:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Jean</kennedy:firstName>
+                                        <kennedy:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1955</kennedy:birthYear>
+                                        <kennedy:spouse rdf:resource="#ChristopherLawford"/>
+                                        <kennedy:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Olsson</kennedy:lastName>
+                                        <kennedy:gender rdf:resource="#female"/>
+                                        <kennedy:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Jean Olsson</kennedy:name>
+                                      </kennedy:Person>
+                                    </kennedy:spouse>
+                                    <kennedy:parent>
+                                      <kennedy:Person rdf:ID="PeterLawford">
+                                        <kennedy:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Peter</kennedy:firstName>
+                                        <kennedy:child rdf:resource="#ChristopherLawford"/>
+                                        <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/220px-Peter_Lawford_in_Royal_Wedding_(2).jpg"/>
+                                        <kennedy:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1923</kennedy:birthYear>
+                                        <kennedy:deathYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1984</kennedy:deathYear>
+                                        <kennedy:profession rdf:resource="#actor"/>
+                                        <kennedy:gender rdf:resource="#male"/>
+                                        <kennedy:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Lawford</kennedy:lastName>
+                                        <kennedy:child>
+                                          <kennedy:Person rdf:ID="VictoriaLawford">
+                                            <kennedy:gender rdf:resource="#female"/>
+                                            <kennedy:parent rdf:resource="#PatriciaKennedy"/>
+                                            <kennedy:lastName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Lawford</kennedy:lastName>
+                                            <kennedy:parent rdf:resource="#PeterLawford"/>
+                                            <kennedy:firstName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Victoria</kennedy:firstName>
+                                            <kennedy:spouse>
+                                              <kennedy:Person rdf:ID="RobertPenderJr">
+                                                <kennedy:firstName
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Robert</kennedy:firstName>
+                                                <kennedy:gender rdf:resource="#male"/>
+                                                <kennedy:spouse rdf:resource="#VictoriaLawford"/>
+                                                <kennedy:birthYear
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >1953</kennedy:birthYear>
+                                                <kennedy:suffix
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Jr</kennedy:suffix>
+                                                <kennedy:lastName
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Pender</kennedy:lastName>
+                                                <kennedy:name
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Robert Pender Jr</kennedy:name>
+                                              </kennedy:Person>
+                                            </kennedy:spouse>
+                                            <kennedy:birthYear
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                            >1958</kennedy:birthYear>
+                                            <kennedy:name rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >Victoria Lawford</kennedy:name>
+                                          </kennedy:Person>
+                                        </kennedy:child>
+                                        <kennedy:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Peter Lawford</kennedy:name>
+                                        <kennedy:child>
+                                          <kennedy:Person rdf:ID="RobinLawford">
+                                            <kennedy:birthYear
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                            >1961</kennedy:birthYear>
+                                            <kennedy:parent rdf:resource="#PeterLawford"/>
+                                            <kennedy:parent rdf:resource="#PatriciaKennedy"/>
+                                            <kennedy:middleInitial
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >E</kennedy:middleInitial>
+                                            <kennedy:name rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >Robin Lawford</kennedy:name>
+                                            <kennedy:gender rdf:resource="#female"/>
+                                            <kennedy:middleName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Elizabeth</kennedy:middleName>
+                                            <kennedy:lastName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Lawford</kennedy:lastName>
+                                            <kennedy:firstName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Robin</kennedy:firstName>
+                                          </kennedy:Person>
+                                        </kennedy:child>
+                                        <kennedy:spouse rdf:resource="#PatriciaKennedy"/>
+                                        <kennedy:child>
+                                          <kennedy:Person rdf:ID="SydneyLawford">
+                                            <kennedy:firstName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Sydney</kennedy:firstName>
+                                            <kennedy:middleInitial
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >M</kennedy:middleInitial>
+                                            <kennedy:lastName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Lawford</kennedy:lastName>
+                                            <kennedy:parent rdf:resource="#PatriciaKennedy"/>
+                                            <kennedy:middleName
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                            >Maleia</kennedy:middleName>
+                                            <kennedy:parent rdf:resource="#PeterLawford"/>
+                                            <kennedy:name rdf:datatype=
+                                            "http://www.w3.org/2001/XMLSchema#string"
+                                            >Sydney Lawford</kennedy:name>
+                                            <kennedy:gender rdf:resource="#female"/>
+                                            <kennedy:birthYear
+                                             rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                                            >1956</kennedy:birthYear>
+                                            <kennedy:spouse>
+                                              <kennedy:Person rdf:ID="JamesMcKelvy">
+                                                <kennedy:birthYear
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#integer"
+                                                >1955</kennedy:birthYear>
+                                                <kennedy:firstName
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >James</kennedy:firstName>
+                                                <kennedy:spouse rdf:resource="#SydneyLawford"/>
+                                                <kennedy:lastName
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >McKelvy</kennedy:lastName>
+                                                <kennedy:middleName
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >Peter</kennedy:middleName>
+                                                <kennedy:gender rdf:resource="#male"/>
+                                                <kennedy:middleInitial
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >P</kennedy:middleInitial>
+                                                <kennedy:name
+                                                 rdf:datatype=
+                                                "http://www.w3.org/2001/XMLSchema#string"
+                                                >James McKelvy</kennedy:name>
+                                              </kennedy:Person>
+                                            </kennedy:spouse>
+                                          </kennedy:Person>
+                                        </kennedy:child>
+                                        <kennedy:almaMater rdf:resource="#Columbia"/>
+                                      </kennedy:Person>
+                                    </kennedy:parent>
+                                    <kennedy:parent rdf:resource="#PatriciaKennedy"/>
+                                    <kennedy:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Christopher Lawford</kennedy:name>
+                                    <kennedy:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1955</kennedy:birthYear>
+                                    <kennedy:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Christopher</kennedy:firstName>
+                                    <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/ChristopherLawford.jpg"/>
+                                    <kennedy:gender rdf:resource="#male"/>
+                                    <kennedy:profession rdf:resource="#actor"/>
+                                  </kennedy:Person>
+                                </kennedy:child>
+                                <kennedy:parent rdf:resource="#JosephKennedy"/>
+                                <kennedy:child rdf:resource="#VictoriaLawford"/>
+                                <kennedy:profession rdf:resource="#home-maker"/>
+                                <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >Patricia Kennedy</kennedy:name>
+                                <kennedy:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Patricia</kennedy:firstName>
+                                <kennedy:deathYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >2006</kennedy:deathYear>
+                                <kennedy:gender rdf:resource="#female"/>
+                                <kennedy:child rdf:resource="#SydneyLawford"/>
+                                <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/Patriciakennedylawford.jpg"/>
+                                <kennedy:spouse rdf:resource="#PeterLawford"/>
+                                <kennedy:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1924</kennedy:birthYear>
+                                <kennedy:child rdf:resource="#RobinLawford"/>
+                              </kennedy:Person>
+                            </kennedy:child>
+                            <kennedy:profession rdf:resource="#producer"/>
+                            <kennedy:middleInitial rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >P</kennedy:middleInitial>
+                            <kennedy:child>
+                              <kennedy:Person rdf:ID="RoseKennedy">
+                                <kennedy:middleInitial rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >M</kennedy:middleInitial>
+                                <kennedy:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Rose</kennedy:firstName>
+                                <kennedy:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1918</kennedy:birthYear>
+                                <kennedy:parent rdf:resource="#RoseFitzgerald"/>
+                                <kennedy:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Kennedy</kennedy:lastName>
+                                <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >Rose Kennedy</kennedy:name>
+                                <kennedy:parent rdf:resource="#JosephKennedy"/>
+                                <kennedy:deathYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >2005</kennedy:deathYear>
+                                <kennedy:middleName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Marie</kennedy:middleName>
+                                <kennedy:gender rdf:resource="#female"/>
+                              </kennedy:Person>
+                            </kennedy:child>
+                            <kennedy:profession rdf:resource="#ambassador"/>
+                          </kennedy:Patriarch>
+                        </kennedy:parent>
+                        <kennedy:profession rdf:resource="#army"/>
+                        <kennedy:almaMater rdf:resource="#Harvard"/>
+                        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1932</kennedy:birthYear>
+                        <kennedy:gender rdf:resource="#male"/>
+                        <kennedy:almaMater rdf:resource="#UniversityOfVirginia"/>
+                        <kennedy:child rdf:resource="#PatrickJKennedy"/>
+                        <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >M</kennedy:middleInitial>
+                        <kennedy:spouse rdf:resource="#VirginiaBennett"/>
+                        <kennedy:profession rdf:resource="#senator"/>
+                        <kennedy:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >2009</kennedy:deathYear>
+                        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Edward Kennedy</kennedy:name>
+                        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Edward</kennedy:firstName>
+                        <kennedy:spouse>
+                          <kennedy:Person rdf:ID="VictoriaReggie">
+                            <kennedy:gender rdf:resource="#female"/>
+                            <kennedy:spouse rdf:resource="#EdwardKennedy"/>
+                            <kennedy:middleName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Anne</kennedy:middleName>
+                            <kennedy:profession rdf:resource="#attorney"/>
+                            <kennedy:middleInitial rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >A</kennedy:middleInitial>
+                            <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Victoria Reggie</kennedy:name>
+                            <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Victoria</kennedy:firstName>
+                            <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                            >1954</kennedy:birthYear>
+                            <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Reggie</kennedy:lastName>
+                          </kennedy:Person>
+                        </kennedy:spouse>
+                        <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Moore</kennedy:middleName>
+                        <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/Ted_Kennedy.jpg"/>
+                        <kennedy:child rdf:resource="#EdwardKennedyJr"/>
+                        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Kennedy</kennedy:lastName>
+                      </kennedy:Person>
+                    </kennedy:child>
+                    <kennedy:spouse rdf:resource="#JosephKennedy"/>
+                    <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Fitzgerald</kennedy:lastName>
+                    <kennedy:child rdf:resource="#JohnKennedy"/>
+                    <kennedy:child rdf:resource="#JosephKennedyJr"/>
+                    <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/Rose_kennedy.JPG"/>
+                    <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Rose Fitzgerald</kennedy:name>
+                    <kennedy:child rdf:resource="#JeanKennedy"/>
+                    <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1890</kennedy:birthYear>
+                    <kennedy:child rdf:resource="#PatriciaKennedy"/>
+                    <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >E</kennedy:middleInitial>
+                    <kennedy:almaMater>
+                      <kennedy:College rdf:ID="SacredHeartConvent">
+                        <kennedy:ivyLeague rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</kennedy:ivyLeague>
+                        <rdfs:label>Sacred Heart Convent</rdfs:label>
+                      </kennedy:College>
+                    </kennedy:almaMater>
+                    <kennedy:child rdf:resource="#RobertKennedy"/>
+                    <kennedy:child rdf:resource="#RoseKennedy"/>
+                    <kennedy:child rdf:resource="#KathleenAKennedy"/>
+                    <kennedy:profession rdf:resource="#home-maker"/>
+                    <kennedy:gender rdf:resource="#female"/>
+                    <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Rose</kennedy:firstName>
+                    <kennedy:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1995</kennedy:deathYear>
+                    <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Elizabeth</kennedy:middleName>
+                    <kennedy:child rdf:resource="#EuniceKennedy"/>
+                  </kennedy:Matriarch>
+                </kennedy:parent>
+                <kennedy:child rdf:resource="#DavidKennedy"/>
+                <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/196px-Robertkennedy.jpg"/>
+                <kennedy:child>
+                  <kennedy:Person rdf:ID="JosephKennedyII">
+                    <kennedy:spouse>
+                      <kennedy:Person rdf:ID="AnneKelly">
+                        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Anne</kennedy:firstName>
+                        <kennedy:spouse rdf:resource="#JosephKennedyII"/>
+                        <kennedy:gender rdf:resource="#female"/>
+                        <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >E</kennedy:middleInitial>
+                        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1957</kennedy:birthYear>
+                        <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Elizabeth</kennedy:middleName>
+                        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Kelly</kennedy:lastName>
+                        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Anne Kelly</kennedy:name>
+                      </kennedy:Person>
+                    </kennedy:spouse>
+                    <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Joseph</kennedy:firstName>
+                    <kennedy:gender rdf:resource="#male"/>
+                    <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1952</kennedy:birthYear>
+                    <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Joseph Kennedy II</kennedy:name>
+                    <kennedy:parent rdf:resource="#RobertKennedy"/>
+                    <kennedy:parent rdf:resource="#EthelSkakel"/>
+                    <kennedy:suffix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >II</kennedy:suffix>
+                    <kennedy:spouse>
+                      <kennedy:Person rdf:ID="SheilaRauch">
+                        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Sheila</kennedy:firstName>
+                        <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >B</kennedy:middleInitial>
+                        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1949</kennedy:birthYear>
+                        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Rauch</kennedy:lastName>
+                        <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Brewster</kennedy:middleName>
+                        <kennedy:gender rdf:resource="#female"/>
+                        <kennedy:spouse rdf:resource="#JosephKennedyII"/>
+                        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Sheila Rauch</kennedy:name>
+                      </kennedy:Person>
+                    </kennedy:spouse>
+                    <kennedy:profession rdf:resource="#congressman"/>
+                    <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</kennedy:lastName>
+                    <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/160px-Joe_Kennedy.jpg"/>
+                  </kennedy:Person>
+                </kennedy:child>
+                <kennedy:profession rdf:resource="#navy"/>
+                <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1925</kennedy:birthYear>
+                <kennedy:child rdf:resource="#MatthewKennedy"/>
+                <kennedy:parent rdf:resource="#JosephKennedy"/>
+                <kennedy:child>
+                  <kennedy:Person rdf:ID="MaryCKennedy">
+                    <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</kennedy:lastName>
+                    <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Mary</kennedy:firstName>
+                    <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Mary Kennedy</kennedy:name>
+                    <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >C</kennedy:middleInitial>
+                    <kennedy:parent rdf:resource="#RobertKennedy"/>
+                    <kennedy:parent rdf:resource="#EthelSkakel"/>
+                    <kennedy:gender rdf:resource="#female"/>
+                    <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1956</kennedy:birthYear>
+                    <kennedy:spouse>
+                      <kennedy:Person rdf:ID="JeffreyRuhe">
+                        <kennedy:gender rdf:resource="#male"/>
+                        <kennedy:spouse rdf:resource="#MaryCKennedy"/>
+                        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Jeffrey</kennedy:firstName>
+                        <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >R</kennedy:middleInitial>
+                        <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Robert</kennedy:middleName>
+                        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Ruhe</kennedy:lastName>
+                        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1952</kennedy:birthYear>
+                        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Jeffrey Ruhe</kennedy:name>
+                      </kennedy:Person>
+                    </kennedy:spouse>
+                    <kennedy:spouse>
+                      <kennedy:Person rdf:ID="PaulHill">
+                        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1954</kennedy:birthYear>
+                        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Paul</kennedy:firstName>
+                        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Hill</kennedy:lastName>
+                        <kennedy:spouse rdf:resource="#MaryCKennedy"/>
+                        <kennedy:gender rdf:resource="#male"/>
+                        <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >M</kennedy:middleInitial>
+                        <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Michael</kennedy:middleName>
+                        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Paul Hill</kennedy:name>
+                      </kennedy:Person>
+                    </kennedy:spouse>
+                    <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Courtney</kennedy:middleName>
+                  </kennedy:Person>
+                </kennedy:child>
+                <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >F</kennedy:middleInitial>
+                <kennedy:profession>
+                  <kennedy:Profession rdf:ID="attorney-general">
+                    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >attorney-general</rdfs:label>
+                  </kennedy:Profession>
+                </kennedy:profession>
+                <kennedy:child>
+                  <kennedy:Person rdf:ID="RoryKennedy">
+                    <kennedy:spouse>
+                      <kennedy:Person rdf:ID="MarkBailey">
+                        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Mark</kennedy:firstName>
+                        <kennedy:gender rdf:resource="#male"/>
+                        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1967</kennedy:birthYear>
+                        <kennedy:spouse rdf:resource="#RoryKennedy"/>
+                        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Bailey</kennedy:lastName>
+                        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Mark Bailey</kennedy:name>
+                      </kennedy:Person>
+                    </kennedy:spouse>
+                    <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</kennedy:lastName>
+                    <kennedy:parent rdf:resource="#EthelSkakel"/>
+                    <kennedy:profession rdf:resource="#producer"/>
+                    <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1968</kennedy:birthYear>
+                    <kennedy:gender rdf:resource="#female"/>
+                    <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Elizabeth</kennedy:middleName>
+                    <kennedy:parent rdf:resource="#RobertKennedy"/>
+                    <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Rory</kennedy:firstName>
+                    <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Rory Kennedy</kennedy:name>
+                    <kennedy:almaMater rdf:resource="#Brown"/>
+                    <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >E</kennedy:middleInitial>
+                  </kennedy:Person>
+                </kennedy:child>
+                <kennedy:child>
+                  <kennedy:Person rdf:ID="MaryKKennedy">
+                    <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</kennedy:lastName>
+                    <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >K</kennedy:middleInitial>
+                    <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kerry</kennedy:middleName>
+                    <kennedy:gender rdf:resource="#female"/>
+                    <kennedy:profession rdf:resource="#non-profit"/>
+                    <kennedy:parent rdf:resource="#RobertKennedy"/>
+                    <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Mary Kennedy</kennedy:name>
+                    <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Mary</kennedy:firstName>
+                    <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1959</kennedy:birthYear>
+                    <kennedy:parent rdf:resource="#EthelSkakel"/>
+                    <kennedy:spouse>
+                      <kennedy:Person rdf:ID="AndrewCuomo">
+                        <kennedy:spouse rdf:resource="#MaryKKennedy"/>
+                        <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >M</kennedy:middleInitial>
+                        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Cuomo</kennedy:lastName>
+                        <kennedy:gender rdf:resource="#male"/>
+                        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Andrew</kennedy:firstName>
+                        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1957</kennedy:birthYear>
+                        <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Mark</kennedy:middleName>
+                        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Andrew Cuomo</kennedy:name>
+                        <kennedy:profession>
+                          <kennedy:Profession rdf:ID="cabinet-secretary">
+                            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >cabinet-secretary</rdfs:label>
+                          </kennedy:Profession>
+                        </kennedy:profession>
+                      </kennedy:Person>
+                    </kennedy:spouse>
+                  </kennedy:Person>
+                </kennedy:child>
+                <kennedy:child>
+                  <kennedy:Person rdf:ID="ChristopherKennedy">
+                    <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1963</kennedy:birthYear>
+                    <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</kennedy:lastName>
+                    <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Christopher</kennedy:firstName>
+                    <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >George</kennedy:middleName>
+                    <kennedy:spouse>
+                      <kennedy:Person rdf:ID="SheilaBerner">
+                        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1962</kennedy:birthYear>
+                        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Berner</kennedy:lastName>
+                        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Sheila</kennedy:firstName>
+                        <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >S</kennedy:middleInitial>
+                        <kennedy:spouse rdf:resource="#ChristopherKennedy"/>
+                        <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Sinclair</kennedy:middleName>
+                        <kennedy:gender rdf:resource="#female"/>
+                        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Sheila Berner</kennedy:name>
+                      </kennedy:Person>
+                    </kennedy:spouse>
+                    <kennedy:parent rdf:resource="#EthelSkakel"/>
+                    <kennedy:parent rdf:resource="#RobertKennedy"/>
+                    <kennedy:gender rdf:resource="#male"/>
+                    <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Christopher Kennedy</kennedy:name>
+                    <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >G</kennedy:middleInitial>
+                  </kennedy:Person>
+                </kennedy:child>
+                <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Kennedy</kennedy:lastName>
+                <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Robert</kennedy:firstName>
+                <kennedy:child>
+                  <kennedy:Person rdf:ID="MichaelKennedy">
+                    <kennedy:gender rdf:resource="#male"/>
+                    <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >L</kennedy:middleInitial>
+                    <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Michael Kennedy</kennedy:name>
+                    <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Michael</kennedy:firstName>
+                    <kennedy:spouse>
+                      <kennedy:Person rdf:ID="VictoriaGifford">
+                        <kennedy:spouse rdf:resource="#MichaelKennedy"/>
+                        <kennedy:gender rdf:resource="#female"/>
+                        <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >D</kennedy:middleInitial>
+                        <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Denise</kennedy:middleName>
+                        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Victoria</kennedy:firstName>
+                        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Gifford</kennedy:lastName>
+                        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1957</kennedy:birthYear>
+                        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Victoria Gifford</kennedy:name>
+                      </kennedy:Person>
+                    </kennedy:spouse>
+                    <kennedy:parent rdf:resource="#EthelSkakel"/>
+                    <kennedy:parent rdf:resource="#RobertKennedy"/>
+                    <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1958</kennedy:birthYear>
+                    <kennedy:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1997</kennedy:deathYear>
+                    <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</kennedy:lastName>
+                    <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >LeMoyne</kennedy:middleName>
+                  </kennedy:Person>
+                </kennedy:child>
+                <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Francis</kennedy:middleName>
+                <kennedy:child>
+                  <kennedy:Person rdf:ID="KathleenHKennedy">
+                    <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</kennedy:lastName>
+                    <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >H</kennedy:middleInitial>
+                    <kennedy:profession>
+                      <kennedy:Profession rdf:ID="Lt-governor"/>
+                    </kennedy:profession>
+                    <kennedy:parent rdf:resource="#EthelSkakel"/>
+                    <kennedy:gender rdf:resource="#female"/>
+                    <kennedy:almaMater rdf:resource="#Harvard"/>
+                    <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Hartington</kennedy:middleName>
+                    <kennedy:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/Kathleen_Kennedy_Townsend.jpg"/>
+                    <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kathleen H. Kennedy</kennedy:name>
+                    <kennedy:spouse>
+                      <kennedy:Person rdf:ID="DavidTownsend">
+                        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >David</kennedy:firstName>
+                        <kennedy:spouse rdf:resource="#KathleenHKennedy"/>
+                        <kennedy:gender rdf:resource="#male"/>
+                        <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >L</kennedy:middleInitial>
+                        <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Townsend</kennedy:lastName>
+                        <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Lee</kennedy:middleName>
+                        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1947</kennedy:birthYear>
+                        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >David Townsend</kennedy:name>
+                      </kennedy:Person>
+                    </kennedy:spouse>
+                    <kennedy:parent rdf:resource="#RobertKennedy"/>
+                    <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1951</kennedy:birthYear>
+                    <kennedy:almaMater>
+                      <kennedy:College rdf:ID="UniversityOfNewMexico">
+                        <rdfs:label>University of New Mexico</rdfs:label>
+                      </kennedy:College>
+                    </kennedy:almaMater>
+                    <kennedy:profession rdf:resource="#attorney"/>
+                    <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kathleen</kennedy:firstName>
+                  </kennedy:Person>
+                </kennedy:child>
+                <kennedy:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1968</kennedy:deathYear>
+              </kennedy:Person>
+            </kennedy:parent>
+            <kennedy:gender rdf:resource="#male"/>
+            <kennedy:spouse>
+              <kennedy:Person rdf:ID="VictoriaStauss">
+                <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Anne</kennedy:middleName>
+                <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >A</kennedy:middleInitial>
+                <kennedy:spouse rdf:resource="#MatthewKennedy"/>
+                <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Stauss</kennedy:lastName>
+                <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1964</kennedy:birthYear>
+                <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Victoria</kennedy:firstName>
+                <kennedy:gender rdf:resource="#female"/>
+                <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Victoria Stauss</kennedy:name>
+              </kennedy:Person>
+            </kennedy:spouse>
+            <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1965</kennedy:birthYear>
+            <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Maxwell</kennedy:middleName>
+          </kennedy:Person>
+        </kennedy:child>
+        <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1928</kennedy:birthYear>
+        <kennedy:profession rdf:resource="#home-maker"/>
+        <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Ethel Skakel</kennedy:name>
+        <kennedy:spouse rdf:resource="#RobertKennedy"/>
+        <kennedy:child rdf:resource="#DouglasKennedy"/>
+        <kennedy:child rdf:resource="#DavidKennedy"/>
+        <kennedy:child rdf:resource="#MaryCKennedy"/>
+        <kennedy:child rdf:resource="#ChristopherKennedy"/>
+        <kennedy:child rdf:resource="#RoryKennedy"/>
+        <kennedy:child rdf:resource="#MichaelKennedy"/>
+        <kennedy:gender rdf:resource="#female"/>
+        <kennedy:child rdf:resource="#RobertKennedyJr"/>
+        <kennedy:child rdf:resource="#KathleenHKennedy"/>
+        <kennedy:child rdf:resource="#MaryKKennedy"/>
+        <kennedy:child rdf:resource="#JosephKennedyII"/>
+        <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Ethel</kennedy:firstName>
+        <kennedy:almaMater rdf:resource="#ManhattanvilleCollege"/>
+      </kennedy:Person>
+    </kennedy:parent>
+    <kennedy:profession rdf:resource="#writer"/>
+    <kennedy:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1984</kennedy:deathYear>
+    <kennedy:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >David Kennedy</kennedy:name>
+    <kennedy:parent rdf:resource="#RobertKennedy"/>
+    <kennedy:gender rdf:resource="#male"/>
+    <kennedy:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Anthony</kennedy:middleName>
+    <kennedy:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1955</kennedy:birthYear>
+    <kennedy:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Kennedy</kennedy:lastName>
+    <kennedy:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >David</kennedy:firstName>
+    <kennedy:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A</kennedy:middleInitial>
+  </kennedy:Person>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:people="http://inova8.com/schema/people-schema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://inova8.com/mapping/people-book#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:book="http://inova8.com/schema/book-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://inova8.com/mapping/people-book">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://inova8.com/schema/book-schema"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+    <owl:imports rdf:resource="http://inova8.com/schema/people-schema"/>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://inova8.com/schema/book-schema#Book">
+    <rdfs:subClassOf rdf:resource="http://inova8.com/schema/people-schema#Book"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/schema/book-schema#publicationDate">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#bookPubDate"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/schema/book-schema#Author">
+    <rdfs:subClassOf rdf:resource="http://inova8.com/schema/people-schema#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/schema/book-schema#title">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#bookTitle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/schema/book-schema#writtenBy">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#bookAuthor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/schema/book-schema#Publisher">
+    <rdfs:subClassOf rdf:resource="http://inova8.com/schema/people-schema#Profession"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/schema/book-schema#isbn">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#bookisbn"/>
+  </rdf:Description>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

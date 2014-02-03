@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:kennedy-void="http://inova8.com/void/kennedy-void#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://inova8.com/void/movie-void#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://inova8.com/void/movie-void">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+    <owl:imports rdf:resource="http://rdfs.org/ns/void"/>
+    <owl:imports rdf:resource="http://inova8.com/schema/movie-schema"/>
+  </owl:Ontology>
+  <void:Linkset rdf:about="http://rdfs.org/ns/void#Movie-Book">
+    <void:sparqlEndpoint rdf:resource="http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/linking/movie-book"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Movie-Book</rdfs:label>
+    <void:subjectsTarget>
+      <void:Dataset rdf:about="http://rdfs.org/ns/void#Movie">
+        <void:uriSpace rdf:resource="http://inova8.com/data/movies"/>
+        <void:sparqlEndpoint rdf:resource="http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/movies"/>
+        <void:vocabulary rdf:resource="http://inova8.com/schema/movie-schema"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Movie</rdfs:label>
+        <void:classPartition>
+          <void:Dataset rdf:about="http://rdfs.org/ns/void#MoviePerson">
+            <void:class rdf:resource="http://inova8.com/schema/movie-schema#Person"/>
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Movie person</rdfs:label>
+          </void:Dataset>
+        </void:classPartition>
+      </void:Dataset>
+    </void:subjectsTarget>
+    <void:objectsTarget rdf:resource="http://rdfs.org/ns/void#Movie"/>
+  </void:Linkset>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

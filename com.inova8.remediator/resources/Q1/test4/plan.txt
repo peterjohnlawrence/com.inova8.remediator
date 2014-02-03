@@ -1,0 +1,9 @@
+QueryPlan [
+Step=1
+MergedJoin [ optimizerCost=75.0
+, queryVars=QueryVars [Var:Child, Var:Person, Var:PersonName, ]
+, queryClauses=QueryClauses [
+	QueryClause [dataset=Dataset:http://inova8.com/data/kennedys, clause=Q(?0,?1,?2)  <-  http://inova8.com/schema/kennedy-schema#child(?0,?2), http://inova8.com/schema/kennedy-schema#name(?0,?1)]
+]
+]
+]

@@ -1,0 +1,18 @@
+QueryPlan [
+Step=1
+MergedJoin [ optimizerCost=4050.0
+, queryVars=QueryVars [Var:Child, ]
+, queryClauses=QueryClauses [
+	QueryClause [dataset=Dataset:http://inova8.com/data/kennedys, clause=Q(?0,?1,?2)  <-  http://inova8.com/schema/kennedy-schema#child(?0,?2), http://inova8.com/schema/kennedy-schema#name(?0,?1)]
+	QueryClause [dataset=Dataset:http://inova8.com/data/kennedys, clause=Q(?0,?1,?2)  <-  http://inova8.com/schema/kennedy-schema#child(?0,?2), http://www.w3.org/2000/01/rdf-schema#label(?0,?1)]
+]
+]
+Step=2
+MergedJoin [ optimizerCost=32060.0
+, queryVars=QueryVars [Var:Person, Var:PersonName, ]
+, queryClauses=QueryClauses [
+	QueryClause [dataset=Dataset:http://inova8.com/data/books, clause=Q(?0,?1)  <-  http://www.w3.org/2000/01/rdf-schema#label(?0,?1)]
+	QueryClause [dataset=Dataset:http://inova8.com/data/movies, clause=Q(?0,?1)  <-  http://www.w3.org/2000/01/rdf-schema#label(?0,?1)]
+]
+]
+]

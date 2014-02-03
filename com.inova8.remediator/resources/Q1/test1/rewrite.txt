@@ -1,0 +1,27 @@
+SELECT *
+WHERE  {
+    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/books> {
+        ?Book <http://inova8.com/schema/book-schema#writtenBy> ?DS1Child 
+    }
+     SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/instance-linking/kennedyperson-bookauthor> {
+        ?DS3Child <http://www.w3.org/2002/07/owl#sameAs> ?DS1Child 
+    }
+    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/kennedys> {
+        ?DS3Child <http://inova8.com/schema/kennedy-schema#almaMater> ?College .
+        ?DS3Person <http://inova8.com/schema/kennedy-schema#child> ?DS3Child .
+        ?DS3Person <http://inova8.com/schema/kennedy-schema#spouse> ?Spouse 
+    }
+     SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/instance-linking/kennedyperson-movieperson> {
+        ?DS3Child <http://www.w3.org/2002/07/owl#sameAs> ?DS2Child 
+    }
+    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/movies> {
+        ?Movie <http://inova8.com/schema/movie-schema#movie_Title> ?MovieTitle .
+        ?DS2Child <http://inova8.com/schema/movie-schema#playsin> ?Movie 
+    }
+    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/instance-linking/kennedyperson-movieperson> {
+        ?DS3Person <http://www.w3.org/2002/07/owl#sameAs> ?DS2Person
+    }
+    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/movies> {
+        ?DS2Person <http://inova8.com/schema/movie-schema#playsin> ?Movie2 
+    }
+ }

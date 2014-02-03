@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JUnit4.11"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jena-arq"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JenaLibs"/>
+	<classpathentry kind="lib" path="E:/Workspaces/SPARQLRewrite/com.inova8.rewriter/External JARS/owlapi-distribution-3.4.8.jar" sourcepath="C:/Users/PeterL/.m2/repository/net/sourceforge/owlapi/owlapi-distribution/3.4.8/owlapi-distribution-3.4.8-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/E:/Workspaces/SPARQLRewrite/com.inova8.rewriter/External JARS/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Workspaces/SPARQLRewrite/Requiem/External JARs/owlapi-bin.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/REQUIEM"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
