@@ -15,9 +15,9 @@ import java.nio.file.Paths;
 import org.apache.jena.atlas.logging.Log;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
+
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.query.Query;
@@ -38,7 +38,7 @@ import com.inova8.remediator.Workspace;
  * @author PeterL
  * 
  */
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
 public class QueryPerformanceTest {
 
 	static String readFile(String path, Charset encoding) throws IOException {
