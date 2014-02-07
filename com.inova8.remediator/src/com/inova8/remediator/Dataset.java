@@ -10,10 +10,10 @@ import java.util.Set;
 import org.apache.jena.atlas.logging.Log;
 import org.apache.xerces.util.URI;
 import org.apache.xerces.util.URI.MalformedURIException;
-import org.oxford.comlab.requiem.rewriter.Clause;
-import org.oxford.comlab.requiem.rewriter.Term;
-import org.oxford.comlab.requiem.rewriter.TermFactory;
-import org.oxford.comlab.requiem.rewriter.Variable;
+import com.inova8.requiem.rewriter.Clause;
+import com.inova8.requiem.rewriter.Term;
+import com.inova8.requiem.rewriter.TermFactory;
+import com.inova8.requiem.rewriter.Variable;
 
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;

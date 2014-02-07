@@ -6,7 +6,6 @@ import java.util.Set;
 
 import org.semanticweb.owl.model.OWLOntologyURIMapper;
 import org.semanticweb.owl.util.AutoURIMapper;
-
 import com.hp.hpl.jena.ontology.OntDocumentManager;
 
 public class Workspace {

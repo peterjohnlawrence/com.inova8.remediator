@@ -1,8 +1,5 @@
 package com.inova8.remediator;
 
-import java.util.Set;
-import java.util.TreeSet;
-
 public class MergedJoin {
 	private QueryClauses queryClauses = new QueryClauses();
 	private QueryVars queryVars = new QueryVars();

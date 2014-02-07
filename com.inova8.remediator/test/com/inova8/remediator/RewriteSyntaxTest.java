@@ -144,8 +144,8 @@ public class RewriteSyntaxTest {
 		
 		Query rewrittenQuery = OpAsQuery.asQuery(rewrittenOperations);
 
-//		assertEquals(rewrittenQuery.toString(), rewriteString.replaceAll("\\s+",
-//				""), rewrittenQuery.toString().replaceAll("\\s+", ""));
+		assertEquals(rewrittenQuery.toString(), rewriteString.replaceAll("\\s+",
+				""), rewrittenQuery.toString().replaceAll("\\s+", ""));
 		return rewrittenQuery.toString();
 	}
 	private void queryExecute(String rewriteString,Integer testNumber) throws Exception {

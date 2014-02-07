@@ -27,8 +27,10 @@ import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.query.ResultSetFormatter;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+//import com.hp.hpl.jena.sparql.engine.ref.QueryEngineRef;
 import com.inova8.remediator.Void;
 import com.inova8.remediator.Workspace;
+import com.inova8.sparql.engine.QueryEngineRemediator;
 
 /**
  * @author PeterL
@@ -91,6 +93,7 @@ public class QueryTest {
 				Charset.defaultCharset());
         OntModel model =  ModelFactory.createOntologyModel(); 
 		Query query = QueryFactory.create(rewriteString);
+		QueryEngineRemediator.register();
 		QueryExecution qexec = QueryExecutionFactory.create(query,model);
 		try {
 			ResultSet results = qexec.execSelect();
@@ -99,8 +102,9 @@ public class QueryTest {
 					""), resultString.toString().replaceAll("\\s+", ""));
 		} catch (Exception e) {
 			Log.debug(Void.class, "Failed query");
-			Log.debug(Void.class, e.getStackTrace().toString());
-			e.printStackTrace();
+			//Log.debug(Void.class, e.getStackTrace().toString());
+			//e.printStackTrace();
+			fail(e.getStackTrace().toString());
 		} finally {
 			qexec.close();
 		}

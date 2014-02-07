@@ -2,10 +2,10 @@ package com.inova8.remediator;
 
 import org.apache.xerces.util.URI;
 import org.apache.xerces.util.URI.MalformedURIException;
-import org.oxford.comlab.requiem.rewriter.Clause;
-import org.oxford.comlab.requiem.rewriter.FunctionalTerm;
-import org.oxford.comlab.requiem.rewriter.Term;
-import org.oxford.comlab.requiem.rewriter.Variable;
+import com.inova8.requiem.rewriter.Clause;
+import com.inova8.requiem.rewriter.FunctionalTerm;
+import com.inova8.requiem.rewriter.Term;
+import com.inova8.requiem.rewriter.Variable;
 
 import com.hp.hpl.jena.graph.Node;
 import com.hp.hpl.jena.graph.NodeFactory;

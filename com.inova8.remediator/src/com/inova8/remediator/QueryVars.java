@@ -3,10 +3,7 @@ package com.inova8.remediator;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Set;
-import java.util.TreeSet;
-
-import org.oxford.comlab.requiem.rewriter.Term;
+import com.inova8.requiem.rewriter.Term;
 
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.sparql.core.Var;
