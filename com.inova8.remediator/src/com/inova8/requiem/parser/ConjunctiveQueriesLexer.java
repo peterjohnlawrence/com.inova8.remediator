@@ -15,21 +15,21 @@ import org.antlr.runtime.NoViableAltException;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.RecognizerSharedState;
 
-public class ConjunctiveQueriesLexer extends Lexer {
-    public static final int SENTENCE=4;
-    public static final int T__12=12;
-    public static final int INT=8;
-    public static final int NUMBER=6;
-    public static final int EOF=-1;
-    public static final int WS=10;
-    public static final int T__13=13;
-    public static final int ALPHA=7;
-    public static final int CHAR=9;
-    public static final int T__16=16;
-    public static final int ALPHAVAR=5;
-    public static final int T__14=14;
-    public static final int T__11=11;
-    public static final int T__15=15;
+class ConjunctiveQueriesLexer extends Lexer {
+	private static final int SENTENCE=4;
+	private static final int T__12=12;
+	private static final int INT=8;
+	private static final int NUMBER=6;
+	private static final int EOF=-1;
+	private static final int WS=10;
+	private static final int T__13=13;
+	private static final int ALPHA=7;
+	private static final int CHAR=9;
+	private static final int T__16=16;
+	private static final int ALPHAVAR=5;
+	private static final int T__14=14;
+	private static final int T__11=11;
+	private static final int T__15=15;
 
 
         private List<String> errors = new LinkedList<String>();
@@ -59,7 +59,7 @@ public class ConjunctiveQueriesLexer extends Lexer {
     public String getGrammarFileName() { return "/Users/hekanibru/Documents/DPhil/Prototype/Grammar/ConjunctiveQueries.g"; }
 
     // $ANTLR start "T__11"
-    public final void mT__11() throws RecognitionException {
+    private final void mT__11() throws RecognitionException {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
@@ -80,7 +80,7 @@ public class ConjunctiveQueriesLexer extends Lexer {
     // $ANTLR end "T__11"
 
     // $ANTLR start "T__12"
-    public final void mT__12() throws RecognitionException {
+    private final void mT__12() throws RecognitionException {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;

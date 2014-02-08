@@ -44,30 +44,30 @@ public class ELHIOParser {
 	 * @return a set of clauses representing the ontology.
 	 * @throws OWLException
 	 */
-	public ArrayList<Clause> getClauses(String path) throws Exception
-	{
-		System.out.println(path);
-		//Create ontology manager and load ontology (OWL API)
-		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();		
-		URI physicalURI = URI.create(path);
-        ontology = manager.loadOntologyFromPhysicalURI(physicalURI);
-         
-        //Normalize ontology (HermiT)
-        OwlNormalization normalization = new OwlNormalization(manager.getOWLDataFactory());
-        normalization.processOntology(new Configuration(), ontology);
-        
-        //TODO fixes to get nsm
-        NamespaceOWLOntologyFormat namespaceOWLOntologyFormat = (NamespaceOWLOntologyFormat)(manager.getOntologyFormat(ontology));
-
-        //Clausify ontology
-        ELHIOClausifier clausification = new ELHIOClausifier(this.m_termFactory, manager,namespaceOWLOntologyFormat);
-        ArrayList<Clause> clauses = clausification.getClauses(normalization);
-        
-        //Remove ontology from the ontology manager
-        manager.removeOntology(ontology.getURI());
-        
-		return clauses;
-	}
+//	public ArrayList<Clause> getClauses(String path) throws Exception
+//	{
+//		System.out.println(path);
+//		//Create ontology manager and load ontology (OWL API)
+//		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();		
+//		URI physicalURI = URI.create(path);
+//        ontology = manager.loadOntologyFromPhysicalURI(physicalURI);
+//         
+//        //Normalize ontology (HermiT)
+//        OwlNormalization normalization = new OwlNormalization(manager.getOWLDataFactory());
+//        normalization.processOntology(new Configuration(), ontology);
+//        
+//        //TODO fixes to get nsm
+//        NamespaceOWLOntologyFormat namespaceOWLOntologyFormat = (NamespaceOWLOntologyFormat)(manager.getOntologyFormat(ontology));
+//
+//        //Clausify ontology
+//        ELHIOClausifier clausification = new ELHIOClausifier(this.m_termFactory, manager,namespaceOWLOntologyFormat);
+//        ArrayList<Clause> clauses = clausification.getClauses(normalization);
+//        
+//        //Remove ontology from the ontology manager
+//        manager.removeOntology(ontology.getURI());
+//        
+//		return clauses;
+//	}
 	public ArrayList<Clause> getClauses(InputStream is,OWLOntologyURIMapper owlOntologyURIMapper) throws Exception
 	{
 		//Create ontology manager and load ontology (OWL API)
@@ -101,74 +101,74 @@ public class ELHIOParser {
 	 * @return a clause representing the query.
 	 * @throws Exception
 	 */
-	public Clause getQueryFromFile(String path) throws Exception{
-		
-		BufferedReader reader = new BufferedReader(new FileReader(path));
-		
-		String input;
-		do{
-			input = reader.readLine();
-		}while(input.indexOf("//") == 0);
-		
-		ConjunctiveQueriesParser parser;
-		byte currentBytes[] = input.getBytes();
-		ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(currentBytes);
-		ANTLRInputStream inputst = null;
-		
-		try {
-			inputst = new ANTLRInputStream(byteArrayInputStream);
-		} catch (IOException e) {
-			e.printStackTrace(System.err);
-			return null;
-		}
-		
-		ConjunctiveQueriesLexer lexer = new ConjunctiveQueriesLexer(inputst);
-		CommonTokenStream tokens = new CommonTokenStream(lexer);
-		parser = new ConjunctiveQueriesParser(tokens);
-		
-		try {
-			parser.parse();
-		} catch (Exception e) {
-			return null;
-		}
-		
-		if ((parser.getErrors().size() == 0) && (lexer.getErrors().size() == 0)) {
-			return parser.getQuery();
-		} else {
-			return null;
-		}
-	}
+//	public Clause getQueryFromFile(String path) throws Exception{
+//		
+//		BufferedReader reader = new BufferedReader(new FileReader(path));
+//		
+//		String input;
+//		do{
+//			input = reader.readLine();
+//		}while(input.indexOf("//") == 0);
+//		
+//		ConjunctiveQueriesParser parser;
+//		byte currentBytes[] = input.getBytes();
+//		ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(currentBytes);
+//		ANTLRInputStream inputst = null;
+//		
+//		try {
+//			inputst = new ANTLRInputStream(byteArrayInputStream);
+//		} catch (IOException e) {
+//			e.printStackTrace(System.err);
+//			return null;
+//		}
+//		
+//		ConjunctiveQueriesLexer lexer = new ConjunctiveQueriesLexer(inputst);
+//		CommonTokenStream tokens = new CommonTokenStream(lexer);
+//		parser = new ConjunctiveQueriesParser(tokens);
+//		
+//		try {
+//			parser.parse();
+//		} catch (Exception e) {
+//			return null;
+//		}
+//		
+//		if ((parser.getErrors().size() == 0) && (lexer.getErrors().size() == 0)) {
+//			return parser.getQuery();
+//		} else {
+//			return null;
+//		}
+//	}
 	
-	public Clause getQuery(String query) throws Exception{
-		
-		ConjunctiveQueriesParser parser;
-		byte currentBytes[] = query.getBytes();
-		ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(currentBytes);
-		ANTLRInputStream inputst = null;
-		
-		try {
-			inputst = new ANTLRInputStream(byteArrayInputStream);
-		} catch (IOException e) {
-			e.printStackTrace(System.err);
-			return null;
-		}
-		
-		ConjunctiveQueriesLexer lexer = new ConjunctiveQueriesLexer(inputst);
-		CommonTokenStream tokens = new CommonTokenStream(lexer);
-		parser = new ConjunctiveQueriesParser(tokens);
-		
-		try {
-			parser.parse();
-		} catch (Exception e) {
-			return null;
-		}
-		
-		if ((parser.getErrors().size() == 0) && (lexer.getErrors().size() == 0)) {
-			return parser.getQuery();
-		} else {
-			return null;
-		}
-	}
+//	public Clause getQuery(String query) throws Exception{
+//		
+//		ConjunctiveQueriesParser parser;
+//		byte currentBytes[] = query.getBytes();
+//		ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(currentBytes);
+//		ANTLRInputStream inputst = null;
+//		
+//		try {
+//			inputst = new ANTLRInputStream(byteArrayInputStream);
+//		} catch (IOException e) {
+//			e.printStackTrace(System.err);
+//			return null;
+//		}
+//		
+//		ConjunctiveQueriesLexer lexer = new ConjunctiveQueriesLexer(inputst);
+//		CommonTokenStream tokens = new CommonTokenStream(lexer);
+//		parser = new ConjunctiveQueriesParser(tokens);
+//		
+//		try {
+//			parser.parse();
+//		} catch (Exception e) {
+//			return null;
+//		}
+//		
+//		if ((parser.getErrors().size() == 0) && (lexer.getErrors().size() == 0)) {
+//			return parser.getQuery();
+//		} else {
+//			return null;
+//		}
+//	}
 	
 	public int getNumberOfAxioms(){
 	    return ontology == null? null: ontology.getAxioms().size();

@@ -20,24 +20,24 @@ import com.inova8.requiem.rewriter.Clause;
 import com.inova8.requiem.rewriter.Term;
 import com.inova8.requiem.rewriter.TermFactory;
 
-public class ConjunctiveQueriesParser extends Parser {
-    public static final String[] tokenNames = new String[] {
+class ConjunctiveQueriesParser extends Parser {
+    private static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "SENTENCE", "ALPHAVAR", "NUMBER", "ALPHA", "INT", "CHAR", "WS", "'<-'", "','", "'Q'", "'('", "')'", "'?'"
     };
-    public static final int SENTENCE=4;
-    public static final int T__12=12;
-    public static final int INT=8;
-    public static final int WS=10;
-    public static final int NUMBER=6;
-    public static final int EOF=-1;
-    public static final int CHAR=9;
-    public static final int ALPHA=7;
-    public static final int T__13=13;
-    public static final int T__16=16;
-    public static final int ALPHAVAR=5;
-    public static final int T__14=14;
-    public static final int T__11=11;
-    public static final int T__15=15;
+    private static final int SENTENCE=4;
+    private static final int T__12=12;
+    private static final int INT=8;
+    private static final int WS=10;
+    private static final int NUMBER=6;
+    private static final int EOF=-1;
+    private static final int CHAR=9;
+    private static final int ALPHA=7;
+    private static final int T__13=13;
+    private static final int T__16=16;
+    private static final int ALPHAVAR=5;
+    private static final int T__14=14;
+    private static final int T__11=11;
+    private static final int T__15=15;
 
     // delegates
     // delegators
@@ -112,7 +112,7 @@ public class ConjunctiveQueriesParser extends Parser {
 
     // $ANTLR start "parse"
     // /Users/hekanibru/Documents/DPhil/Prototype/Grammar/ConjunctiveQueries.g:90:1: parse returns [boolean value] : clause EOF ;
-    public final boolean parse() throws RecognitionException {
+    final boolean parse() throws RecognitionException {
         boolean value = false;
 
         try {
