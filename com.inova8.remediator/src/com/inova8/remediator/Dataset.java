@@ -28,7 +28,7 @@ import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.shared.PrefixMapping;
 
-public class Dataset {
+class Dataset {
 	protected OntResource dataset;
 
 	protected OntModel model;
@@ -101,8 +101,10 @@ public class Dataset {
 			+ "{ ?property a owl:ObjectProperty .}\n"
 			+ " UNION\n"
 			+ "{ ?property a owl:DatatypeProperty .}\n" + "}";
-
-	public Dataset(OntModel model, OntResource dataset,
+    
+	private static String variableClassName ="com.inova8.requiem.rewriter.Variable";
+	
+	Dataset(OntModel model, OntResource dataset,
 			OntResource sparqlEndPoint) {
 
 		this.model = model;
@@ -112,7 +114,7 @@ public class Dataset {
 
 	}
 
-	public Dataset(OntModel model, OntResource dataset,
+	Dataset(OntModel model, OntResource dataset,
 			OntResource sparqlEndPoint, OntResource uriSpace, String prefix)
 			throws MalformedURIException {
 
@@ -137,7 +139,7 @@ public class Dataset {
 		return partitions.addClassPartition(clazz, entities);
 	}
 
-	public void addClause(Clause additionalClause) {
+	void addClause(Clause additionalClause) {
 		ArrayList<Term> bodyTerm = new ArrayList<Term>();
 		// Remove those terms that are not recognized by this datasource
 		for (Term term : additionalClause.getBody()) {
@@ -160,8 +162,10 @@ public class Dataset {
 				// Remove any existing clauses that would be subsumed by these
 				// new clauses.
 				for (Clause disconnectedClause : disconnectedClauses) {
-					cleanUpClauses(disconnectedClause.getBody());
-					queryClauses.add(new QueryClause(disconnectedClause, this));
+					Term[] disconnectedBody = disconnectedClause.getBody();
+					cleanUpClauses(disconnectedBody);
+					queryClauses.add(new QueryClause(new Clause(disconnectedBody,getHeadFromBody(disconnectedBody)), this));
+
 				}
 			}
 		}
@@ -297,7 +301,7 @@ public class Dataset {
     	for (Term argument: term.getArguments()){
     		//argument.getClass().getName().equals("org.oxford.comlab.requiem.rewriter.Variable")
     		//org.oxford.comlab.requiem.rewriter.FunctionalTerm
-    		if (argument.getClass().getName().equals("org.oxford.comlab.requiem.rewriter.Variable")) count++;
+    		if (argument.getClass().getName().equals(variableClassName)) count++;
     	}
     	return count;
     }

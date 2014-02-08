@@ -34,7 +34,7 @@ import com.hp.hpl.jena.sparql.algebra.op.OpUnion;
 import com.hp.hpl.jena.sparql.core.BasicPattern;
 import com.hp.hpl.jena.sparql.core.Var;
 
-public class RequiemTransform extends TransformCopy {
+class Transform extends TransformCopy {
 	final private QueryVars queryVars;
 	private ByteArrayInputStream ontologyInputStream = null;
 	private OWLOntologyURIMapper owlOntologyURIMapper = null;
@@ -53,9 +53,9 @@ public class RequiemTransform extends TransformCopy {
 
 	private Boolean optimize;
 	//HashMap<DatasetQueryVarLinkset, LinksetOpService> linksetOpServices = new HashMap<DatasetQueryVarLinkset, LinksetOpService>();
-	DatasetQueryVarLinksets linksetOpServices = new DatasetQueryVarLinksets ();
+	private DatasetQueryVarLinksets linksetOpServices = new DatasetQueryVarLinksets ();
 
-	RequiemTransform(QueryVars queryVars, Void voidModel, Boolean optimize) {
+	Transform(QueryVars queryVars, Void voidModel, Boolean optimize) {
 		super();
 		this.queryVars = queryVars;
 		// TODO replace variables with voidModel references
@@ -286,8 +286,8 @@ public class RequiemTransform extends TransformCopy {
 			clauses = rewrite(clause);
 			// clauses = rewriteDlite(clause);
 		} catch (Exception e) {
-			Log.debug(RequiemTransform.class, "Failed to rewrite clause " + clause.toString());
-			Log.debug(RequiemTransform.class, e.getStackTrace().toString());
+			Log.debug(Transform.class, "Failed to rewrite clause " + clause.toString());
+			Log.debug(Transform.class, e.getStackTrace().toString());
 			e.printStackTrace();
 		}
 		for (Clause cl : clauses) {

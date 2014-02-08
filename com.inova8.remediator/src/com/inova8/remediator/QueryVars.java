@@ -8,14 +8,14 @@ import com.inova8.requiem.rewriter.Term;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.sparql.core.Var;
 
-public class QueryVars extends ArrayList<QueryVar>{
+class QueryVars extends ArrayList<QueryVar>{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public QueryVars(Collection<Var> variables) {
+	QueryVars(Collection<Var> variables) {
 		super();
 		for (Var var:variables){
 			this.add(new QueryVar(var,false));
@@ -26,7 +26,7 @@ public class QueryVars extends ArrayList<QueryVar>{
 		super();
 	}
 
-	public int indexOf(Var variable) {
+	int indexOf(Var variable) {
 
 		for( int index =0; index < this.size(); index++)
 			{
@@ -34,7 +34,7 @@ public class QueryVars extends ArrayList<QueryVar>{
 		}
 		return -1;
 	}
-	public void locateDatasetClauses(ArrayList<Dataset> datasets)
+	void locateDatasetClauses(ArrayList<Dataset> datasets)
 	{
 		for (Dataset dataset:datasets)
 		{
@@ -49,7 +49,7 @@ public class QueryVars extends ArrayList<QueryVar>{
 			}
 		}
 	}
-	public QueryVars locateVariablesOfClass(RDFNode variableClass)
+	QueryVars locateVariablesOfClass(RDFNode variableClass)
 	{
 		QueryVars classQueryVariables = new QueryVars();
 		

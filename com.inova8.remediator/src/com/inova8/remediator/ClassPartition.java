@@ -10,7 +10,7 @@ import com.hp.hpl.jena.ontology.OntResource;
 /**
  * The Class ClassPartition.
  */
-public class ClassPartition extends Partition {
+class ClassPartition extends Partition {
 	
 	/** The entities. */
 	private Integer entities;
@@ -22,7 +22,7 @@ public class ClassPartition extends Partition {
 	 * @param clazz the class
 	 * @param entities the entities
 	 */
-	public ClassPartition(OntModel model, OntResource clazz, Integer entities) {
+	ClassPartition(OntModel model, OntResource clazz, Integer entities) {
 		super(model, clazz);
 		this.entities = entities;
 	}

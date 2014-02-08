@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class QueryClauses extends HashSet<QueryClause>{
+class QueryClauses extends HashSet<QueryClause>{
 
 	private static final long serialVersionUID = -4516774815436811543L;
 
@@ -13,10 +13,16 @@ public class QueryClauses extends HashSet<QueryClause>{
 		super();
 	}
 
-	public QueryClauses(Collection<? extends QueryClause> c) {
+	QueryClauses(Collection<? extends QueryClause> c) {
 		super(c);
 	}
 
+
+	@Override
+	public boolean add(QueryClause e) {
+		
+		return super.add(e);
+	}
 
 	@Override
 	public String toString() {

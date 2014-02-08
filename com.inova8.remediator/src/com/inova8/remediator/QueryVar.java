@@ -6,7 +6,7 @@ import java.util.HashSet;
 import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.sparql.core.Var;
 
-public class QueryVar  implements Comparable<QueryVar>{
+class QueryVar  implements Comparable<QueryVar>{
 
 	private Var var;
 	private Boolean optional;
@@ -15,7 +15,7 @@ public class QueryVar  implements Comparable<QueryVar>{
 	private Boolean linked = false;
 	private HashMap<DatasetQueryVarLinkset, LinksetOpServiceDataset> datasetQueryVarLinksets = new HashMap<DatasetQueryVarLinkset, LinksetOpServiceDataset>();
 
-	static HashSet<String> literalClasses = new HashSet<String>() {
+	private static HashSet<String> literalClasses = new HashSet<String>() {
 		private static final long serialVersionUID = 1L;
 		{
 			add("http://www.w3.org/2000/01/rdf-schema#Literal");
@@ -70,12 +70,12 @@ public class QueryVar  implements Comparable<QueryVar>{
 		return datasetQueryVarLinksets;
 	}
 
-	public QueryVar(Var var, Boolean optional) {
+	QueryVar(Var var, Boolean optional) {
 		this.var = var;
 		this.optional = optional;
 	}
 
-	public String getLinkedName(Dataset dataset) {
+	String getLinkedName(Dataset dataset) {
 		if (this.isLinked() || this.isRDFSLiteral()) {
 			return dataset.getPrefix().concat(this.getName());
 		} else {
@@ -83,7 +83,7 @@ public class QueryVar  implements Comparable<QueryVar>{
 		}
 	}
 
-	public Var getLinkedVar(Dataset dataset) {
+	Var getLinkedVar(Dataset dataset) {
 		return Var.alloc(this.getLinkedName(dataset));
 	}
 
@@ -112,11 +112,11 @@ public class QueryVar  implements Comparable<QueryVar>{
 		return variableClasses;
 	}
 
-	public void addVariableClass(RDFNode variableClass) {
+	void addVariableClass(RDFNode variableClass) {
 		variableClasses.add(variableClass);
 	}
 
-	public Boolean isRDFSLiteral() {
+	private Boolean isRDFSLiteral() {
 		for (RDFNode rdfNode : variableClasses) {
 			if (literalClasses.contains(rdfNode.toString())) {
 				return true;
@@ -125,11 +125,11 @@ public class QueryVar  implements Comparable<QueryVar>{
 		return false;
 	}
 
-	public int clauseCount(QueryClauses resolvedClauses, QueryVars resolvedVariables) {
+	int clauseCount(QueryClauses resolvedClauses, QueryVars resolvedVariables) {
 		return (difference(queryClauses, resolvedClauses).size());
 	}
 
-	public double clauseCost(QueryClauses resolvedClauses, QueryVars resolvedVariables, QueryVars queryVars) {
+	double clauseCost(QueryClauses resolvedClauses, QueryVars resolvedVariables, QueryVars queryVars) {
 		QueryClauses remainingClauses = difference(queryClauses, resolvedClauses);
 		Double clauseCost = 1.0;
 		for (QueryClause remainingClause : remainingClauses) {
@@ -138,7 +138,7 @@ public class QueryVar  implements Comparable<QueryVar>{
 		return clauseCost;
 	}
 
-	public QueryClauses difference(QueryClauses set1, QueryClauses set2) {
+	private QueryClauses difference(QueryClauses set1, QueryClauses set2) {
 		QueryClauses symmetricDiff = new QueryClauses(set1);
 		symmetricDiff.addAll(set2);
 		// symmetricDiff now contains the union
@@ -153,19 +153,19 @@ public class QueryVar  implements Comparable<QueryVar>{
 		return var.getName();
 	}
 
-	public void addClause(QueryClause queryClause) {
+	void addClause(QueryClause queryClause) {
 		queryClauses.add(queryClause);
 	}
 
-	public void setLinked() {
+	void setLinked() {
 		linked = true;
 	}
 
-	public Boolean isLinked() {
+	Boolean isLinked() {
 		return linked;
 	}
 
-	public void addDatasetQueryVar(DatasetQueryVarLinkset datasetQueryVarLinkset, LinksetOpService linksetOpService,
+	void addDatasetQueryVar(DatasetQueryVarLinkset datasetQueryVarLinkset, LinksetOpService linksetOpService,
 			DatasetQueryVarLinkset otherDatasetQueryVar) {
 		datasetQueryVarLinksets.put(datasetQueryVarLinkset, new LinksetOpServiceDataset(linksetOpService, otherDatasetQueryVar));
 	}

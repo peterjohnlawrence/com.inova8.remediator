@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.hp.hpl.jena.ontology.OntResource;
 
-public class Vocabularies extends ArrayList<OntResource> {
+class Vocabularies extends ArrayList<OntResource> {
 
 	/**
 	 * 

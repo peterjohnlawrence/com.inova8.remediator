@@ -15,7 +15,7 @@ public class FederatedQuery {
 	private Op operations;
 	private QueryVars queryVars;
 	private QueryPlan queryPlan;
-	private RequiemTransform transform;
+	private Transform transform;
 
 	private OntModel vocabularyModel;
 
@@ -50,7 +50,7 @@ public class FederatedQuery {
 
 	public Op rewrite(Void voidModel, Boolean optimize) {
 
-		transform = new RequiemTransform(queryVars,	voidModel, optimize);
+		transform = new Transform(queryVars,	voidModel, optimize);
 		
 		Op op = Transformer.transform(transform, this.operations);
 

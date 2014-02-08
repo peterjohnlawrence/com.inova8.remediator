@@ -3,7 +3,7 @@ package com.inova8.remediator;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class QueryPlan extends ArrayList<MergedJoin>{
+class QueryPlan extends ArrayList<MergedJoin>{
 
 	/**
 	 * 
