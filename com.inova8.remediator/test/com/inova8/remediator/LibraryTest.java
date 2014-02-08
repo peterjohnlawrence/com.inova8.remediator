@@ -15,7 +15,7 @@ import org.junit.Test;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.inova8.remediator.Workspace;
+import com.inova8.workspace.Workspace;
 
 public class LibraryTest {
 

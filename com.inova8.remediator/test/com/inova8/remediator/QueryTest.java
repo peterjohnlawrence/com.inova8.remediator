@@ -29,8 +29,8 @@ import com.hp.hpl.jena.query.ResultSetFormatter;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 //import com.hp.hpl.jena.sparql.engine.ref.QueryEngineRef;
 import com.inova8.remediator.Void;
-import com.inova8.remediator.Workspace;
 import com.inova8.sparql.engine.QueryEngineRemediator;
+import com.inova8.workspace.Workspace;
 
 /**
  * @author PeterL

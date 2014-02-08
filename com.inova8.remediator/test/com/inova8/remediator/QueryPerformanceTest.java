@@ -32,7 +32,7 @@ import com.hp.hpl.jena.sparql.algebra.OpAsQuery;
 import com.inova8.remediator.FederatedQuery;
 import com.inova8.remediator.QueryPlan;
 import com.inova8.remediator.Void;
-import com.inova8.remediator.Workspace;
+import com.inova8.workspace.Workspace;
 
 /**
  * @author PeterL

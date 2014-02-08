@@ -1,4 +1,4 @@
-package com.inova8.remediator;
+package com.inova8.workspace;
 
 import java.io.File;
 import java.net.URI;

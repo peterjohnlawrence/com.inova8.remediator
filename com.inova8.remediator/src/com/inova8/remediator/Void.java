@@ -11,6 +11,7 @@ import com.inova8.requiem.parser.ELHIOParser;
 import com.inova8.requiem.rewriter.Clause;
 import com.inova8.requiem.rewriter.Term;
 import com.inova8.requiem.rewriter.TermFactory;
+import com.inova8.workspace.Workspace;
 
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
