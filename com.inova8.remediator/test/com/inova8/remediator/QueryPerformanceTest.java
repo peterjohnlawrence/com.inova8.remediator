@@ -32,6 +32,7 @@ import com.hp.hpl.jena.sparql.algebra.OpAsQuery;
 import com.inova8.remediator.FederatedQuery;
 import com.inova8.remediator.QueryPlan;
 import com.inova8.remediator.Void;
+import com.inova8.sparql.engine.QueryEngineRemediator;
 import com.inova8.workspace.Workspace;
 
 /**
@@ -70,7 +71,7 @@ public class QueryPerformanceTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		path = "./resources/";
+		path = "./test/models/";
 		queryFolder = "Q1";
 
 		ontologyModelFile = readFile(path + queryFolder + "/model.txt",
@@ -121,6 +122,7 @@ public class QueryPerformanceTest {
 				Charset.defaultCharset());
         OntModel model =  ModelFactory.createOntologyModel(); 
 		Query query = QueryFactory.create(rewriteString);
+		QueryEngineRemediator.register();
 		QueryExecution qexec = QueryExecutionFactory.create(query,model);
 		try {
 			ResultSet results = qexec.execSelect();
@@ -130,7 +132,6 @@ public class QueryPerformanceTest {
 		} catch (Exception e) {
 			Log.debug(Void.class, "Failed query");
 			Log.debug(Void.class, e.getStackTrace().toString());
-			e.printStackTrace();
 		} finally {
 			qexec.close();
 		}

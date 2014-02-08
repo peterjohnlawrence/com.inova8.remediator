@@ -288,7 +288,6 @@ class Transform extends TransformCopy {
 		} catch (Exception e) {
 			Log.debug(Transform.class, "Failed to rewrite clause " + clause.toString());
 			Log.debug(Transform.class, e.getStackTrace().toString());
-			e.printStackTrace();
 		}
 		for (Clause cl : clauses) {
 			for (Dataset dataset : datasets) {

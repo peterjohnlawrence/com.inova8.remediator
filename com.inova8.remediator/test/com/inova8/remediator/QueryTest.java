@@ -32,12 +32,18 @@ import com.inova8.remediator.Void;
 import com.inova8.sparql.engine.QueryEngineRemediator;
 import com.inova8.workspace.Workspace;
 
+import org.slf4j.Logger ;
+import org.slf4j.LoggerFactory ;
+
 /**
  * @author PeterL
  * 
  */
 
 public class QueryTest {
+	
+	private static Logger logger = LoggerFactory.getLogger("stdout");
+    
 
 	static String readFile(String path, Charset encoding) throws IOException {
 		byte[] encoded = Files.readAllBytes(Paths.get(path));
@@ -68,7 +74,7 @@ public class QueryTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		path = "./resources/";
+		path = "./test/models/";
 		queryFolder = "Q1";
 	}
 
@@ -101,9 +107,7 @@ public class QueryTest {
 			assertEquals(resultString.toString(), queryResultString.replaceAll("\\s+",
 					""), resultString.toString().replaceAll("\\s+", ""));
 		} catch (Exception e) {
-			Log.debug(Void.class, "Failed query");
-			//Log.debug(Void.class, e.getStackTrace().toString());
-			//e.printStackTrace();
+			Log.debug(Void.class, "Failed query:" + e.getStackTrace().toString());
 			fail(e.getStackTrace().toString());
 		} finally {
 			qexec.close();

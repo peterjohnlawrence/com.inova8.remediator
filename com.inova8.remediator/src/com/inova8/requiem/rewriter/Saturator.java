@@ -3,6 +3,8 @@ package com.inova8.requiem.rewriter;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import org.apache.jena.atlas.logging.Log;
+
 public class Saturator {
 	private TermFactory m_termFactory;
 	protected final Resolution m_resolution;
@@ -107,7 +109,7 @@ public class Saturator {
 				}
 			}
 		}
-		System.out.println("Inferences: " + inferences);
+		Log.info(this,"Inferences: " + inferences);
 		return prune(selectionFunction);
 	}
 

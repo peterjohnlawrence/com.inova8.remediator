@@ -76,7 +76,7 @@ public class RewriteSyntaxTest {
 	 */
 	//@Before
 	public void setUp() throws Exception {
-		path = "./resources/";
+		path = "./test/models/";
 		queryFolder = "Q1";
 
 		ontologyModelFile = readFile(path + queryFolder + "/model.txt",
@@ -95,42 +95,42 @@ public class RewriteSyntaxTest {
 	}
 
 
-	@Test
-	public final void test1VoidModel() throws Exception {
-		String rewrittenQuery =queryTranslate(1); 
-		queryExecute(rewrittenQuery,1);
-	}
-	@Test
-	public final void test2VoidModel() throws Exception {
-		String rewrittenQuery =queryTranslate(2); 
-		queryExecute(rewrittenQuery,2);
-	}
-
-	@Test
-	public final void test3VoidModel() throws Exception {
-		String rewrittenQuery =queryTranslate(3); 	
-		queryExecute(rewrittenQuery,3);
-		}
+//	@Test
+//	public final void test1VoidModel() throws Exception {
+//		String rewrittenQuery =queryTranslate(1); 
+//		queryExecute(rewrittenQuery,1);
+//	}
+//	@Test
+//	public final void test2VoidModel() throws Exception {
+//		String rewrittenQuery =queryTranslate(2); 
+//		queryExecute(rewrittenQuery,2);
+//	}
+//
+//	@Test
+//	public final void test3VoidModel() throws Exception {
+//		String rewrittenQuery =queryTranslate(3); 	
+//		queryExecute(rewrittenQuery,3);
+//		}
 	@Test
 	public final void test4VoidModel() throws Exception {
 		String rewrittenQuery =queryTranslate(4); 
 		queryExecute(rewrittenQuery,4);
 	}
-	@Test
-	public final void test5VoidModel() throws Exception {
-		String rewrittenQuery =queryTranslate(5); 
-		queryExecute(rewrittenQuery,5);
-	}
-	@Test
-	public final void test6VoidModel() throws Exception {
-		String rewrittenQuery =queryTranslate(6);
-		queryExecute(rewrittenQuery,6);
-	}
-	@Test
-	public final void test7VoidModel() throws Exception {
-		String rewrittenQuery =queryTranslate(7); 
-		queryExecute(rewrittenQuery,7);
-	}
+//	@Test
+//	public final void test5VoidModel() throws Exception {
+//		String rewrittenQuery =queryTranslate(5); 
+//		queryExecute(rewrittenQuery,5);
+//	}
+//	@Test
+//	public final void test6VoidModel() throws Exception {
+//		String rewrittenQuery =queryTranslate(6);
+//		queryExecute(rewrittenQuery,6);
+//	}
+//	@Test
+//	public final void test7VoidModel() throws Exception {
+//		String rewrittenQuery =queryTranslate(7); 
+//		queryExecute(rewrittenQuery,7);
+//	}
 	public final String queryTranslate(Integer testNumber) throws Exception {
 		queryString = readFile(path + queryFolder + "/test" + testNumber + "/query.txt",
 				Charset.defaultCharset());

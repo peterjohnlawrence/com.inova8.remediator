@@ -4,6 +4,7 @@ import java.io.File;
 import java.net.URI;
 import java.util.Set;
 
+import org.apache.jena.atlas.logging.Log;
 import org.semanticweb.owl.model.OWLOntologyURIMapper;
 import org.semanticweb.owl.util.AutoURIMapper;
 import com.hp.hpl.jena.ontology.OntDocumentManager;

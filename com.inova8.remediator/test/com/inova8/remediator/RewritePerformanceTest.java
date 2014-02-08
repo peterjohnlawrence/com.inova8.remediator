@@ -63,7 +63,7 @@ public class RewritePerformanceTest {
 	 */
 	@Before
 	public void setUp() throws Exception {
-		path = "./resources/";
+		path = "./test/models/";
 		queryFolder = "Q1";
 
 		ontologyModelFile = readFile(path + queryFolder + "/model.txt",

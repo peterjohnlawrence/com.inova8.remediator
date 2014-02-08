@@ -4,5 +4,5 @@ prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>
 select * 
 {
 ?Person people:fullName ?PersonName .
-?Person people:hasChild ?Child .
+{?Person people:hasChild ?Child .}
 } 

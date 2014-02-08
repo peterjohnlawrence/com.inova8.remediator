@@ -35,7 +35,7 @@ public class LibraryTest {
 				Arrays.asList(extensionsArray));
 		Workspace library = new Workspace(
 				new File(
-						"./resources/Q1"),
+						"./test/models/Q1"),
 				true, extensions);
 
 	}
@@ -44,7 +44,7 @@ public class LibraryTest {
 	public final void testLibraryWithDefaultExtensions() {
 		Workspace library = new Workspace(
 				new File(
-						"./resources/Q1"),
+						"./test/models/Q1"),
 				true);
 
 	}
@@ -54,7 +54,7 @@ public class LibraryTest {
 		OntModel ontModel;
 		Workspace library = new Workspace(
 				new File(
-						"./resources/Q1"),
+						"./test/models/Q1"),
 				true);
 
 		ontModelSpecs = new OntModelSpec(OntModelSpec.OWL_MEM);

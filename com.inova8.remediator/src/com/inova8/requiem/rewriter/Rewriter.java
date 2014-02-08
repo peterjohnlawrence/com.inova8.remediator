@@ -1,6 +1,8 @@
 package com.inova8.requiem.rewriter;
 import java.util.ArrayList;
 
+import org.apache.jena.atlas.logging.Log;
+
 import com.inova8.requiem.optimizer.Optimizer;
 
 
@@ -15,7 +17,7 @@ public class Rewriter {
 		ArrayList<Clause> saturation = new ArrayList<Clause>();
 		ArrayList<Clause> rewriting = new ArrayList<Clause>();
 			
-	    System.out.println("\nOntology and query loaded ("+ clauses.size() +" clauses)");
+	    Log.info(this,"Ontology and query loaded ("+ clauses.size() +" clauses)");
 	    	
     	//Prune irrelevant clauses based on the dependency graph from the query
     	clauses = m_optimizer.pruneWithDependencyGraph("Q", clauses);
@@ -24,7 +26,7 @@ public class Rewriter {
     	
     	saturation = m_saturator.saturate(clauses, new SelectionFunctionSaturate(), mode);
     	
-    	System.out.println("Saturation completed ("+ saturation.size() +" clauses)");
+    	Log.info(this,"Saturation completed ("+ saturation.size() +" clauses)");
     	
     	//Unfolding
     	if(mode.equals("N") || mode.equals("F")){
@@ -34,7 +36,7 @@ public class Rewriter {
     		rewriting = m_saturator.unfoldGreedily(saturation);
     	}
     	
-    	System.out.println("Unfolding completed ("+ rewriting.size() +" clauses)");
+    	Log.info(this,"Unfolding completed ("+ rewriting.size() +" clauses)");
     	
     	//Optimize
     	if(!mode.equals("N")){
@@ -48,7 +50,7 @@ public class Rewriter {
 		    rewriting = m_optimizer.condensate(rewriting);
     	}
     			    			    	
-    	System.out.println("Pruning completed ("+ rewriting.size() +" clauses)");
+    	Log.info(this,"Pruning completed ("+ rewriting.size() +" clauses)");
     	
     	return rewriting;	    
 	}	

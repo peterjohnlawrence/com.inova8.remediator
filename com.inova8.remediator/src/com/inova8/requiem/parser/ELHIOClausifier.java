@@ -6,6 +6,8 @@ import java.util.HashSet;
 import com.inova8.requiem.rewriter.Clause;
 import com.inova8.requiem.rewriter.Term;
 import com.inova8.requiem.rewriter.TermFactory;
+
+import org.apache.jena.atlas.logging.Log;
 import org.semanticweb.HermiT.owlapi.structural.OwlNormalization;
 import org.semanticweb.owl.model.OWLClass;
 import org.semanticweb.owl.model.OWLClassAssertionAxiom;
@@ -164,11 +166,11 @@ public class ELHIOClausifier {
 			roles.add(role1);
 		}
 		else{
-			System.err.print("ignoring role inclusion: ");
+			String info = "ignoring role inclusion: ";
         	for(int j=0; j<axiom.length; j++){
-            	System.err.print(axiom[j].toString() + " ");
+            	info+=axiom[j].toString() + " ";
             }
-            System.err.println();
+            Log.info(this,info);
 		}	
 	}
 	    private boolean isValidDataPropertyInclusion(OWLDataPropertyExpression[] axiom){	
@@ -205,7 +207,7 @@ public class ELHIOClausifier {
 			roles.add(roleName);
 		}
 		else{
-    		System.err.println("Ignoring invalid individual axiom: " + axiom.toString());
+    		Log.info(this,"Ignoring invalid individual axiom: " + axiom.toString());
 		}
 	}
 	
@@ -242,12 +244,12 @@ public class ELHIOClausifier {
 			roles.add(role1);
 		}
 		else{
-			System.err.print("ignoring role inclusion: ");
+			String info = "ignoring role inclusion: ";
         	for(int j=0; j<axiom.length; j++){
-            	System.err.print(axiom[j].toString() + " ");
+        		info+=axiom[j].toString() + " ";
             }
-            System.err.println();
-		}
+        	Log.info(this, info);
+ 		}
 	}
 	
 	/**
@@ -386,11 +388,11 @@ public class ELHIOClausifier {
     
     
     private void printIgnoring(OWLDescription[] conceptInclusion){
-    	System.err.print("ignoring invalid concept inclusion: ");
+    	String info = ("ignoring invalid concept inclusion: ");
 		for(int j=0; j < conceptInclusion.length; j++){
-			System.err.print(conceptInclusion[j].toString() + " ");
+			info+=(conceptInclusion[j].toString() + " ");
 		}
-		System.err.println();
+		Log.info(this,info);
     }
 	
 	/**
@@ -594,7 +596,7 @@ public class ELHIOClausifier {
 		}
 		
 		if(result.size() == 0){
-			System.out.println(body.toString());
+			Log.info(this, body.toString());
 		}
 		
 		Term[] terms = new Term[result.size()];

@@ -21,6 +21,8 @@ package com.inova8.sparql.engine;
 import java.util.ArrayList ;
 import java.util.List ;
 
+import org.apache.jena.atlas.logging.Log;
+
 import com.hp.hpl.jena.graph.Node ;
 import com.hp.hpl.jena.query.ResultSet ;
 import com.hp.hpl.jena.query.ResultSetFormatter ;
@@ -100,7 +102,7 @@ public class EvaluatorSimple implements Evaluator
     {
         if ( debug )
         {
-            System.out.println("Join") ;
+        	Log.debug(this,"Join") ;
             dump(tableLeft) ;
             dump(tableRight) ;
         }
@@ -112,11 +114,11 @@ public class EvaluatorSimple implements Evaluator
     {
         if ( debug )
         {
-            System.out.println("Left Join") ;
+        	Log.debug(this,"Left Join") ;
             dump(tableLeft) ;
             dump(tableRight) ;
             if ( exprs != null )
-                System.out.println(exprs) ;
+                Log.debug(this,exprs.toString()) ;
         }
 
         return joinWorker(tableLeft, tableRight, true, exprs) ;
@@ -127,7 +129,7 @@ public class EvaluatorSimple implements Evaluator
     {
         if ( debug )
         {
-            System.out.println("Diff") ;
+        	Log.debug(this,"Diff") ;
             dump(tableLeft) ;
             dump(tableRight) ;
         }
@@ -139,7 +141,7 @@ public class EvaluatorSimple implements Evaluator
     {
         if ( debug )
         {
-            System.out.println("Minus") ;
+        	Log.debug(this,"Minus") ;
             dump(tableLeft) ;
             dump(tableRight) ;
         }
@@ -152,8 +154,8 @@ public class EvaluatorSimple implements Evaluator
     {
         if ( debug )
         {
-            System.out.println("Restriction") ;
-            System.out.println(expressions) ;
+        	Log.debug(this,"Restriction") ;
+        	Log.debug(this,expressions.toString()) ;
             dump(table) ;
         }
         QueryIterator iter = table.iterator(execCxt) ;
@@ -174,7 +176,7 @@ public class EvaluatorSimple implements Evaluator
     {
         if ( debug )
         {
-            System.out.println("Union") ;
+        	Log.debug(this,"Union") ;
             dump(tableLeft) ;
             dump(tableRight) ;
         }
@@ -344,9 +346,9 @@ public class EvaluatorSimple implements Evaluator
         return results ;
     }
 
-    private static void dump(Table table)
+    private  void dump(Table table)
     {
-        System.out.println("Table: "+Utils.className(table)) ;
+    	Log.debug(this,"Table: "+Utils.className(table)) ;
         QueryIterator qIter = table.iterator(null) ;
         ResultSet rs = new ResultSetStream(table.getVarNames(), null, table.iterator(null)) ;
         ResultSetFormatter.out(rs) ;

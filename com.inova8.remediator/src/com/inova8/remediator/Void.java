@@ -99,8 +99,8 @@ class Void {
 		try {
 			conjunctiveClauses = parser.getClauses(this.writeVocabularyModel(), this.getWorkspace().getOWLOntologyURIMapper());
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Log.debug(this,
+					"Failed to parse clauses: " + e.getMessage());
 		}
 
 	}
@@ -108,7 +108,7 @@ class Void {
 	private void buildVoidModel(String voidURI, Boolean gatherStatistics) {
 		this.voidModel.read(voidURI);
 		// TODO remove
-		this.voidModel.writeAll(System.out, "RDF/XML-ABBREV");
+		//this.voidModel.writeAll(System.out, "RDF/XML-ABBREV");
 		loadVoidDatasets();
 		loadVoidLinksets();
 		buildVocabularyModel();
@@ -238,7 +238,6 @@ class Void {
 		} catch (Exception e) {
 			Log.debug(Void.class, "Failed datasetQuery");
 			Log.debug(Void.class, e.getStackTrace().toString());
-			e.printStackTrace();
 		} finally {
 			qexec.close();
 		}
@@ -409,19 +408,6 @@ class Void {
 	 */
 	static final Property entities = m_model
 			.createProperty("http://rdfs.org/ns/void#entities");
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
 	/**
 	 * <p>
 	 * The total number of distinct properties in a void:Dataset. In other

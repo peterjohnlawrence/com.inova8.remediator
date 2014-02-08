@@ -24,7 +24,7 @@ public class VoidTest {
 	public void setUp() throws Exception {
 		String[] extensions = { ".rdf", ".owl" };
 
-		path = "./resources/Q1";
+		path = "./test/models/Q1";
 
 	    workspace = new Workspace(new File(path), true);
 
