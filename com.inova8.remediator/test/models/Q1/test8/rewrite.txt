@@ -1,0 +1,23 @@
+SELECT  *
+WHERE
+  {   { SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/kennedys>
+          { ?DS3Person <http://inova8.com/schema/kennedy-schema#child> ?Child .
+            ?DS3Person <http://inova8.com/schema/kennedy-schema#name> ?DS3PersonName}
+      }
+    UNION
+      { SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/kennedys>
+          { ?DS3Person <http://inova8.com/schema/kennedy-schema#child> ?Child .
+            ?DS3Person <http://www.w3.org/2000/01/rdf-schema#label> ?DS3PersonName}
+      }
+    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/instance-linking/kennedyperson-bookauthor>
+      { ?DS3Person <http://www.w3.org/2002/07/owl#sameAs> ?DS1Person}
+    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/instance-linking/kennedyperson-movieperson>
+      { ?DS3Person <http://www.w3.org/2002/07/owl#sameAs> ?DS2Person}
+      { SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/books>
+          { ?DS1Person <http://www.w3.org/2000/01/rdf-schema#label> ?DS1PersonName}
+      }
+    UNION
+      { SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/movies>
+          { ?DS2Person <http://www.w3.org/2000/01/rdf-schema#label> ?DS2PersonName}
+      }
+  }

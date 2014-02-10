@@ -1,0 +1,20 @@
+prefix people:<http://inova8.com/schema/people-schema#>
+prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+select * 
+{
+{?Person rdfs:label ?PersonName 
+{select * where { ?PersonName rdf:type ?Class} }}
+OPTIONAL {?Person people:hasChild ?Child . FILTER(?child=?Person)}
+FILTER(?PersonName="fred") .
+   VALUES ?Class { people:Person people:Book }
+   { SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/kennedys>
+          { ?DS3Person <http://inova8.com/schema/kennedy-schema#child> ?Child .
+            ?DS3Person <http://inova8.com/schema/kennedy-schema#name> ?DS3PersonName}
+      }
+    UNION
+      { GRAPH <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/kennedys>
+          { ?DS3Person <http://inova8.com/schema/kennedy-schema#child> ?Child .
+            ?DS3Person <http://www.w3.org/2000/01/rdf-schema#label> ?DS3PersonName}
+      }
+} 
