@@ -102,7 +102,7 @@ class Dataset {
 			+ " UNION\n"
 			+ "{ ?property a owl:DatatypeProperty .}\n" + "}";
     
-	private static String variableClassName ="com.inova8.requiem.rewriter.Variable";
+	private static String variableClassName =Variable.class.getName();
 	
 	Dataset(OntModel model, OntResource dataset,
 			OntResource sparqlEndPoint) {

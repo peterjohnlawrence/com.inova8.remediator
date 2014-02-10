@@ -93,8 +93,6 @@ public class RewriteSyntaxTest {
 	@After
 	public void tearDown() throws Exception {
 	}
-
-
 //	@Test
 //	public final void test1VoidModel() throws Exception {
 //		String rewrittenQuery =queryTranslate(1); 
@@ -111,16 +109,16 @@ public class RewriteSyntaxTest {
 //		String rewrittenQuery =queryTranslate(3); 	
 //		queryExecute(rewrittenQuery,3);
 //		}
-	@Test
-	public final void test4VoidModel() throws Exception {
-		String rewrittenQuery =queryTranslate(4); 
-		queryExecute(rewrittenQuery,4);
-	}
 //	@Test
-//	public final void test5VoidModel() throws Exception {
-//		String rewrittenQuery =queryTranslate(5); 
-//		queryExecute(rewrittenQuery,5);
+//	public final void test4VoidModel() throws Exception {
+//		String rewrittenQuery =queryTranslate(4); 
+//		queryExecute(rewrittenQuery,4);
 //	}
+	@Test
+	public final void test5VoidModel() throws Exception {
+		String rewrittenQuery =queryTranslate(5); 
+		queryExecute(rewrittenQuery,5);
+	}
 //	@Test
 //	public final void test6VoidModel() throws Exception {
 //		String rewrittenQuery =queryTranslate(6);

@@ -102,13 +102,13 @@ public class RewritePerformanceTest {
 		FederatedQuery federatedQuery = new FederatedQuery(queryString);
 		Op rewrittenOperations = federatedQuery.rewrite(queryVoid, true);
 		QueryPlan queryPlan = federatedQuery.getQueryPlan();
-//		assertEquals(queryPlan.toString(), planString.replaceAll("\\s+",
-//				""), queryPlan.toString().replaceAll("\\s+", ""));	
+		assertEquals(queryPlan.toString(), planString.replaceAll("\\s+",
+				""), queryPlan.toString().replaceAll("\\s+", ""));	
 		
 		Query rewrittenQuery = OpAsQuery.asQuery(rewrittenOperations);
-//
-//		assertEquals(rewrittenQuery.toString(), rewriteString.replaceAll("\\s+",
-//				""), rewrittenQuery.toString().replaceAll("\\s+", ""));
+
+		assertEquals(rewrittenQuery.toString(), rewriteString.replaceAll("\\s+",
+				""), rewrittenQuery.toString().replaceAll("\\s+", ""));
 		return rewrittenQuery.toString();
 	}
 }

@@ -97,8 +97,8 @@ class Transform extends TransformCopy {
 	private BasicPattern clauseToPattern(Dataset dataset, Clause clause) {
 		// new ElementTriplesBlock();
 		BasicPattern pattern = new BasicPattern();
-		for (Term term : clause.getBody()) {
-			pattern.add(termToTriple(dataset, term));
+		for (Term term: clause.getBody()){
+			pattern.add(termToTriple(dataset,term));
 		}
 		return pattern;
 	}
@@ -359,10 +359,13 @@ class Transform extends TransformCopy {
 
 	private void createDatasetQueryClauses() {
 		for (Dataset dataset : datasets) {
-			Node datasetNode = NodeFactory.createURI(dataset.getSparqlEndPoint().toString());
+			Node datasetNode = NodeFactory.createURI(dataset
+					.getSparqlEndPoint().toString());
 			for (QueryClause datasetClause : dataset.getQueryClauses()) {
-				datasetClause.setOpService(new OpService(datasetNode, new OpBGP(clauseToPattern(dataset,
-						datasetClause)), false));
+				// datasetClause.setOpService(new OpService(datasetNode, new
+				// OpBGP(clauseToPattern(dataset,datasetClause)), false));
+				datasetClause.setOpService(new OpService(datasetNode,
+						clauseToBGP(dataset, datasetClause), false));
 			}
 		}
 	}
@@ -449,10 +452,18 @@ class Transform extends TransformCopy {
 		Node subj = triple.getSubject();
 		Node obj = triple.getObject();
 		try {
-			if (pred.getURI().toString().equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")) {
-				return termFactory.getFunctionalTerm(obj.getURI().toString(), nodeToTerm(subj));
+			if (pred.getURI().toString()
+					.equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")) {
+				if (obj.isVariable()) {
+					return termFactory.getFunctionalTerm(pred.getURI()
+							.toString(), nodeToTerm(subj), nodeToTerm(obj));
+				} else {// Treat as URI, literal will throw exception
+					return termFactory.getFunctionalTerm(obj.getURI()
+							.toString(), nodeToTerm(subj));
+				}
 			} else {
-				return termFactory.getFunctionalTerm(pred.getURI().toString(), nodeToTerm(subj), nodeToTerm(obj));
+				return termFactory.getFunctionalTerm(pred.getURI().toString(),
+						nodeToTerm(subj), nodeToTerm(obj));
 			}
 		} catch (UnsupportedOperationException e) {
 			throw e;

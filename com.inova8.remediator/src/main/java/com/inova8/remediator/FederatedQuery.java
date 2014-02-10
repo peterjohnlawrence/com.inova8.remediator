@@ -13,11 +13,13 @@ public class FederatedQuery {
 
 	private Query query;
 	private Op operations;
+	private Op simplifiedOperations;
+
+
 	private QueryVars queryVars;
-	private QueryPlan queryPlan;
+
 	private Transform transform;
 
-	private OntModel vocabularyModel;
 
 	public FederatedQuery(String queryString) {
 		super();
@@ -26,12 +28,16 @@ public class FederatedQuery {
 		this.operations = Algebra.compile(this.query);
 		queryVars = new QueryVars(
 				OpVars.mentionedVars(this.operations));
+		Simplifier  simplifier = new Simplifier();
+		this.simplifiedOperations = Transformer.transform(simplifier, this.operations);
 	}
 
 	public Op getOperations() {
 		return operations;
 	}
-
+	public Op getSimplifiedOperations() {
+		return simplifiedOperations;
+	}
 	public Query getQuery() {
 		return query;
 	}
@@ -50,9 +56,11 @@ public class FederatedQuery {
 
 	public Op rewrite(Void voidModel, Boolean optimize) {
 
+
+		
 		transform = new Transform(queryVars,	voidModel, optimize);
 		
-		Op op = Transformer.transform(transform, this.operations);
+		Op op = Transformer.transform(transform, this.simplifiedOperations);
 
 		return op;
 

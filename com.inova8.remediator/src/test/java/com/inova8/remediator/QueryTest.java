@@ -42,9 +42,6 @@ import org.slf4j.LoggerFactory ;
 
 public class QueryTest {
 	
-	private static Logger logger = LoggerFactory.getLogger("stdout");
-    
-
 	static String readFile(String path, Charset encoding) throws IOException {
 		byte[] encoded = Files.readAllBytes(Paths.get(path));
 		return encoding.decode(ByteBuffer.wrap(encoded)).toString();
