@@ -10,10 +10,6 @@ import java.util.Set;
 import org.apache.jena.atlas.logging.Log;
 import org.apache.xerces.util.URI;
 import org.apache.xerces.util.URI.MalformedURIException;
-import com.inova8.requiem.rewriter.Clause;
-import com.inova8.requiem.rewriter.Term;
-import com.inova8.requiem.rewriter.TermFactory;
-import com.inova8.requiem.rewriter.Variable;
 
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
@@ -28,6 +24,10 @@ import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.shared.PrefixMapping;
+import com.inova8.requiem.rewriter.Clause;
+import com.inova8.requiem.rewriter.Term;
+import com.inova8.requiem.rewriter.TermFactory;
+import com.inova8.requiem.rewriter.Variable;
 
 class Dataset {
 	protected OntResource dataset;

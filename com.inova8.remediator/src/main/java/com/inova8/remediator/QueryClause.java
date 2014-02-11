@@ -2,10 +2,6 @@ package com.inova8.remediator;
 
 import org.apache.xerces.util.URI;
 import org.apache.xerces.util.URI.MalformedURIException;
-import com.inova8.requiem.rewriter.Clause;
-import com.inova8.requiem.rewriter.FunctionalTerm;
-import com.inova8.requiem.rewriter.Term;
-import com.inova8.requiem.rewriter.Variable;
 
 import com.hp.hpl.jena.graph.Node;
 import com.hp.hpl.jena.graph.NodeFactory;
@@ -13,6 +9,10 @@ import com.hp.hpl.jena.graph.Triple;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.sparql.algebra.op.OpService;
+import com.inova8.requiem.rewriter.Clause;
+import com.inova8.requiem.rewriter.FunctionalTerm;
+import com.inova8.requiem.rewriter.Term;
+import com.inova8.requiem.rewriter.Variable;
 
 public class QueryClause extends Clause implements Comparable<QueryClause>{
 

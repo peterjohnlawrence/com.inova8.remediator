@@ -7,11 +7,6 @@ import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 import org.apache.jena.atlas.logging.Log;
-import com.inova8.requiem.parser.ELHIOParser;
-import com.inova8.requiem.rewriter.Clause;
-import com.inova8.requiem.rewriter.Term;
-import com.inova8.requiem.rewriter.TermFactory;
-import com.inova8.workspace.Workspace;
 
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
@@ -23,10 +18,21 @@ import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
-import com.hp.hpl.jena.rdf.model.*;
+import com.hp.hpl.jena.rdf.model.InfModel;
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Property;
+import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.rdf.model.Statement;
+import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.reasoner.Reasoner;
 import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.vocabulary.OWL;
+import com.inova8.requiem.parser.ELHIOParser;
+import com.inova8.requiem.rewriter.Clause;
+import com.inova8.requiem.rewriter.Term;
+import com.inova8.requiem.rewriter.TermFactory;
+import com.inova8.workspace.Workspace;
 
 class Void {
 	private Workspace workspace;

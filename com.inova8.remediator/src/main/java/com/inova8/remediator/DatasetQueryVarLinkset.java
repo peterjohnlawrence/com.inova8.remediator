@@ -12,30 +12,6 @@ public class DatasetQueryVarLinkset {
 		this.queryVar = queryVar;
 		this.linkset = linkset;
 	}
-	public Dataset getDataset() {
-		return dataset;
-	}
-	public QueryVar getQueryVar() {
-		return queryVar;
-	}
-	public Linkset getLinkset() {
-		return linkset;
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((dataset == null) ? 0 : dataset.hashCode());
-		result = prime * result + ((linkset == null) ? 0 : linkset.hashCode());
-		result = prime * result + ((queryVar == null) ? 0 : queryVar.hashCode());
-		return result;
-	}
-
-	@Override
-	public String toString() {
-		return "DatasetQueryVarLinkset [dataset=" + dataset + ", queryVar=" + queryVar + ", linkset=" + linkset + "]";
-	}
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -61,5 +37,29 @@ public class DatasetQueryVarLinkset {
 		} else if (!queryVar.equals(other.queryVar))
 			return false;
 		return true;
+	}
+	public Dataset getDataset() {
+		return dataset;
+	}
+	public Linkset getLinkset() {
+		return linkset;
+	}
+
+	public QueryVar getQueryVar() {
+		return queryVar;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((dataset == null) ? 0 : dataset.hashCode());
+		result = prime * result + ((linkset == null) ? 0 : linkset.hashCode());
+		result = prime * result + ((queryVar == null) ? 0 : queryVar.hashCode());
+		return result;
+	}
+	@Override
+	public String toString() {
+		return "DatasetQueryVarLinkset [dataset=" + dataset + ", queryVar=" + queryVar + ", linkset=" + linkset + "]";
 	}
 }

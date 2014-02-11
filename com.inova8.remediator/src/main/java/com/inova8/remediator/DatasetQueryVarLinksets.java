@@ -2,7 +2,6 @@ package com.inova8.remediator;
 
 import java.util.HashSet;
 
-//TODO public class DatasetQueryVarLinksets extends HashMap<DatasetQueryVarLinkset, LinksetOpService> {
 	public class DatasetQueryVarLinksets extends HashSet<DatasetQueryVarLinkset> {
 	/**
 	 * 
@@ -11,6 +10,6 @@ import java.util.HashSet;
 
 	public DatasetQueryVarLinksets() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 }

@@ -2,6 +2,7 @@ package com.inova8.remediator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntResource;
 import com.hp.hpl.jena.rdf.model.Resource;
@@ -29,23 +30,7 @@ public class Partitions {
 				triples)) != null;
 	}
 
-	public boolean contains(String string) {
-		boolean test = partitions.containsKey(string);
-		return test;
-	}
-	public Integer getEntities(String className) {
-		
-		return ((ClassPartition) partitions.get(className)).getEntities();
-	}
-	public Integer getTriples(String propertyName) {
-		
-		return ((PropertyPartition) partitions.get(propertyName)).getTriples();
-	}
 	public void addStatisticsToModel(OntModel statisticsModel, Resource datasetStatistics) {
-		// <dataset>
-		// void:classPartition [ void:class <class>; void:entities <entities>];
-		// void:classPartition [ void:class <class>; void:entities <entities>];
-		// .
 		
 		//Remove existing partition information
 		ArrayList<Resource> cpo = new ArrayList<Resource>();
@@ -89,5 +74,17 @@ public class Partitions {
 				datasetStatistics.addProperty(Void.classPartition, bNode);
 			}
 		}
+	}
+	public boolean contains(String string) {
+		boolean test = partitions.containsKey(string);
+		return test;
+	}
+	public Integer getEntities(String className) {
+		
+		return ((ClassPartition) partitions.get(className)).getEntities();
+	}
+	public Integer getTriples(String propertyName) {
+		
+		return ((PropertyPartition) partitions.get(propertyName)).getTriples();
 	}
 }

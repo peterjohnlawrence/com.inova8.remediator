@@ -1,6 +1,5 @@
 package com.inova8.remediator;
 
-import java.io.ByteArrayInputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -8,17 +7,7 @@ import java.util.Set;
 
 import org.apache.jena.atlas.logging.Log;
 import org.apache.xerces.util.URI;
-
 import org.apache.xerces.util.URI.MalformedURIException;
-
-import com.inova8.requiem.parser.ELHIOParser;
-import com.inova8.requiem.rewriter.Clause;
-import com.inova8.requiem.rewriter.FunctionalTerm;
-import com.inova8.requiem.rewriter.Rewriter;
-import com.inova8.requiem.rewriter.Term;
-import com.inova8.requiem.rewriter.TermFactory;
-import com.inova8.requiem.rewriter.Variable;
-import org.semanticweb.owl.model.OWLOntologyURIMapper;
 
 import com.hp.hpl.jena.graph.Node;
 import com.hp.hpl.jena.graph.NodeFactory;
@@ -32,6 +21,13 @@ import com.hp.hpl.jena.sparql.algebra.op.OpService;
 import com.hp.hpl.jena.sparql.algebra.op.OpUnion;
 import com.hp.hpl.jena.sparql.core.BasicPattern;
 import com.hp.hpl.jena.sparql.core.Var;
+import com.inova8.requiem.parser.ELHIOParser;
+import com.inova8.requiem.rewriter.Clause;
+import com.inova8.requiem.rewriter.FunctionalTerm;
+import com.inova8.requiem.rewriter.Rewriter;
+import com.inova8.requiem.rewriter.Term;
+import com.inova8.requiem.rewriter.TermFactory;
+import com.inova8.requiem.rewriter.Variable;
 
 class Transform extends TransformCopy {
 	final private QueryVars queryVars;

@@ -12,12 +12,10 @@ public class Linksets extends ArrayList<Linkset>{
 
 	public Linksets() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Linksets(Collection<? extends Linkset> c) {
 		super(c);
-		// TODO Auto-generated constructor stub
 	}
 
 	public void updateStatistics() {
