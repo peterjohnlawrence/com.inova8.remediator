@@ -146,7 +146,7 @@ public class QueryClause extends Clause implements Comparable<QueryClause>{
 	private Double selectivityPredicate(String predicateName) {
 		Integer numberPredicateTriples = dataset.getPartitions().getTriples(predicateName);
 		if (numberPredicateTriples == null) {
-			return (Double) null;
+			return null;
 		} else {
 			Double selectivity = (double) numberPredicateTriples / (double) (dataset.getTriples());
 			return selectivity;

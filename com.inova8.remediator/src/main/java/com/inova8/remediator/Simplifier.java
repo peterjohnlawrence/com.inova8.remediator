@@ -8,7 +8,6 @@ import com.hp.hpl.jena.sparql.algebra.Op;
 import com.hp.hpl.jena.sparql.algebra.TransformCopy;
 import com.hp.hpl.jena.sparql.algebra.op.*;
 import com.hp.hpl.jena.sparql.core.BasicPattern;
-import com.inova8.requiem.rewriter.Term;
 
 public class Simplifier extends TransformCopy {
 

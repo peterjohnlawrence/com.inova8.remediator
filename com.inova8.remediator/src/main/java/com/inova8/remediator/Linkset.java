@@ -2,7 +2,6 @@ package com.inova8.remediator;
 
 import org.apache.jena.atlas.logging.Log;
 
-import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntResource;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecution;
@@ -23,7 +22,6 @@ public class Linkset extends Dataset {
 	private OntResource objectsTarget;
 	private OntResource objectsClass;
 	private Dataset subset;
-	//private HashMap<QueryVar,OpService> queryVarLinksetServices = new  HashMap<QueryVar,OpService>();
 
 	private String linksetVocabularyQuery = "PREFIX void: <" + Void.getURI()
 			+ ">\n"
@@ -54,11 +52,6 @@ public class Linkset extends Dataset {
 		return (this.sparqlEndPoint != null && this.linkPredicate != null
 				&& this.subjectsClass != null && this.objectsClass != null);
 	}
-
-//	public void addOpService(QueryVar queryVar, OpService opService) {
-//		this.queryVarLinksetServices.put(queryVar, opService);
-//	}
-
 
 	public Resource getLinkPredicate() {
 		return linkPredicate;

@@ -1,6 +1,5 @@
 package com.inova8.remediator;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
 //TODO public class DatasetQueryVarLinksets extends HashMap<DatasetQueryVarLinkset, LinksetOpService> {

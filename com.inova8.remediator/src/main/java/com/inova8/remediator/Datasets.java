@@ -74,13 +74,13 @@ public class Datasets extends ArrayList<Dataset> {
 		}
 	}
 	public Dataset getDataset(OntResource datasetNode){
-		if (datasetNode==null ) return (Dataset)null;
+		if (datasetNode==null ) return null;
 		
 		for (Dataset dataset : this) {
 			if(dataset.getDataset().equals(datasetNode)) return dataset;
 	
 		}
-		return (Dataset)null;
+		return null;
 	}
 
 	public OntModel getStatisticsModel() {

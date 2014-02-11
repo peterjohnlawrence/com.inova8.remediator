@@ -1,6 +1,5 @@
 package com.inova8.remediator;
 
-import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.sparql.algebra.Algebra;

@@ -2,7 +2,6 @@ package com.inova8.remediator;
 
 import java.io.ByteArrayInputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -36,8 +35,6 @@ import com.hp.hpl.jena.sparql.core.Var;
 
 class Transform extends TransformCopy {
 	final private QueryVars queryVars;
-	private ByteArrayInputStream ontologyInputStream = null;
-	private OWLOntologyURIMapper owlOntologyURIMapper = null;
 
 	private static TermFactory termFactory = new TermFactory();
 	private static final ELHIOParser parser = new ELHIOParser(termFactory);
@@ -52,7 +49,6 @@ class Transform extends TransformCopy {
 
 
 	private Boolean optimize;
-	//HashMap<DatasetQueryVarLinkset, LinksetOpService> linksetOpServices = new HashMap<DatasetQueryVarLinkset, LinksetOpService>();
 	private DatasetQueryVarLinksets linksetOpServices = new DatasetQueryVarLinksets ();
 
 	Transform(QueryVars queryVars, Void voidModel, Boolean optimize) {
@@ -61,8 +57,6 @@ class Transform extends TransformCopy {
 		// TODO replace variables with voidModel references
 		this.voidModel = voidModel;
 		this.optimize = optimize;
-		this.ontologyInputStream = voidModel.writeVocabularyModel();
-		this.owlOntologyURIMapper = voidModel.getWorkspace().getOWLOntologyURIMapper();
 		this.datasets = voidModel.getDatasets();
 		this.linksets = voidModel.getLinksets();
 	}
@@ -95,7 +89,6 @@ class Transform extends TransformCopy {
 	}
 
 	private BasicPattern clauseToPattern(Dataset dataset, Clause clause) {
-		// new ElementTriplesBlock();
 		BasicPattern pattern = new BasicPattern();
 		for (Term term: clause.getBody()){
 			pattern.add(termToTriple(dataset,term));
