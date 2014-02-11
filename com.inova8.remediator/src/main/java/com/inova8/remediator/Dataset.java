@@ -26,16 +26,18 @@ import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.QuerySolutionMap;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.shared.PrefixMapping;
 
 class Dataset {
 	protected OntResource dataset;
-
-	protected OntModel model;
+	private Resource datasetStatistics;
+	protected Void voidInstance;
 	protected OntResource sparqlEndPoint;
 	private OntResource uriSpace;
 	protected Vocabularies vocabularies = new Vocabularies();
 	private Integer triples;
+
 
 	private Integer entities;
 	private Integer classes;
@@ -56,6 +58,8 @@ class Dataset {
 			+ "SELECT ?vocabulary \n" + "WHERE  {\n"
 			+ "    ?dataset rdf:type void:Dataset .\n"
 			+ "    ?dataset void:vocabulary ?vocabulary .\n" + "}\n";
+
+
 	private static String propertyPartitionStatisticsQuery = "SELECT  ?p (COUNT(DISTINCT ?o ) AS ?count )\n"
 			+ "WHERE  { ?s ?p ?o }\n" + "GROUP BY ?p\n" + "ORDER BY ?count";
 	private static String classPartitionStatisticsQuery = "SELECT  ?class (COUNT(?s) AS ?count )\n"
@@ -104,21 +108,20 @@ class Dataset {
     
 	private static String variableClassName =Variable.class.getName();
 	
-	Dataset(OntModel model, OntResource dataset,
+	protected Dataset(Void voidInstance, OntResource dataset,
 			OntResource sparqlEndPoint) {
 
-		this.model = model;
+		this.voidInstance = voidInstance;
 		this.dataset = dataset;
-
 		this.sparqlEndPoint = sparqlEndPoint;
 
 	}
 
-	Dataset(OntModel model, OntResource dataset,
+	Dataset(Void voidInstance, OntResource dataset,
 			OntResource sparqlEndPoint, OntResource uriSpace, String prefix)
 			throws MalformedURIException {
 
-		this.model = model;
+		this.voidInstance = voidInstance;
 		this.dataset = dataset;
 		this.sparqlEndPoint = sparqlEndPoint;
 		this.uriSpace = uriSpace;
@@ -128,7 +131,8 @@ class Dataset {
 		} else {
 			this.prefix = prefix;
 		}
-		this.partitions = new Partitions(model);
+		this.partitions = new Partitions(this.voidInstance);
+		this.datasetStatistics = voidInstance.getStatisticsModel().createResource(dataset.getURI());
 	}
 
 	public OntResource getDataset() {
@@ -366,7 +370,7 @@ class Dataset {
 		return termFactory.getFunctionalTerm("Q", bodyVariables.toArray(vAtom));
 	}
 
-	public Integer getObjects() {
+	public Integer getDistinctObjects() {
 		return distinctObjects;
 	}
 
@@ -405,6 +409,13 @@ class Dataset {
 	Vocabularies getVocabularies() {
 		return this.vocabularies;
 	}
+	public void setDistinctSubjects(Integer distinctSubjects) {
+		this.distinctSubjects = distinctSubjects;
+	}
+
+	public void setDistinctObjects(Integer distinctObjects) {
+		this.distinctObjects = distinctObjects;
+	}
 
 	boolean isRecognizedTerm(Term term) {
 		// TODO allow for variableArity of 0
@@ -442,21 +453,6 @@ class Dataset {
 	}
 
 	private boolean isRecognizedURI(Term term) {
-		//TODO replace or eliminate Term, declaration so pure Jena
-		//TODO test if a functional term or a variable
-		
-//		switch(term.getClass().getName()){
-//		case "org.oxford.comlab.requiem.rewriter.Variable":
-//			return false;
-//		case "org.oxford.comlab.requiem.rewriter.FunctionalTerm":
-//			try {
-//				URI uri = new URI(term.getName());
-//				return isRecognizedURI(uri.toString());
-//			} catch (MalformedURIException e) {
-//				return true;
-//			}
-//		default: return false;
-//		}
 		try {
 			URI uri = new URI(term.getName());
 			return isRecognizedURI(uri.toString());
@@ -486,7 +482,7 @@ class Dataset {
 		QuerySolutionMap binding = new QuerySolutionMap();
 		binding.add("dataset", dataset);
 		Query query = QueryFactory.create(datasetVocabularyQuery);
-		QueryExecution qexec = QueryExecutionFactory.create(query, model,
+		QueryExecution qexec = QueryExecutionFactory.create(query, voidInstance.getVoidModel(),
 				binding);
 
 		try {
@@ -518,8 +514,8 @@ class Dataset {
 		this.distinctObjects = objects;
 	}
 
-	public void setPredicates(Integer predicates) {
-		this.properties = predicates;
+	public void setProperties(Integer properties) {
+		this.properties = properties;
 	}
 
 	public void setPrefix(String prefix) {
@@ -555,34 +551,11 @@ class Dataset {
 		return "Dataset:"+uriSpace.toString();
 	}
 
-	private void updateClassPartitionStatistics() {
-		Query query = QueryFactory.create(classPartitionStatisticsQuery);
-		QueryExecution qexec = QueryExecutionFactory.sparqlService(
-				this.sparqlEndPoint.toString(), query);
 
-		try {
-			ResultSet results = qexec.execSelect();
-			for (; results.hasNext();) {
-				QuerySolution soln = results.nextSolution();
-				OntResource clazz = soln.getResource("class").as(
-						OntResource.class);
-				Integer triples = (soln.getLiteral("count") != null) ? soln
-						.getLiteral("count").getInt() : null;
-				partitions.addClassPartition(clazz, triples);
-			}
-		} catch (Exception e) {
-			Log.debug(
-					Dataset.class,
-					"Unable to connect to SPARQLEndpoint to execute classPartitionStatisticsQuery: "
-							+ this.sparqlEndPoint.toString());
-		} finally {
-			qexec.close();
-		}
-	}
 
-	public void updatePartitions(OntModel voidModel) {
+	public void updatePartitions() {
 		OntModelSpec partitionModelSpec = new OntModelSpec(OntModelSpec.OWL_MEM);
-		partitionModelSpec.setDocumentManager(voidModel.getDocumentManager());
+		partitionModelSpec.setDocumentManager(voidInstance.getVoidModel().getDocumentManager());
 		partitionModelSpec.getDocumentManager().setProcessImports(true);
 
 		OntModel partitionModel = ModelFactory
@@ -599,7 +572,6 @@ class Dataset {
 
 		updateClassPartition(partitionModel);
 		updatePropertyPartition(partitionModel);
-		writePartitionsToModel();
 
 	}
 
@@ -622,7 +594,32 @@ class Dataset {
 			qexec.close();
 		}
 	}
+	
+	private void updateClassPartitionStatistics() {
+		Query query = QueryFactory.create(classPartitionStatisticsQuery);
+		QueryExecution qexec = QueryExecutionFactory.sparqlService(
+				this.sparqlEndPoint.toString(), query);
 
+		try {
+			ResultSet results = qexec.execSelect();
+			for (; results.hasNext();) {
+				QuerySolution soln = results.nextSolution();
+				OntResource clazz = soln.getResource("class").as(
+						OntResource.class);
+				Integer entities = (soln.getLiteral("count") != null) ? soln
+						.getLiteral("count").getInt() : null;
+				partitions.addClassPartition(clazz, entities);
+			}
+		} catch (Exception e) {
+			Log.debug(
+					Dataset.class,
+					"Unable to connect to SPARQLEndpoint to execute classPartitionStatisticsQuery: "
+							+ this.sparqlEndPoint.toString());
+		} finally {
+			qexec.close();
+		}
+	}
+	
 	protected void updatePropertyPartition(OntModel partitionModel) {
 		Query query = QueryFactory.create(propertyPartitionQuery);
 		QueryExecution qexec = QueryExecutionFactory.create(query,
@@ -644,7 +641,7 @@ class Dataset {
 		}
 	}
 
-	private void updateDatasetPartitionStatistics() {
+	private void updateDatasetStatistics() {
 		Query query = QueryFactory.create(datasetStatisticsQuery);
 		QueryExecution qexec = QueryExecutionFactory.sparqlService(
 				this.sparqlEndPoint.toString(), query);
@@ -703,10 +700,10 @@ class Dataset {
 
 	public void updatePartitionStatistics() {
 		if (sparqlEndPoint != null) {
-			updateDatasetPartitionStatistics();
+			updateDatasetStatistics();
 			updatePropertyPartitionStatistics();
 			updateClassPartitionStatistics();
-			writePartitionsToModel();
+			addStatisticsToModel();
 		}
 	}
 
@@ -716,31 +713,31 @@ class Dataset {
 		return termFactory.getFunctionalTerm("Q", vAtom);
 	}
 
-	public void writePartitionsToModel() {
+	public void addStatisticsToModel() {
 
 		// Cleanup existing statistics
-		dataset.removeAll(Void.triples);
-		dataset.removeAll(Void.entities);
-		dataset.removeAll(Void.classes);
-		dataset.removeAll(Void.properties);
-		dataset.removeAll(Void.distinctSubjects);
-		dataset.removeAll(Void.distinctObjects);
+		datasetStatistics.removeAll(Void.triples);
+		datasetStatistics.removeAll(Void.entities);
+		datasetStatistics.removeAll(Void.classes);
+		datasetStatistics.removeAll(Void.properties);
+		datasetStatistics.removeAll(Void.distinctSubjects);
+		datasetStatistics.removeAll(Void.distinctObjects);
 
 		// Now add the new ones
 		if (this.getTriples() != null)
-			dataset.addLiteral(Void.triples, this.getTriples());
+			datasetStatistics.addLiteral(Void.triples, this.getTriples());
 		if (this.getEntities() != null)
-			dataset.addLiteral(Void.entities, this.getEntities());
+			datasetStatistics.addLiteral(Void.entities, this.getEntities());
 		if (this.getClasses() != null)
-			dataset.addLiteral(Void.classes, this.getClasses());
+			datasetStatistics.addLiteral(Void.classes, this.getClasses());
 		if (this.getProperties() != null)
-			dataset.addLiteral(Void.properties, this.getProperties());
+			datasetStatistics.addLiteral(Void.properties, this.getProperties());
 		if (this.getSubjects() != null)
-			dataset.addLiteral(Void.distinctSubjects, this.getSubjects());
-		if (this.getObjects() != null)
-			dataset.addLiteral(Void.distinctObjects, this.getObjects());
+			datasetStatistics.addLiteral(Void.distinctSubjects, this.getSubjects());
+		if (this.getDistinctObjects() != null)
+			datasetStatistics.addLiteral(Void.distinctObjects, this.getDistinctObjects());
 
-		partitions.write(model, dataset);
+		partitions.addStatisticsToModel(voidInstance.getStatisticsModel(), datasetStatistics);
 
 	}
 

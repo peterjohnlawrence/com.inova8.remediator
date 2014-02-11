@@ -34,6 +34,8 @@ class Void {
 
 	private OntModel voidModel;
 	private OntModel vocabularyModel;
+	private OntModel statisticsModel;
+
 	private InfModel infModel;
 	private Reasoner boundReasoner;
 	private Datasets datasets = new Datasets();
@@ -84,37 +86,39 @@ class Void {
 	 * @param voidURI
 	 *            the void uri
 	 */
-	Void(OntModel voidModel, String voidURI, Boolean gatherStatistics) {
-		this.voidModel = voidModel;
-		buildVoidModel(voidURI, gatherStatistics);
-	}
-
 	Void(Workspace workspace, String voidURI, Boolean gatherStatistics) {
 		this.workspace = workspace;
 		voidModelSpec = new OntModelSpec(OntModelSpec.OWL_MEM);
 		voidModelSpec.setDocumentManager(this.workspace.getDocumentManager());
 		voidModelSpec.getDocumentManager().setProcessImports(true);
 		voidModel = ModelFactory.createOntologyModel(voidModelSpec);
+		initializeModel(voidURI, gatherStatistics);
+	}
+	private void initializeModel(String voidURI, Boolean gatherStatistics)
+	{
+		statisticsModel = ModelFactory.createOntologyModel();
 		buildVoidModel(voidURI, gatherStatistics);
 		try {
 			conjunctiveClauses = parser.getClauses(this.writeVocabularyModel(), this.getWorkspace().getOWLOntologyURIMapper());
 		} catch (Exception e) {
-			Log.debug(this,
+			Log.warn(this,
 					"Failed to parse clauses: " + e.getMessage());
-		}
-
+		}	
 	}
 
 	private void buildVoidModel(String voidURI, Boolean gatherStatistics) {
 		this.voidModel.read(voidURI);
 		// TODO remove
-		//this.voidModel.writeAll(System.out, "RDF/XML-ABBREV");
+		// this.voidModel.writeAll(System.out, "RDF/XML-ABBREV");
 		loadVoidDatasets();
 		loadVoidLinksets();
 		buildVocabularyModel();
 		loadPartitions();
-		if (gatherStatistics)
+		if (gatherStatistics) {
 			updatePartitionStatistics();
+		} else {
+			loadPartitionStatistics();
+		}
 		buildInferenceModel();
 	}
 
@@ -128,9 +132,11 @@ class Void {
 		this.boundReasoner = ReasonerRegistry.getRDFSSimpleReasoner();
 		this.boundReasoner = this.boundReasoner.bindSchema(this.vocabularyModel);
 	}
-
+	public OntModel getStatisticsModel() {
+		return statisticsModel;
+	}
 	private void loadPartitions() {
-		datasets.updatePartitions(voidModel);
+		datasets.updatePartitions();
 	}
 	public ArrayList<Clause> getConjunctiveClauses() {
 		return conjunctiveClauses;
@@ -232,7 +238,7 @@ class Void {
 				OntResource uriSpace = (soln.getResource("uriSpace") != null) ? soln
 						.getResource("uriSpace").as(OntResource.class) : null;
 				String prefix = DS + index;
-				datasets.add(new Dataset(voidModel, dataset, sparqlEndPoint,
+				datasets.add(new Dataset(this, dataset, sparqlEndPoint,
 						uriSpace, prefix));
 			}
 		} catch (Exception e) {
@@ -280,7 +286,7 @@ class Void {
 				OntResource objectsClass = soln.getResource("objectsClass") != null ? soln
 						.getResource("objectsClass").as(OntResource.class)
 						: null;
-				linksets.add(new Linkset(voidModel, this.datasets, linkset, sparqlEndPoint,linkPredicate,
+				linksets.add(new Linkset(this, this.datasets, linkset, sparqlEndPoint,linkPredicate,
 						subjectsDataset,subjectsTarget, subjectsClass ,objectsDataset, objectsTarget,objectsClass));
 			}
 		} catch (Exception e) {
@@ -296,6 +302,10 @@ class Void {
 		partitionStatisticsAvailable = true;
 	}
 
+	public void loadPartitionStatistics(){
+		datasets.loadPartitionStatistics(voidModel);
+		partitionStatisticsAvailable = true;
+	}
 	public Boolean getPartitionStatisticsAvailable() {
 		return partitionStatisticsAvailable;
 	}

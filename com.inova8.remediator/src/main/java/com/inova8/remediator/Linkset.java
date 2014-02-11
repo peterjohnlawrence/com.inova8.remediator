@@ -32,12 +32,12 @@ public class Linkset extends Dataset {
 			+ "    ?linkset rdf:type void:Linkset .\n"
 			+ "    ?linkset void:vocabulary ?vocabulary .\n" + "}\n";
 
-	public Linkset(OntModel model, Datasets datasets, OntResource linkset,
+	public Linkset(Void voidInstance, Datasets datasets, OntResource linkset,
 			OntResource sparqlEndPoint, OntResource linkPredicate,
 			OntResource subjectsDataset, OntResource subjectsTarget,
 			OntResource subjectsClass, OntResource objectsDataset,
 			OntResource objectsTarget, OntResource objectsClass) {
-		super(model, linkset, sparqlEndPoint);
+		super(voidInstance, linkset, sparqlEndPoint);
 
 		this.linkPredicate = linkPredicate;
 		this.subjectsDataset =  datasets.getDataset(subjectsDataset);
@@ -98,7 +98,7 @@ public class Linkset extends Dataset {
 		QuerySolutionMap binding = new QuerySolutionMap();
 		binding.add("linkset", this.dataset);
 		Query query = QueryFactory.create(linksetVocabularyQuery);
-		QueryExecution qexec = QueryExecutionFactory.create(query, model,
+		QueryExecution qexec = QueryExecutionFactory.create(query, voidInstance.getVoidModel(),
 				binding);
 
 		try {

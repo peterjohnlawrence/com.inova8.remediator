@@ -22,8 +22,8 @@ class ClassPartition extends Partition {
 	 * @param clazz the class
 	 * @param entities the entities
 	 */
-	ClassPartition(OntModel model, OntResource clazz, Integer entities) {
-		super(model, clazz);
+	ClassPartition( OntResource clazz, Integer entities) {
+		super( clazz);
 		this.entities = entities;
 	}
 

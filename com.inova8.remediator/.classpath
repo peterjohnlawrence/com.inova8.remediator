@@ -5,7 +5,7 @@
 	<classpathentry kind="lib" path="LibraryJars/log4j-1.2.16.jar"/>
 	<classpathentry kind="lib" path="External JARS/HermiT.jar"/>
 	<classpathentry kind="lib" path="External JARS/antlr-3.1.jar"/>
-	<classpathentry kind="lib" path="External JARS/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="External JARS/junit-4.11.jar" sourcepath="C:/Users/PeterL/.m2/repository/junit/junit/4.11/junit-4.11-sources.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>

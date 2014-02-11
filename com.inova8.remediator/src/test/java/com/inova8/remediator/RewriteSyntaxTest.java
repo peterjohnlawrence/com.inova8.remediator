@@ -79,9 +79,6 @@ public class RewriteSyntaxTest {
 		path = "./test/models/";
 		queryFolder = "Q1";
 
-		ontologyModelFile = readFile(path + queryFolder + "/model.txt",
-				Charset.defaultCharset());
-
 		workspace = new Workspace(new File(path + queryFolder), true);
 		URL = "http://inova8.com/people/void";
 		queryVoid = new Void(workspace, URL, true);

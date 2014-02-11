@@ -44,7 +44,6 @@ public class RewritePerformanceTest {
 	}
 
 	String URL;
-	String ontologyModelFile;
 	String queryString;
 	String rewriteString;
 	String planString;
@@ -65,9 +64,6 @@ public class RewritePerformanceTest {
 	public void setUp() throws Exception {
 		path = "./test/models/";
 		queryFolder = "Q1";
-
-		ontologyModelFile = readFile(path + queryFolder + "/model.txt",
-				Charset.defaultCharset());
 
 		workspace = new Workspace(new File(path + queryFolder), true);
 		URL = "http://inova8.com/people/void";

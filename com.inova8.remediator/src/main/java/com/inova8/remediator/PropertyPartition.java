@@ -1,13 +1,12 @@
 package com.inova8.remediator;
 
-import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntResource;
 
 public class PropertyPartition extends Partition {
 	private Integer triples;
 
-	public PropertyPartition(OntModel model, OntResource property, Integer triples) {
-		super(model, property);
+	public PropertyPartition( OntResource property, Integer triples) {
+		super( property);
 		this.triples = triples;
 	}
 
@@ -26,6 +25,8 @@ public class PropertyPartition extends Partition {
 	public void setTriples(Integer triples) {
 		this.triples = triples;
 	}
+	
+
 	@Override
 	public String toString() {
 		return this.partition.toString();

@@ -97,9 +97,8 @@ public class SimplifierTest extends TestCase {
 
 		Query query = QueryFactory.create(queryString);
 		Op operations = Algebra.compile(query);
-		//Simplifier  simplifier = new Simplifier();
-		//TransformCopy  simplifier = new TransformCopy();
-		TransformBase  simplifier = new TransformBase();
+		Simplifier  simplifier = new Simplifier();
+
 		Op simplifiedOp = Transformer.transform(simplifier, operations);
 		simplifiedOp.toString();
 		Query rewrittenQuery = OpAsQuery.asQuery(simplifiedOp);

@@ -44,25 +44,20 @@ public class VoidTest {
 
 	@Test
 	public final void testBuildVocabulary() {
-		Void queryVoid = new Void(voidModel, URL,true);
-		//queryVoid.buildVocabularyModel();
-		queryVoid.getVocabularyModel().write(System.out,"RDF/XML-ABBREV");
+		Void queryVoid = new Void(workspace, URL,false);
+		queryVoid.getVoidModel().write(System.out,"TURTLE");
+		queryVoid.getVocabularyModel().write(System.out,"TURTLE");
 	}
 
 	@Test
-	public final void testVoid() {
-		Void queryVoid = new Void(voidModel, URL,true);
-		// ontModel.getBaseModel().write(System.out,"RDF/XML-ABBREV");
-		//queryVoid.updatePartitionStatistics();
-
-		queryVoid.getVoidModel().write(System.out,"RDF/XML-ABBREV");
+	public final void testStatisticsQuery() {
+		Void queryVoid = new Void(workspace, URL,true);
+		queryVoid.getStatisticsModel().write(System.out,"TURTLE");
 	}
 	
 	@Test
-	public final void testVoidWorkspace() {
-		Void queryVoid = new Void(workspace, URL,true);
-		// ontModel.getBaseModel().write(System.out,"RDF/XML-ABBREV");
-		//queryVoid.updatePartitionStatistics();
-		queryVoid.getVoidModel().write(System.out,"RDF/XML-ABBREV");
+	public final void testStatisticsRead() {
+		Void queryVoid = new Void(workspace, URL,false);
+		queryVoid.getStatisticsModel().write(System.out,"TURTLE");
 	}
 }

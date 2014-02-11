@@ -5,10 +5,10 @@ import com.hp.hpl.jena.ontology.OntResource;
 
 abstract class Partition {
 	protected OntResource partition;
-	protected OntModel model;
-	Partition(OntModel model, OntResource partition ) {
+
+	Partition(OntResource partition ) {
 		super();
-		this.model = model;
+
 		this.partition = partition;
 	}
 	

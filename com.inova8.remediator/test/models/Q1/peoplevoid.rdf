@@ -22,7 +22,9 @@
     <owl:imports rdf:resource="http://rdfs.org/ns/void"/>
     <owl:imports rdf:resource="http://inova8.com/void/movie-void"/>
     <owl:imports rdf:resource="http://inova8.com/void/book-void"/>
-    <owl:imports rdf:resource="http://inova8.com/void/people-void"/>  </owl:Ontology>
+    <owl:imports rdf:resource="http://inova8.com/void/people-void"/>  
+	<owl:imports rdf:resource="http://inova8.com/people/void/statistics"/> 
+	</owl:Ontology>
 </rdf:RDF>
 
 <!-- Created with TopBraid -->
