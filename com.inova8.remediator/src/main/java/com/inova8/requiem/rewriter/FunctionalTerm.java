@@ -7,7 +7,6 @@ public class FunctionalTerm extends Term{
     protected final String m_name;
     protected Term[] m_arguments;
     
-    //TODO
     public Integer originIndex = null;
     
     protected FunctionalTerm(String name,Term[] arguments) {

@@ -125,8 +125,6 @@ class Void {
 
 	private void buildVoidModel(String voidURI, Boolean gatherStatistics) {
 		this.voidModel.read(voidURI);
-		// TODO remove
-		// this.voidModel.writeAll(System.out, "RDF/XML-ABBREV");
 		loadVoidDatasets();
 		loadVoidLinksets();
 		buildVocabularyModel();
@@ -140,7 +138,6 @@ class Void {
 	}
 
 	private void buildInferenceModel() {
-		// TODO Auto-generated method stub
 
 		OntModel vocabularyModel = this.getVocabularyModel();
 		vocabularyModel.loadImports();

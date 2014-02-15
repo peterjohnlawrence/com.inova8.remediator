@@ -12,17 +12,14 @@ class QueryPlan extends ArrayList<MergedJoin>{
 
 	public QueryPlan() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public QueryPlan(Collection<? extends MergedJoin> c) {
 		super(c);
-		// TODO Auto-generated constructor stub
 	}
 
 	public QueryPlan(int initialCapacity) {
 		super(initialCapacity);
-		// TODO Auto-generated constructor stub
 	}
 
 

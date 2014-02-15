@@ -207,7 +207,7 @@ class Dataset {
 			// clause, so no need to add new clause
 			termFound = false;
 			for (Term thatAtom : thatTerm) {
-				// TODO string match is not the best technique if the toString
+				// String match is not the best technique if the toString
 				// changes but it works and toString is unlikely to change.
 				if (thatAtom.toString().equals(thisAtom.toString())) {
 					termFound = true;
@@ -794,7 +794,6 @@ class Dataset {
 	}
 
 	public DatasetQueryVarLinkset getDatasetQueryVarLinkset(QueryVar linkQueryVariable, Linkset linkset) {
-		// TODO Change lookup key 
 		DatasetQueryVarLinkset tempDatasetQueryVarLinkset = new DatasetQueryVarLinkset(this, linkQueryVariable,linkset);
 		if(datasetQueryVarLinksets.containsKey(tempDatasetQueryVarLinkset)){
 			return datasetQueryVarLinksets.get(tempDatasetQueryVarLinkset);
@@ -814,8 +813,6 @@ class Dataset {
 			}
 		} else if (term instanceof Variable) {
 			QueryVar queryVar = queryVars.get(term.getMinVariableIndex());
-			//TODO is it really a Node_variable or a Var
-			//return NodeFactory.createVariable(queryVar.getLinkedName(dataset));
 			return Var.alloc(queryVar.getLinkedName(this));
 			} else {
 			return null;

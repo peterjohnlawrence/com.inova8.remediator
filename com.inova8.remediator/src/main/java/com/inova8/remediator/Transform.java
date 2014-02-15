@@ -340,10 +340,6 @@ class Transform {
 							linkQueryVariable.addDatasetQueryVar(objectDatasetQueryVarLinkset, linksetOpService,
 									subjectDatasetQueryVarLinkset);
 
-							//TODO
-							//linksetOpServices.put(subjectDatasetQueryVarLinkset, linksetOpService);
-							//linksetOpServices.put(objectDatasetQueryVarLinkset, linksetOpService);
-
 							linksetOpServices.add(subjectDatasetQueryVarLinkset);
 							linksetOpServices.add(objectDatasetQueryVarLinkset);
 
@@ -390,7 +386,6 @@ class Transform {
 		QueryVars resolvedQueryVars = new QueryVars();
 		QueryClauses resolvedClauses = new QueryClauses();
 		HashSet<QueryVar> lowestCostQueryVars;
-		// TODO queryVariables.locateDatasetClauses(datasets);
 		// Keep on iterating through list of query variables until none left to
 		// resolve.
 		while (resolvedQueryVars.size() < queryVars.size()) {

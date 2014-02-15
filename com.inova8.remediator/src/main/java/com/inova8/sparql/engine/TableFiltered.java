@@ -28,7 +28,6 @@ public class TableFiltered extends TableN{
 					if (!vars.contains(var))  vars.add(var);
 				}
 			}
-			//TODO check for duplicates
 			newRows.add(newBinding);
 		}
 		rows = new ArrayList<Binding>(newRows);

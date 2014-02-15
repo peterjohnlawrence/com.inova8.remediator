@@ -134,10 +134,7 @@ public class ELHIOClausifier {
         return clauses;
 	}
 	
-
-	//TODO
 	    private void addClauses(OWLDataPropertyExpression[] axiom) {
-		// TODO Auto-generated method stub
 		if(isValidDataPropertyInclusion(axiom)){
 			//TODO String role0 = axiom[0].getNamedProperty().toString();
 			String role0 = axiom[0].asOWLDataProperty().getURI().toString();
