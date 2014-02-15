@@ -20,7 +20,7 @@ public class Linksets extends ArrayList<Linkset>{
 
 	public void updateStatistics() {
 		for (Linkset linkset : this) {
-			linkset.updatePartitionStatistics();
+			linkset.queryPartitionStatistics();
 		}
 	}
 }

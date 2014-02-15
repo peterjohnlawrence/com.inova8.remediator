@@ -68,18 +68,21 @@ public class Resolution{
         Substitution unifier = Substitution.mostGeneralUnifier(mainAtom, sideAtom, this.m_saturator.getTermFactory());
         
         if (unifier == null)
-            return null;
-        
+            return null;        
         Set<Term> newBody = new LinkedHashSet<Term>();
         //Copy the atoms from the main premise
         for (int index=0; index < mainPremise.getBody().length; index++){
             if (index != mainPremiseAtomIndex){
-                newBody.add(mainPremise.getBody()[index].apply(unifier, this.m_saturator.getTermFactory()));
+            	Term newBodyAtom = mainPremise.getBody()[index].apply(unifier, this.m_saturator.getTermFactory());
+            	((FunctionalTerm)newBodyAtom).originIndex=((FunctionalTerm)mainPremise.getBody()[index]).originIndex;
+                newBody.add(newBodyAtom);
             }
         }
         //Copy the atoms from the side premise
         for (int index=0; index < sidePremiseRenamed.getBody().length;index++){
-            newBody.add(sidePremiseRenamed.getBody()[index].apply(unifier, this.m_saturator.getTermFactory()));
+        	Term newBodyAtom =sidePremiseRenamed.getBody()[index].apply(unifier, this.m_saturator.getTermFactory());
+        	((FunctionalTerm)newBodyAtom).originIndex=((FunctionalTerm)mainAtom).originIndex;
+            newBody.add(newBodyAtom);
         }
             
         //New body and head

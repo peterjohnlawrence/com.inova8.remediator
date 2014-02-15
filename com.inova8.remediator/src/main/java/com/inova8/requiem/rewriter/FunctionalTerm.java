@@ -7,9 +7,18 @@ public class FunctionalTerm extends Term{
     protected final String m_name;
     protected Term[] m_arguments;
     
+    //TODO
+    public Integer originIndex = null;
+    
     protected FunctionalTerm(String name,Term[] arguments) {
         m_name=name;
         m_arguments=arguments;
+    }
+    //TODO
+    protected FunctionalTerm(String name,Term[] arguments, Integer originIndex) {
+        m_name=name;
+        m_arguments=arguments;
+        this.originIndex =originIndex;
     }
     
     public String getName() {
@@ -41,10 +50,14 @@ public class FunctionalTerm extends Term{
         if (m_arguments.length==0 || substitution.isEmpty())
             return this;
         else {
+        	//TODO Copy the reference to the new term indicating the origin of the term that is being replaced
             Term[] arguments=new Term[m_arguments.length];
             for (int index=m_arguments.length-1;index>=0;--index)
                 arguments[index]=m_arguments[index].apply(substitution,termFactory);
-            return termFactory.getFunctionalTerm(m_name,arguments);
+            //TODO assign this.originIndex to new term
+             FunctionalTerm newTerm=termFactory.getFunctionalTerm(m_name,arguments);
+             newTerm.originIndex = this.originIndex;
+             return newTerm;
         }
     }
     
@@ -55,7 +68,10 @@ public class FunctionalTerm extends Term{
             Term[] arguments=new Term[m_arguments.length];
             for (int index=m_arguments.length-1;index>=0;--index)
                 arguments[index]=m_arguments[index].offsetVariables(termFactory,offset);
-            return termFactory.getFunctionalTerm(m_name,arguments);
+            
+            FunctionalTerm newTerm= termFactory.getFunctionalTerm(m_name,arguments);
+            newTerm.originIndex = this.originIndex;
+            return newTerm;
         }
     }
 
@@ -66,7 +82,10 @@ public class FunctionalTerm extends Term{
             Term[] arguments=new Term[m_arguments.length];
             for (int index=m_arguments.length-1;index>=0;--index)
                 arguments[index]=m_arguments[index].renameVariables(termFactory, mapping);
-            return termFactory.getFunctionalTerm(m_name,arguments);
+            
+            FunctionalTerm newTerm= termFactory.getFunctionalTerm(m_name,arguments);
+            newTerm.originIndex = this.originIndex;
+            return newTerm;
         }
     }
     

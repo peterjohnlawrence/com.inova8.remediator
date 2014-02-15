@@ -14,14 +14,15 @@ import com.hp.hpl.jena.graph.NodeFactory;
 import com.hp.hpl.jena.graph.Triple;
 import com.hp.hpl.jena.sparql.algebra.Op;
 import com.hp.hpl.jena.sparql.algebra.OpVars;
-import com.hp.hpl.jena.sparql.algebra.TransformCopy;
+import com.hp.hpl.jena.sparql.algebra.Transformer;
+
 import com.hp.hpl.jena.sparql.algebra.op.OpBGP;
 import com.hp.hpl.jena.sparql.algebra.op.OpSequence;
 import com.hp.hpl.jena.sparql.algebra.op.OpService;
 import com.hp.hpl.jena.sparql.algebra.op.OpUnion;
 import com.hp.hpl.jena.sparql.core.BasicPattern;
 import com.hp.hpl.jena.sparql.core.Var;
-import com.inova8.requiem.parser.ELHIOParser;
+
 import com.inova8.requiem.rewriter.Clause;
 import com.inova8.requiem.rewriter.FunctionalTerm;
 import com.inova8.requiem.rewriter.Rewriter;
@@ -29,14 +30,14 @@ import com.inova8.requiem.rewriter.Term;
 import com.inova8.requiem.rewriter.TermFactory;
 import com.inova8.requiem.rewriter.Variable;
 
-class Transform extends TransformCopy {
+class Transform {
 	final private QueryVars queryVars;
 
 	private static TermFactory termFactory = new TermFactory();
-	private static final ELHIOParser parser = new ELHIOParser(termFactory);
 	private static final Rewriter rewriter = new Rewriter();
 
-	private ArrayList<Clause> clauses = new ArrayList<Clause>();
+	private Clause originalClause;
+	private ArrayList<Clause> rewrittenClauses = new ArrayList<Clause>();
 	private ArrayList<OpBGP> ops = new ArrayList<OpBGP>();
 	private Datasets datasets;
 	private Linksets linksets;
@@ -57,11 +58,36 @@ class Transform extends TransformCopy {
 		this.linksets = voidModel.getLinksets();
 	}
 
+	public Op transform(RemediatorQuery remediatorQuery) {
+		if (OpBGP.isBGP(remediatorQuery.getSimplifiedOperations())) {
+			{
+				originalClause = BGPToClause((OpBGP) remediatorQuery.getSimplifiedOperations());
+				rewriteBGP(originalClause);
+				voidModel.InferVariableClasses(queryVars);
+				queryVars.locateDatasetClauses(datasets);
+				createLinksetQueryClauses();
+
+				if (optimize && ! voidModel.getPartitionStatisticsAvailable()){
+					Log.warn(this, "Statistics not queried nor read so optimization of query plan not avaiable. Heuristic will be used instead");
+					this.optimize=false;
+				}
+				createOptimalQueryPlan();
+				createDatasetQueryClauses(remediatorQuery);
+				return createOpSequence();
+			}
+		} else {
+			Log.warn(this, "Can only transform BGPs " + remediatorQuery.getSimplifiedOperations().toString());
+			return null;
+		}
+	}
+	
 	private Clause BGPToClause(OpBGP opBGP) {
 		Term[] bAtom = new Term[opBGP.getPattern().size()];
 		int index = 0;
 		for (Triple triple : opBGP.getPattern().getList()) {
 			bAtom[index] = tripleToTerm(triple);
+			//((FunctionalTerm)bAtom[index]).originIndex=(Integer)index;
+			((FunctionalTerm)bAtom[index]).originIndex=triple.hashCode();
 			index++;
 		}
 		Term hAtom = BGPToTerm(opBGP);
@@ -93,7 +119,7 @@ class Transform extends TransformCopy {
 	}
 
 	public ArrayList<Clause> getClauses() {
-		return clauses;
+		return rewrittenClauses;
 	}
 
 	public ArrayList<Dataset> getDatasets() {
@@ -122,17 +148,17 @@ class Transform extends TransformCopy {
 		}
 	}
 
-	private ArrayList<Clause> rewrite(Clause cl) throws Exception {
+	private ArrayList<Clause> rewrite(Clause clause) throws Exception {
 		ArrayList<Clause> original = new ArrayList<Clause>();
 		original = voidModel.getConjunctiveClauses();
-		original.add(cl);
+		original.add(clause);
 		// N (Naive: no optimizations), F (Full: forward/query subsumption and
 		// dependency graph pruning), or G (Greedy: Full plus greedy unfolding).
-		return rewriter.rewrite(original, "G");
+		return rewriter.rewrite(original, "N");
 	}
 
 	public void setClauses(ArrayList<Clause> clauses) {
-		this.clauses = clauses;
+		this.rewrittenClauses = clauses;
 	}
 
 	public void setOps(ArrayList<OpBGP> ops) {
@@ -148,14 +174,14 @@ class Transform extends TransformCopy {
 				return NodeFactory.createLiteral(term.toString());
 			}
 		} else if (term instanceof Variable) {
-			QueryVar var = queryVars.get(term.getMinVariableIndex());
-			return NodeFactory.createVariable(var.getLinkedName(dataset));
-		} else {
+			QueryVar queryVar = queryVars.get(term.getMinVariableIndex());
+			return Var.alloc(queryVar.getLinkedName(dataset));
+			} else {
 			return null;
 		}
 	}
 
-	private Triple termToTriple(Dataset dataset, Term term) {
+	public Triple termToTriple(Dataset dataset, Term term) {
 		if (term.getArity() == 1) {
 			Node clas = NodeFactory.createURI(term.getName());
 			Node object = termToNode(dataset, term.getArgument(0));
@@ -171,25 +197,7 @@ class Transform extends TransformCopy {
 		}
 	}
 
-	@Override
-	public Op transform(OpBGP opBGP) {
-
-		rewriteBGP(opBGP);
-
-		voidModel.InferVariableClasses(queryVars);
-
-		queryVars.locateDatasetClauses(datasets);
-
-		createLinksetQueryClauses();
-
-		// TODO Should be conditional on optimize &&
-		// voidModel.getPartitionStatisticsAvailable()
-		createOptimalQueryPlan();
-
-		createDatasetQueryClauses();
-
-		return createOpSequence();
-	}
+	
 
 	private OpSequence createOpSequence() {
 		OpSequence opSequence = OpSequence.create();
@@ -269,16 +277,16 @@ class Transform extends TransformCopy {
 	}
 	
 
-	private void rewriteBGP(OpBGP opBGP) {
-		Clause clause = BGPToClause(opBGP);
+	private void rewriteBGP(Clause originalClause) {
+		//Clause originalClause = BGPToClause(opBGP);
 		try {
-			clauses = rewrite(clause);
+			rewrittenClauses = rewrite(originalClause);
 			// clauses = rewriteDlite(clause);
 		} catch (Exception e) {
-			Log.debug(Transform.class, "Failed to rewrite clause " + clause.toString());
+			Log.debug(Transform.class, "Failed to rewrite clause " + originalClause.toString());
 			Log.debug(Transform.class, e.getStackTrace().toString());
 		}
-		for (Clause cl : clauses) {
+		for (Clause cl : rewrittenClauses) {
 			for (Dataset dataset : datasets) {
 				dataset.addClause(cl);
 			}
@@ -346,15 +354,22 @@ class Transform extends TransformCopy {
 		}
 	}
 
-	private void createDatasetQueryClauses() {
+	private void createDatasetQueryClauses(RemediatorQuery remediatorQuery) {
 		for (Dataset dataset : datasets) {
 			Node datasetNode = NodeFactory.createURI(dataset
 					.getSparqlEndPoint().toString());
 			for (QueryClause datasetClause : dataset.getQueryClauses()) {
-				// datasetClause.setOpService(new OpService(datasetNode, new
-				// OpBGP(clauseToPattern(dataset,datasetClause)), false));
+
+				Substituter substituter = new Substituter(
+						queryVars, datasetClause,
+						remediatorQuery.getSimplifiedTriples());
+				Op substitutedOperations = Transformer.transform(substituter,
+						remediatorQuery.getOperations());
+				optimize = false;
+
 				datasetClause.setOpService(new OpService(datasetNode,
-						clauseToBGP(dataset, datasetClause), false));
+						substitutedOperations, false));
+
 			}
 		}
 	}
@@ -436,7 +451,7 @@ class Transform extends TransformCopy {
 		}
 	}
 
-	private Term tripleToTerm(Triple triple) {
+	private FunctionalTerm tripleToTerm(Triple triple) {
 		Node pred = triple.getPredicate();
 		Node subj = triple.getSubject();
 		Node obj = triple.getObject();

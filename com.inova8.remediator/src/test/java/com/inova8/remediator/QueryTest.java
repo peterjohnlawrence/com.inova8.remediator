@@ -30,7 +30,7 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 //import com.hp.hpl.jena.sparql.engine.ref.QueryEngineRef;
 import com.inova8.remediator.Void;
 import com.inova8.sparql.engine.QueryEngineRemediator;
-import com.inova8.workspace.Workspace;
+import com.inova8.workspace.RemediatorWorkspace;
 
 import org.slf4j.Logger ;
 import org.slf4j.LoggerFactory ;
@@ -64,7 +64,7 @@ public class QueryTest {
 	OntModel ontModel;
 	Void queryVoid;
 	Void queryVoid1;
-	Workspace workspace;
+	RemediatorWorkspace workspace;
 
 	/**
 	 * @throws java.lang.Exception

@@ -1,6 +1,7 @@
 package com.inova8.workspace;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.net.URI;
 import java.util.Set;
 
@@ -9,27 +10,33 @@ import org.semanticweb.owl.model.OWLOntologyURIMapper;
 import org.semanticweb.owl.util.AutoURIMapper;
 import com.hp.hpl.jena.ontology.OntDocumentManager;
 
-public class Workspace {
+public class RemediatorWorkspace {
 	private OntDocumentManager documentManager;
 
 	private AutoURIMapper autoURIMapper;
 
-	public Workspace(File rootDirectory, boolean recursive, Set<String> extensions) {
+	public RemediatorWorkspace(File rootDirectory, boolean recursive, Set<String> extensions) throws FileNotFoundException {
 		super();
-		autoURIMapper = new AutoURIMapper(rootDirectory, recursive);
-		autoURIMapper.setFileExtensions(extensions);
-		documentManager= new OntDocumentManager(); 
-		autoURIMapper.update();
-		updateDocumentManager();
-
+		initialize(rootDirectory,  recursive,  extensions);
 	}
 
-	public Workspace(File rootDirectory, boolean recursive) {
+	public RemediatorWorkspace(File rootDirectory, boolean recursive) throws FileNotFoundException {
 		super();
-		autoURIMapper = new AutoURIMapper(rootDirectory, recursive);
-		autoURIMapper.update();
-		documentManager= new OntDocumentManager(); 
-		updateDocumentManager();
+		initialize(rootDirectory,  recursive,  null);
+	}
+
+	private void initialize(File rootDirectory, boolean recursive,
+			Set<String> extensions) throws FileNotFoundException {
+		if (rootDirectory.isDirectory()) {
+			autoURIMapper = new AutoURIMapper(rootDirectory, recursive);
+			if (extensions != null)
+				autoURIMapper.setFileExtensions(extensions);
+			documentManager = new OntDocumentManager();
+			autoURIMapper.update();
+			updateDocumentManager();
+		} else {
+			throw new FileNotFoundException(rootDirectory.toString());
+		}
 	}
 
 	private void updateDocumentManager() {
@@ -39,16 +46,16 @@ public class Workspace {
 		}
 	}
 
-	URI getPhysicalURI(java.net.URI ontologyURI) {
+	public URI getPhysicalURI(java.net.URI ontologyURI) {
 		
 		return autoURIMapper.getPhysicalURI(ontologyURI);
 	}
 
-	Set<String> getFileExtensions() {
+	public Set<String> getFileExtensions() {
 		return autoURIMapper.getFileExtensions();
 	}
 
-	Set<URI> getOntologyURIs() {
+	public Set<URI> getOntologyURIs() {
 		return autoURIMapper.getOntologyURIs();
 	}
 

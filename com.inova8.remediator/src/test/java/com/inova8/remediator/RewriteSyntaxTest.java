@@ -28,10 +28,10 @@ import com.hp.hpl.jena.query.ResultSetFormatter;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.sparql.algebra.Op;
 import com.hp.hpl.jena.sparql.algebra.OpAsQuery;
-import com.inova8.remediator.FederatedQuery;
+import com.inova8.remediator.RemediatorQuery;
 import com.inova8.remediator.QueryPlan;
 import com.inova8.remediator.Void;
-import com.inova8.workspace.Workspace;
+import com.inova8.workspace.RemediatorWorkspace;
 
 /**
  * @author PeterL
@@ -69,7 +69,7 @@ public class RewriteSyntaxTest {
 	OntModel ontModel;
 	Void queryVoid;
 	Void queryVoid1;
-	Workspace workspace;
+	RemediatorWorkspace workspace;
 
 	/**
 	 * @throws java.lang.Exception
@@ -79,7 +79,7 @@ public class RewriteSyntaxTest {
 		path = "./test/models/";
 		queryFolder = "Q1";
 
-		workspace = new Workspace(new File(path + queryFolder), true);
+		workspace = new RemediatorWorkspace(new File(path + queryFolder), true);
 		URL = "http://inova8.com/people/void";
 		queryVoid = new Void(workspace, URL, true);
 	}
@@ -111,16 +111,16 @@ public class RewriteSyntaxTest {
 //		String rewrittenQuery =queryTranslate(4); 
 //		queryExecute(rewrittenQuery,4);
 //	}
-	@Test
-	public final void test5VoidModel() throws Exception {
-		String rewrittenQuery =queryTranslate(5); 
-		queryExecute(rewrittenQuery,5);
-	}
 //	@Test
-//	public final void test6VoidModel() throws Exception {
-//		String rewrittenQuery =queryTranslate(6);
-//		queryExecute(rewrittenQuery,6);
+//	public final void test5VoidModel() throws Exception {
+//		String rewrittenQuery =queryTranslate(5); 
+//		queryExecute(rewrittenQuery,5);
 //	}
+	@Test
+	public final void test6VoidModel() throws Exception {
+		String rewrittenQuery =queryTranslate(6);
+		queryExecute(rewrittenQuery,6);
+	}
 //	@Test
 //	public final void test7VoidModel() throws Exception {
 //		String rewrittenQuery =queryTranslate(7); 
@@ -134,11 +134,11 @@ public class RewriteSyntaxTest {
 		planString = readFile(path + queryFolder + "/test"+ testNumber + "/plan.txt",
 				Charset.defaultCharset());
 
-		FederatedQuery federatedQuery = new FederatedQuery(queryString);
+		RemediatorQuery federatedQuery = new RemediatorQuery(queryString);
 		Op rewrittenOperations = federatedQuery.rewrite(queryVoid, true);
 		QueryPlan queryPlan = federatedQuery.getQueryPlan();
-//		assertEquals(queryPlan.toString(), planString.replaceAll("\\s+",
-//				""), queryPlan.toString().replaceAll("\\s+", ""));	
+		assertEquals(queryPlan.toString(), planString.replaceAll("\\s+",
+				""), queryPlan.toString().replaceAll("\\s+", ""));	
 		
 		Query rewrittenQuery = OpAsQuery.asQuery(rewrittenOperations);
 

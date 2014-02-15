@@ -22,10 +22,10 @@ import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.sparql.algebra.Op;
 import com.hp.hpl.jena.sparql.algebra.OpAsQuery;
-import com.inova8.remediator.FederatedQuery;
+import com.inova8.remediator.RemediatorQuery;
 import com.inova8.remediator.QueryPlan;
 import com.inova8.remediator.Void;
-import com.inova8.workspace.Workspace;
+import com.inova8.workspace.RemediatorWorkspace;
 
 /**
  * @author PeterL
@@ -55,7 +55,7 @@ public class RewritePerformanceTest {
 	OntModel ontModel;
 	Void queryVoid;
 	Void queryVoid1;
-	Workspace workspace;
+	RemediatorWorkspace workspace;
 
 	/**
 	 * @throws java.lang.Exception
@@ -65,7 +65,7 @@ public class RewritePerformanceTest {
 		path = "./test/models/";
 		queryFolder = "Q1";
 
-		workspace = new Workspace(new File(path + queryFolder), true);
+		workspace = new RemediatorWorkspace(new File(path + queryFolder), true);
 		URL = "http://inova8.com/people/void";
 		queryVoid = new Void(workspace, URL, true);
 	}
@@ -81,7 +81,7 @@ public class RewritePerformanceTest {
 	public final void testRewritePerformance() throws Exception {
 		String rewrittenQuery =queryTranslate(1); 
 		for (int i = 0; i <= 100; i++) {
-			FederatedQuery federatedQuery1 = new FederatedQuery(queryString);
+			RemediatorQuery federatedQuery1 = new RemediatorQuery(queryString);
 			Op rewrittenOperations1 = federatedQuery1.rewrite(queryVoid, true);
 			Query rewrittenQuery1 = OpAsQuery.asQuery(rewrittenOperations1);
 
@@ -95,7 +95,7 @@ public class RewritePerformanceTest {
 		planString = readFile(path + queryFolder + "/test"+ testNumber + "/plan.txt",
 				Charset.defaultCharset());
 
-		FederatedQuery federatedQuery = new FederatedQuery(queryString);
+		RemediatorQuery federatedQuery = new RemediatorQuery(queryString);
 		Op rewrittenOperations = federatedQuery.rewrite(queryVoid, true);
 		QueryPlan queryPlan = federatedQuery.getQueryPlan();
 		assertEquals(queryPlan.toString(), planString.replaceAll("\\s+",

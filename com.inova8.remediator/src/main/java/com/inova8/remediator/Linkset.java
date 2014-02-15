@@ -128,17 +128,17 @@ public class Linkset extends Dataset {
 	}
 
 	@Override
-	public void updatePartitionStatistics() {
+	public void queryPartitionStatistics() {
 		// TODO complete linkset statistics
 		if (sparqlEndPoint != null) {
 
-			updatePropertyPartitionStatistics();
+			queryPropertyPartitionStatistics();
 
 		}
 	}
 
 	@Override
-	protected void updatePropertyPartitionStatistics() {
+	protected void queryPropertyPartitionStatistics() {
 		// TODO linkset specific statistics
 	}
 

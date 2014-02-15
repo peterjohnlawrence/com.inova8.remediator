@@ -26,7 +26,15 @@ public class QueryClause extends Clause implements Comparable<QueryClause>{
 		super(clause.getBody(), clause.getHead());
 		this.dataset = dataset;
 	}
-	
+	public Term getRewrittenTriple(Integer hashCode) 
+	{
+		for(Term term: super.getBody()){
+			if( ((FunctionalTerm)term).originIndex.equals(hashCode)){
+				return term;
+			}
+		}
+		return null;
+	}
 	public OntModel getDataModel(QueryVars queryVars){
 
 		OntModel dataModel = ModelFactory.createOntologyModel();
@@ -86,8 +94,12 @@ public class QueryClause extends Clause implements Comparable<QueryClause>{
 						.getName());
 				Double selectivityObject = selectivityObject(
 						bodyTerm.getArgument(1), resolvedQueryVariables,unboundQueryVariables,queryVars);
-				selectivityTerm = dataset.getTriples()*selectivitySubject * selectivityPredicate
-						* selectivityObject;
+				try {
+					selectivityTerm = dataset.getTriples() * selectivitySubject
+							* selectivityPredicate * selectivityObject;
+				} catch (NullPointerException e) {
+					selectivityTerm = null;
+				}
 			} else {
 				return null;
 			}

@@ -61,9 +61,9 @@ public class Datasets extends ArrayList<Dataset> {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void updatePartitionStatistics() {
+	public void queryPartitionStatistics() {
 		for (Dataset dataset : this) {
-			dataset.updatePartitionStatistics();
+			dataset.queryPartitionStatistics();
 		}
 		
 	}
@@ -155,8 +155,8 @@ public class Datasets extends ArrayList<Dataset> {
 						OntResource.class);
 				OntResource clazz = soln.getResource("Class").as(
 						OntResource.class);
-				Integer entities = (soln.getLiteral("entities") != null) ? soln
-						.getLiteral("entities").getInt() : null;	
+				Integer entities = (soln.getLiteral("Entities") != null) ? soln
+						.getLiteral("Entities").getInt() : null;	
 				Dataset ds = this.getDataset(dataset);		
 				if (ds!=null)ds.getPartitions().addClassPartition(clazz, entities);
 			}
@@ -180,8 +180,8 @@ public class Datasets extends ArrayList<Dataset> {
 						OntResource.class);
 				OntResource property = soln.getResource("Property").as(
 						OntResource.class);
-				Integer triples = (soln.getLiteral("triples") != null) ? soln
-						.getLiteral("triples").getInt() : null;	
+				Integer triples = (soln.getLiteral("Triples") != null) ? soln
+						.getLiteral("Triples").getInt() : null;	
 				Dataset ds = this.getDataset(dataset);		
 				if (ds!=null)ds.getPartitions().addPropertyPartition(property, triples);
 			}

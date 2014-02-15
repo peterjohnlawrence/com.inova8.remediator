@@ -3,7 +3,7 @@ Step=1
 MergedJoin [ optimizerCost=4.0
 , queryVars=QueryVars [Var:Actor, ]
 , queryClauses=QueryClauses [
-	QueryClause [dataset=Dataset:http://inova8.com/data/movies, clause=Q(?0,?2)  <-  http://inova8.com/schema/movie-schema#portrayedPerson(?2,?0)]
+	QueryClause [dataset=Dataset:http://inova8.com/data/movies, clause=Q(?2,?0)  <-  http://inova8.com/schema/movie-schema#portrayedPerson(?2,?0)]
 ]
 ]
 Step=2

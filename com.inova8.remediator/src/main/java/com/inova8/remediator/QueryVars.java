@@ -34,6 +34,14 @@ class QueryVars extends ArrayList<QueryVar>{
 		}
 		return -1;
 	}
+	QueryVar get(Var variable) {
+
+		for( int index =0; index < this.size(); index++)
+			{
+			if(this.get(index).getVar().getName().equals(variable.getName())) return this.get(index);
+		}
+		return null;
+	}
 	void locateDatasetClauses(ArrayList<Dataset> datasets)
 	{
 		for (Dataset dataset:datasets)

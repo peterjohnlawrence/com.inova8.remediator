@@ -11,6 +11,9 @@ import org.apache.jena.atlas.logging.Log;
 import org.apache.xerces.util.URI;
 import org.apache.xerces.util.URI.MalformedURIException;
 
+import com.hp.hpl.jena.graph.Node;
+import com.hp.hpl.jena.graph.NodeFactory;
+import com.hp.hpl.jena.graph.Triple;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.ontology.OntResource;
@@ -24,12 +27,20 @@ import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.shared.PrefixMapping;
+import com.hp.hpl.jena.sparql.core.Var;
 import com.inova8.requiem.rewriter.Clause;
+import com.inova8.requiem.rewriter.FunctionalTerm;
 import com.inova8.requiem.rewriter.Term;
 import com.inova8.requiem.rewriter.TermFactory;
 import com.inova8.requiem.rewriter.Variable;
 
 class Dataset {
+	private static final Integer DEFAULT_DISTINCTSUBJECTS = 100;
+	private static final Integer DEFAULT_CLASSES = 10;
+	private static final Integer DEFAULT_ENTITIES = 100;
+	private static final int DEFAULT_DISTINCTOBJECTS = 100;
+	private static final int DEFAULT_TRIPLES = 10000;
+	private static final int DEFAULT_SUBJECTS = 1000;
 	protected OntResource dataset;
 	private Resource datasetStatistics;
 	protected Void voidInstance;
@@ -341,17 +352,57 @@ class Dataset {
 	boolean addPropertyPartition(OntResource property, Integer triples) {
 		return partitions.addPropertyPartition(property, triples);
 	}
-
-	public Integer getClasses() {
-		return classes;
+	public int getDistinctSubjects() {
+		if (distinctSubjects ==null){
+			return DEFAULT_DISTINCTSUBJECTS;
+		}else
+		{
+			return (int) distinctSubjects;
+		}
+	}
+	public int getClasses() {
+		if (classes ==null){
+			return DEFAULT_CLASSES;
+		}else
+		{
+			return (int) classes;
+		}
+	}
+	public int getEntities() {
+		if (entities ==null){
+			return DEFAULT_ENTITIES;
+		}else
+		{
+			return (int) entities;
+		}
+	}
+	public int getSubjects() {
+		if (distinctSubjects ==null){
+			return DEFAULT_SUBJECTS;
+		}else
+		{
+			return (int) distinctSubjects;
+		}
 	}
 
+	public int getTriples() {
+		if (triples ==null){
+			return DEFAULT_TRIPLES;
+		}else
+		{
+			return (int) triples;
+		}
+	}
+	public int getDistinctObjects() {
+		if (distinctObjects ==null){
+			return DEFAULT_DISTINCTOBJECTS;
+		}else
+		{
+			return (int) distinctObjects;
+		}
+	}
 	public QueryClauses getQueryClauses() {
 		return queryClauses;
-	}
-
-	public Integer getEntities() {
-		return entities;
 	}
 
 	private Term getHeadFromBody(Term[] bodyTerms) {
@@ -370,9 +421,7 @@ class Dataset {
 		return termFactory.getFunctionalTerm("Q", bodyVariables.toArray(vAtom));
 	}
 
-	public Integer getDistinctObjects() {
-		return distinctObjects;
-	}
+
 
 	Partitions getPartitions() {
 		return this.partitions;
@@ -394,13 +443,7 @@ class Dataset {
 		return sparqlEndPoint;
 	}
 
-	public Integer getSubjects() {
-		return distinctSubjects;
-	}
 
-	public Integer getTriples() {
-		return triples;
-	}
 
 	public OntResource getUriSpace() {
 		return uriSpace;
@@ -595,7 +638,7 @@ class Dataset {
 		}
 	}
 	
-	private void updateClassPartitionStatistics() {
+	private void queryClassPartitionStatistics() {
 		Query query = QueryFactory.create(classPartitionStatisticsQuery);
 		QueryExecution qexec = QueryExecutionFactory.sparqlService(
 				this.sparqlEndPoint.toString(), query);
@@ -641,7 +684,7 @@ class Dataset {
 		}
 	}
 
-	private void updateDatasetStatistics() {
+	private void queryDatasetStatistics() {
 		Query query = QueryFactory.create(datasetStatisticsQuery);
 		QueryExecution qexec = QueryExecutionFactory.sparqlService(
 				this.sparqlEndPoint.toString(), query);
@@ -673,7 +716,7 @@ class Dataset {
 		qexec.close();
 	}
 
-	protected void updatePropertyPartitionStatistics() {
+	protected void queryPropertyPartitionStatistics() {
 		Query query = QueryFactory.create(propertyPartitionStatisticsQuery);
 		QueryExecution qexec = QueryExecutionFactory.sparqlService(
 				this.sparqlEndPoint.toString(), query);
@@ -698,11 +741,11 @@ class Dataset {
 		}
 	}
 
-	public void updatePartitionStatistics() {
+	public void queryPartitionStatistics() {
 		if (sparqlEndPoint != null) {
-			updateDatasetStatistics();
-			updatePropertyPartitionStatistics();
-			updateClassPartitionStatistics();
+			queryDatasetStatistics();
+			queryPropertyPartitionStatistics();
+			queryClassPartitionStatistics();
 			addStatisticsToModel();
 		}
 	}
@@ -724,25 +767,19 @@ class Dataset {
 		datasetStatistics.removeAll(Void.distinctObjects);
 
 		// Now add the new ones
-		if (this.getTriples() != null)
+		if (this.triples != null)
 			datasetStatistics.addLiteral(Void.triples, this.getTriples());
-		if (this.getEntities() != null)
+		if (this.entities != null)
 			datasetStatistics.addLiteral(Void.entities, this.getEntities());
-		if (this.getClasses() != null)
+		if (this.classes != null)
 			datasetStatistics.addLiteral(Void.classes, this.getClasses());
-		if (this.getProperties() != null)
+		if (this.properties != null)
 			datasetStatistics.addLiteral(Void.properties, this.getProperties());
-		if (this.getSubjects() != null)
+		if (this.distinctSubjects != null)
 			datasetStatistics.addLiteral(Void.distinctSubjects, this.getSubjects());
-		if (this.getDistinctObjects() != null)
+		if (this.distinctObjects != null)
 			datasetStatistics.addLiteral(Void.distinctObjects, this.getDistinctObjects());
-
 		partitions.addStatisticsToModel(voidInstance.getStatisticsModel(), datasetStatistics);
-
-	}
-
-	public Integer getDistinctSubjects() {
-		return distinctSubjects;
 	}
 
 	public QueryClauses getClauseVariables(QueryVars queryVars,
@@ -764,6 +801,40 @@ class Dataset {
 		}else{
 			datasetQueryVarLinksets.put(linkQueryVariable,tempDatasetQueryVarLinkset);
 			return tempDatasetQueryVarLinkset;
+		}
+	}
+
+	private Node termToNode(QueryVars queryVars, Term term) {
+		if (term instanceof FunctionalTerm) {
+			try {
+				URI uri = new URI(term.getName());
+				return NodeFactory.createURI(uri.toString());
+			} catch (MalformedURIException e) {
+				return NodeFactory.createLiteral(term.toString());
+			}
+		} else if (term instanceof Variable) {
+			QueryVar queryVar = queryVars.get(term.getMinVariableIndex());
+			//TODO is it really a Node_variable or a Var
+			//return NodeFactory.createVariable(queryVar.getLinkedName(dataset));
+			return Var.alloc(queryVar.getLinkedName(this));
+			} else {
+			return null;
+		}
+	}
+
+	public Triple termToTriple( QueryVars queryVars, Term term) {
+		if (term.getArity() == 1) {
+			Node clas = NodeFactory.createURI(term.getName());
+			Node object = termToNode(queryVars, term.getArgument(0));
+			return Triple
+					.create(object, NodeFactory.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), clas);
+		} else if (term.getArity() == 2) {
+			Node pred = NodeFactory.createURI(term.getName());
+			Node subj = termToNode(queryVars, term.getArgument(0));
+			Node obj = termToNode(queryVars, term.getArgument(1));
+			return Triple.create(subj, pred, obj);
+		} else {
+			return null;
 		}
 	}
 }

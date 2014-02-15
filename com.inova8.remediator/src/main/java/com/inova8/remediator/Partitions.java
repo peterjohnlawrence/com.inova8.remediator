@@ -79,12 +79,20 @@ public class Partitions {
 		boolean test = partitions.containsKey(string);
 		return test;
 	}
-	public Integer getEntities(String className) {
-		
-		return ((ClassPartition) partitions.get(className)).getEntities();
+	public int getEntities(String className) {
+		Integer entities = ((ClassPartition) partitions.get(className)).getEntities();
+		if (entities==null){
+			return 1;
+		}else{
+			return (int)entities;
+		}
 	}
-	public Integer getTriples(String propertyName) {
-		
-		return ((PropertyPartition) partitions.get(propertyName)).getTriples();
+	public int getTriples(String propertyName) {
+		Integer triples = ((PropertyPartition) partitions.get(propertyName)).getTriples();
+		if (triples==null){
+			return 1;
+		}else{
+			return (int)triples;
+		}		
 	}
 }

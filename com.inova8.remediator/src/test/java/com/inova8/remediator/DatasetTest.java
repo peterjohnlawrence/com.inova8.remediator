@@ -12,7 +12,7 @@ import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.inova8.remediator.Dataset;
 import com.inova8.remediator.Datasets;
-import com.inova8.workspace.Workspace;
+import com.inova8.workspace.RemediatorWorkspace;
 
 public class DatasetTest {
 	Datasets datasets= new Datasets();
@@ -26,7 +26,7 @@ public class DatasetTest {
 	OntModel voidModel;
 	OntModelSpec vocabularyModelSpec;
 	OntModel vocabularyModel;
-	Workspace workspace;
+	RemediatorWorkspace workspace;
 	Void queryVoid;
 	OntModel datasetModel;
 
@@ -35,7 +35,7 @@ public class DatasetTest {
 	public void setUp() throws Exception {
 		path = "./test/models/";
 		queryFolder = "Q1";
-		workspace = new Workspace(new File(path + queryFolder), true);
+		workspace = new RemediatorWorkspace(new File(path + queryFolder), true);
 		URL = "http://inova8.com/people/void";
 		queryVoid = new Void(workspace, URL, true);
 

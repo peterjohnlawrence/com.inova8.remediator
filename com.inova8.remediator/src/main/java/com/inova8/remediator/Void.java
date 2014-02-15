@@ -4,6 +4,8 @@ package com.inova8.remediator;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 import org.apache.jena.atlas.logging.Log;
@@ -32,10 +34,10 @@ import com.inova8.requiem.parser.ELHIOParser;
 import com.inova8.requiem.rewriter.Clause;
 import com.inova8.requiem.rewriter.Term;
 import com.inova8.requiem.rewriter.TermFactory;
-import com.inova8.workspace.Workspace;
+import com.inova8.workspace.RemediatorWorkspace;
 
 class Void {
-	private Workspace workspace;
+	private RemediatorWorkspace workspace;
 	private OntModelSpec voidModelSpec;
 
 	private OntModel voidModel;
@@ -91,8 +93,9 @@ class Void {
 	 *            the void model
 	 * @param voidURI
 	 *            the void uri
+	 * @throws URISyntaxException 
 	 */
-	Void(Workspace workspace, String voidURI, Boolean gatherStatistics) {
+	Void(RemediatorWorkspace workspace, String voidURI, Boolean gatherStatistics) throws URISyntaxException {
 		this.workspace = workspace;
 		voidModelSpec = new OntModelSpec(OntModelSpec.OWL_MEM);
 		voidModelSpec.setDocumentManager(this.workspace.getDocumentManager());
@@ -100,16 +103,24 @@ class Void {
 		voidModel = ModelFactory.createOntologyModel(voidModelSpec);
 		initializeModel(voidURI, gatherStatistics);
 	}
+
 	private void initializeModel(String voidURI, Boolean gatherStatistics)
-	{
-		statisticsModel = ModelFactory.createOntologyModel();
-		buildVoidModel(voidURI, gatherStatistics);
-		try {
-			conjunctiveClauses = parser.getClauses(this.writeVocabularyModel(), this.getWorkspace().getOWLOntologyURIMapper());
-		} catch (Exception e) {
-			Log.warn(this,
-					"Failed to parse clauses: " + e.getMessage());
-		}	
+			throws URISyntaxException {
+		if (this.workspace.getPhysicalURI(new URI(voidURI)) != null) {
+
+			statisticsModel = ModelFactory.createOntologyModel();
+			buildVoidModel(voidURI, gatherStatistics);
+			try {
+				conjunctiveClauses = parser.getClauses(this
+						.writeVocabularyModel(), this.getWorkspace()
+						.getOWLOntologyURIMapper());
+			} catch (Exception e) {
+				Log.warn(this, "Failed to parse clauses: " + e.getMessage());
+			}
+		} else {
+			throw new URISyntaxException(voidURI, "Invalid or empty voidURI");
+		}
+
 	}
 
 	private void buildVoidModel(String voidURI, Boolean gatherStatistics) {
@@ -121,7 +132,7 @@ class Void {
 		buildVocabularyModel();
 		loadPartitions();
 		if (gatherStatistics) {
-			updatePartitionStatistics();
+			queryPartitionStatistics();
 		} else {
 			loadPartitionStatistics();
 		}
@@ -222,7 +233,7 @@ class Void {
 		return this.voidModel;
 	}
 
-	public Workspace getWorkspace() {
+	public RemediatorWorkspace getWorkspace() {
 		return workspace;
 	}
 
@@ -303,8 +314,8 @@ class Void {
 		}
 	}
 
-	public void updatePartitionStatistics() {
-		datasets.updatePartitionStatistics();
+	public void queryPartitionStatistics() {
+		datasets.queryPartitionStatistics();
 		partitionStatisticsAvailable = true;
 	}
 

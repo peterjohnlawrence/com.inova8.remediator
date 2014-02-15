@@ -220,13 +220,15 @@ public class Simplifier extends TransformCopy {
 		if (OpBGP.isBGP(left)) {
 			bgp.addAll(((OpBGP) left).getPattern());
 		} else {
-			Log.warn(this, "mergeToBGP left not valid BGP");
+			if (!(left instanceof OpTable))
+			Log.warn(this, "mergeToBGP left not valid BGP " + left.toString());
 		}
 		if (OpBGP.isBGP(right)) {
 			bgp.addAll(((OpBGP) right).getPattern());
 			;
 		} else {
-			Log.warn(this, "mergeToBGP right not valid BGP");
+			if (!(right instanceof OpTable))
+			Log.warn(this, "mergeToBGP right not valid BGP"+ right.toString());
 		}
 		return new OpBGP(bgp);
 	}
