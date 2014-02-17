@@ -72,8 +72,14 @@ public class QueryClause extends Clause implements Comparable<QueryClause>{
 			} catch (MalformedURIException e) {
 				return NodeFactory.createLiteral(term.toString());
 			}
-		} else if (term instanceof Variable) {		
-			return NodeFactory.createURI("http://inova8.com/variable#" + queryVars.get(term.getMinVariableIndex()).getName());
+		} else if (term instanceof Variable) {	
+			//Check for blank node
+			QueryVar queryVar =queryVars.get(term.getMinVariableIndex());
+			if (queryVar!=null){
+				return NodeFactory.createURI("http://inova8.com/variable#" + queryVar.getName());
+			}else{
+				return  NodeFactory.createURI("http://inova8.com/blanknode#" + term.getMinVariableIndex());	
+			}
 		} else {
 			return null;
 		}

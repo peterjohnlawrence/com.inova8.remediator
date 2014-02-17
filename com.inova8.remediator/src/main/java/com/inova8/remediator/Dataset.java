@@ -38,6 +38,7 @@ class Dataset {
 	private static final Integer DEFAULT_DISTINCTSUBJECTS = 100;
 	private static final Integer DEFAULT_CLASSES = 10;
 	private static final Integer DEFAULT_ENTITIES = 100;
+	private static final Integer DEFAULT_PROPERTIES = 100;
 	private static final int DEFAULT_DISTINCTOBJECTS = 100;
 	private static final int DEFAULT_TRIPLES = 10000;
 	private static final int DEFAULT_SUBJECTS = 1000;
@@ -165,12 +166,14 @@ class Dataset {
 		// If anything left than add as another clause, as long as that clause
 		// does not already exist.
 
+		// TODO Should not add anonymous variables to head 
 		if (!bodyTerm.isEmpty()) {
 			Term bodyTermArray[] = new Term[bodyTerm.size()];
 			bodyTerm.toArray(bodyTermArray);
 			if (!isSubsumed(bodyTermArray)) {
+				// Only add to body if included in original head, in this way excluding additional anonymous variables
 				Clause newClause = new Clause(bodyTermArray,
-						getHeadFromBody(bodyTermArray));
+						getHeadFromBody(additionalClause.getHead(),bodyTermArray));
 				// Make sure that the clause is not disconnected/Cartesian, if
 				// so separate into separate clauses.
 				ArrayList<Clause> disconnectedClauses = detectDisconnectedClauses(newClause);
@@ -179,7 +182,7 @@ class Dataset {
 				for (Clause disconnectedClause : disconnectedClauses) {
 					Term[] disconnectedBody = disconnectedClause.getBody();
 					cleanUpClauses(disconnectedBody);
-					queryClauses.add(new QueryClause(new Clause(disconnectedBody,getHeadFromBody(disconnectedBody)), this));
+					queryClauses.add(new QueryClause(new Clause(disconnectedBody,getHeadFromBody(additionalClause.getHead(), disconnectedBody)), this));
 
 				}
 			}
@@ -401,18 +404,28 @@ class Dataset {
 			return (int) distinctObjects;
 		}
 	}
+
+	public Integer getProperties() {
+		if (properties ==null){
+			return DEFAULT_PROPERTIES;
+		}else
+		{
+			return (int) properties;
+		}
+	}
 	public QueryClauses getQueryClauses() {
 		return queryClauses;
 	}
 
-	private Term getHeadFromBody(Term[] bodyTerms) {
+	private Term getHeadFromBody(Term originalHead, Term[] bodyTerms) {
 		ArrayList<Variable> bodyVariables = new ArrayList<Variable>();
 
 		// Get the variables of the body
+		//TODO Except anonymous variables
 		for (int j = 0; j < bodyTerms.length; j++) {
 			for (int i = 0; i < bodyTerms[j].getArguments().length; i++) {
 				Term t = bodyTerms[j].getArguments()[i].getVariableOrConstant();
-				if ((t instanceof Variable) && !(bodyVariables.contains(t))) {
+				if ((t instanceof Variable) && !(bodyVariables.contains(t)) && Arrays.asList(originalHead.getArguments()).contains(t)) {
 					bodyVariables.add((Variable) t);
 				}
 			}
@@ -435,9 +448,6 @@ class Dataset {
 		return prefixes;
 	}
 
-	public Integer getProperties() {
-		return properties;
-	}
 
 	public OntResource getSparqlEndPoint() {
 		return sparqlEndPoint;
@@ -591,7 +601,12 @@ class Dataset {
 
 	@Override
 	public String toString() {
-		return "Dataset:"+uriSpace.toString();
+		if (this.dataset!=null){
+			return "Dataset:"+dataset.toString();
+		} else
+		{
+			return "Dataset:<unidentified>";
+		}
 	}
 
 
@@ -813,7 +828,11 @@ class Dataset {
 			}
 		} else if (term instanceof Variable) {
 			QueryVar queryVar = queryVars.get(term.getMinVariableIndex());
-			return Var.alloc(queryVar.getLinkedName(this));
+			if (queryVar!=null){
+				return Var.alloc(queryVar.getLinkedName(this));
+			}else{
+				return Var.alloc(Integer.toString(term.getMinVariableIndex()));
+			}
 			} else {
 			return null;
 		}

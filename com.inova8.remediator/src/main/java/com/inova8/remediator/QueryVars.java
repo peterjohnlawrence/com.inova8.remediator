@@ -34,11 +34,23 @@ class QueryVars extends ArrayList<QueryVar>{
 		}
 		return -1;
 	}
-	QueryVar get(Var variable) {
 
-		for( int index =0; index < this.size(); index++)
-			{
-			if(this.get(index).getVar().getName().equals(variable.getName())) return this.get(index);
+	@Override
+	public QueryVar get(int index) {
+		if (index >= this.size()) {
+			return null;
+		} else {
+			return super.get(index);
+		}
+	}
+
+	QueryVar get(Var variable) {
+		if (variable != null) {
+			for (int index = 0; index < this.size(); index++) {
+				if (this.get(index).getVar().getName()
+						.equals(variable.getName()))
+					return this.get(index);
+			}
 		}
 		return null;
 	}
@@ -50,8 +62,9 @@ class QueryVars extends ArrayList<QueryVar>{
 			{
 				for (Term argument: queryClause.getHead().getArguments())
 				{
-					QueryVar var = this.get(argument.getMinVariableIndex());
-					var.addClause(queryClause);
+					QueryVar queryVar = this.get(argument.getMinVariableIndex());
+					if (queryVar!=null)
+						queryVar.addClause(queryClause);
 					
 				}
 			}

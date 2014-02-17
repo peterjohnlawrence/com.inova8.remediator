@@ -3,14 +3,24 @@ package com.inova8.workspace;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URI;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.jena.atlas.logging.Log;
 import org.semanticweb.owl.model.OWLOntologyURIMapper;
 import org.semanticweb.owl.util.AutoURIMapper;
 import com.hp.hpl.jena.ontology.OntDocumentManager;
+import com.hp.hpl.jena.ontology.OntDocumentManager.ReadFailureHandler;
+import com.hp.hpl.jena.rdf.model.Model;
 
 public class RemediatorWorkspace {
+	   class FileImportNotFound implements ReadFailureHandler {
+
+	        public void handleFailedRead(String url, Model model, Exception e) {
+	            Log.warn(this, "Missing import: "+url );
+	        }
+	    }
 	private OntDocumentManager documentManager;
 
 	private AutoURIMapper autoURIMapper;
@@ -22,7 +32,8 @@ public class RemediatorWorkspace {
 
 	public RemediatorWorkspace(File rootDirectory, boolean recursive) throws FileNotFoundException {
 		super();
-		initialize(rootDirectory,  recursive,  null);
+		Set<String> extensions = new HashSet<String>(Arrays.asList(new String[]{ "rdf", "owl","xml","ttl","trg","nt","nq" }));
+		initialize(rootDirectory,  recursive,  extensions);
 	}
 
 	private void initialize(File rootDirectory, boolean recursive,
@@ -32,6 +43,7 @@ public class RemediatorWorkspace {
 			if (extensions != null)
 				autoURIMapper.setFileExtensions(extensions);
 			documentManager = new OntDocumentManager();
+			documentManager.setReadFailureHandler(new FileImportNotFound());
 			autoURIMapper.update();
 			updateDocumentManager();
 		} else {

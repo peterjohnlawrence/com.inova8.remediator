@@ -24,7 +24,9 @@ import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
+import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
+import com.hp.hpl.jena.rdf.model.ResourceFactory;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.reasoner.Reasoner;
@@ -115,7 +117,7 @@ class Void {
 						.writeVocabularyModel(), this.getWorkspace()
 						.getOWLOntologyURIMapper());
 			} catch (Exception e) {
-				Log.warn(this, "Failed to parse clauses: " + e.getMessage());
+				Log.fatal(this, "Failed to parse clauses: " + e.getMessage());
 			}
 		} else {
 			throw new URISyntaxException(voidURI, "Invalid or empty voidURI");
@@ -247,8 +249,23 @@ class Void {
 				QuerySolution soln = results.nextSolution();
 				OntResource dataset = soln.getResource("dataset").as(
 						OntResource.class);
-				OntResource sparqlEndPoint = soln.getResource("sparqlEndPoint")
-						.as(OntResource.class);
+				RDFNode ep = soln.get("sparqlEndPoint");
+				OntResource sparqlEndPoint=null;
+				if(ep.isResource()){
+					sparqlEndPoint = (OntResource) ep.asResource();
+				}else if(ep.isLiteral()){
+					try{
+						URI sparqlEndPointURI = new URI(ep.asLiteral().getString());
+						sparqlEndPoint =voidModel.createOntResource(sparqlEndPointURI.toString());
+					}
+					catch(Exception e){
+						Log.debug(Void.class, "Invalid SPARQLEndpoint URI: "+ ep.asLiteral().getString());
+						sparqlEndPoint=null;
+					}
+				}else{
+					Log.debug(Void.class, "Invalid SPARQLEndpoint value: "+ep.toString());
+					sparqlEndPoint=null;
+				}
 				OntResource uriSpace = (soln.getResource("uriSpace") != null) ? soln
 						.getResource("uriSpace").as(OntResource.class) : null;
 				String prefix = DS + index;
@@ -343,15 +360,24 @@ class Void {
 				Property rdfType = infModel
 						.getProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
 				for (Term term : clause.getHead().getArguments()) {
-					Resource nForce = infModel
-							.getResource("http://inova8.com/variable#"
-									+ queryVars.get(
-											term.getMinVariableIndex())
-											.getName());
-					for (StmtIterator stmtIterator = this.infModel.listStatements(nForce,rdfType, (Resource)null); stmtIterator.hasNext();) {
-						Statement stmt = stmtIterator.nextStatement();
-						queryVars.get(term.getMinVariableIndex()).addVariableClass(stmt.getObject());
-					}					
+					QueryVar queryVar = queryVars.get(term
+							.getMinVariableIndex());
+					// Check not a blank node
+					if (queryVar != null) {
+						Resource nForce = infModel
+								.getResource("http://inova8.com/variable#"
+										+ queryVars.get(
+												term.getMinVariableIndex())
+												.getName());
+						for (StmtIterator stmtIterator = this.infModel
+								.listStatements(nForce, rdfType,
+										(Resource) null); stmtIterator
+								.hasNext();) {
+							Statement stmt = stmtIterator.nextStatement();
+
+							queryVar.addVariableClass(stmt.getObject());
+						}
+					}
 				}
 			}
 		}

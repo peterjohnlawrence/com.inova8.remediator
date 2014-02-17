@@ -182,12 +182,12 @@ public class Simplifier extends TransformCopy {
 
 	@Override
 	public Op transform(OpOrder opOrder, Op subOp) {
-		return new OpBGP();
+		return  subOp;
 	}
 
 	@Override
 	public Op transform(OpTopN opTop, Op subOp) {
-		return new OpBGP();
+		return  subOp;
 	}
 
 	@Override
@@ -197,22 +197,22 @@ public class Simplifier extends TransformCopy {
 
 	@Override
 	public Op transform(OpDistinct opDistinct, Op subOp) {
-		return new OpBGP();
+		return subOp;
 	}
 
 	@Override
 	public Op transform(OpReduced opReduced, Op subOp) {
-		return new OpBGP();
+		return subOp;
 	}
 
 	@Override
 	public Op transform(OpSlice opSlice, Op subOp) {
-		return new OpBGP();
+		return subOp;
 	}
 
 	@Override
 	public Op transform(OpGroup opGroup, Op subOp) {
-		return new OpBGP();
+		return subOp;
 	}
 
 	private Op mergeToBGP(Op left, Op right) {
