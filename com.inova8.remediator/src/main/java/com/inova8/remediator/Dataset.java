@@ -612,7 +612,8 @@ class Dataset {
 
 
 	public void updatePartitions() {
-		OntModelSpec partitionModelSpec = new OntModelSpec(OntModelSpec.OWL_MEM);
+		//Use OntModelSpec.OWL_MEM_RDFS_INF to ensure all default classes and properties are also discovered.
+		OntModelSpec partitionModelSpec = new OntModelSpec(OntModelSpec.OWL_MEM_RDFS_INF);
 		partitionModelSpec.setDocumentManager(voidInstance.getVoidModel().getDocumentManager());
 		partitionModelSpec.getDocumentManager().setProcessImports(true);
 
@@ -627,10 +628,8 @@ class Dataset {
 						+ vocabulary + "  " + e.getMessage());
 			}
 		}
-
 		updateClassPartition(partitionModel);
 		updatePropertyPartition(partitionModel);
-
 	}
 
 	private void updateClassPartition(OntModel partitionModel) {
@@ -644,7 +643,7 @@ class Dataset {
 				QuerySolution soln = results.nextSolution();
 				OntResource clazz = soln.getResource("class").as(
 						OntResource.class);
-				partitions.addClassPartition(clazz, null);
+				if (!clazz.isAnon()) partitions.addClassPartition(clazz, null);
 			}
 		} catch (Exception e) {
 			Log.debug(Dataset.class, "Failed to execute classPartitionQuery");
