@@ -16,6 +16,9 @@ import com.inova8.requiem.rewriter.Variable;
 
 public class QueryClause extends Clause implements Comparable<QueryClause>{
 
+	private static final String HTTP_INOVA8_COM_BLANKNODE = "http://inova8.com/blanknode#";
+	private static final String HTTP_INOVA8_COM_VARIABLE = "http://inova8.com/variable#";
+	private static final String HTTP_WWW_W3_ORG_1999_02_22_RDF_SYNTAX_NS_TYPE = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
 	private Dataset dataset;
 	private Double optimizerCost;
 	private int optimizerCount;
@@ -52,7 +55,7 @@ public class QueryClause extends Clause implements Comparable<QueryClause>{
 			return Triple
 					.create(object,
 							NodeFactory
-									.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"),
+									.createURI(HTTP_WWW_W3_ORG_1999_02_22_RDF_SYNTAX_NS_TYPE),
 							clas);
 		} else if (term.getArity() == 2) {
 			Node pred = NodeFactory.createURI(term.getName());
@@ -76,9 +79,9 @@ public class QueryClause extends Clause implements Comparable<QueryClause>{
 			//Check for blank node
 			QueryVar queryVar =queryVars.get(term.getMinVariableIndex());
 			if (queryVar!=null){
-				return NodeFactory.createURI("http://inova8.com/variable#" + queryVar.getName());
+				return NodeFactory.createURI(HTTP_INOVA8_COM_VARIABLE + queryVar.getName());
 			}else{
-				return  NodeFactory.createURI("http://inova8.com/blanknode#" + term.getMinVariableIndex());	
+				return  NodeFactory.createURI(HTTP_INOVA8_COM_BLANKNODE + term.getMinVariableIndex());	
 			}
 		} else {
 			return null;

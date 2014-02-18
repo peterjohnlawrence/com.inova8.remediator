@@ -39,6 +39,10 @@ import com.inova8.requiem.rewriter.TermFactory;
 import com.inova8.workspace.RemediatorWorkspace;
 
 class Void {
+	private static final String HTTP_INOVA8_COM_VARIABLE = "http://inova8.com/variable#";
+	private static final String HTTP_WWW_W3_ORG_1999_02_22_RDF_SYNTAX_NS_TYPE = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
+	private static final String FORMAT = "RDF/XML-ABBREV";
+	private static final String HTTP_INOVA8_COM_CONSOLIDATEDMODEL = "http://inova8.com/consolidatedmodel";
 	private RemediatorWorkspace workspace;
 	private OntModelSpec voidModelSpec;
 
@@ -58,8 +62,8 @@ class Void {
 	private static final ELHIOParser parser = new ELHIOParser(termFactory);
 
 
-	private String DS = "DS";
-	private String datasetQuery = "PREFIX void: <" + NS + ">\n"
+	private  static final String DS = "DS";
+	private  static final String datasetQuery = "PREFIX void: <http://rdfs.org/ns/void#>\n"
 			+ "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
 			+ "SELECT ?dataset ?sparqlEndPoint ?uriSpace \n" + "WHERE  {\n"
 			+ "    ?dataset rdf:type void:Dataset .\n"
@@ -68,7 +72,7 @@ class Void {
 			+ "        ?dataset void:uriSpace ?uriSpace .\n" + "    }\n"
 			+ "    FILTER ( ! EXISTS {?c void:classPartition ?dataset } ) .\n"
 			+ "}\n";
-	private static String linksetQuery = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
+	private  static final  String linksetQuery = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
 			+ "PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
 			+ "PREFIX owl: <http://www.w3.org/2002/07/owl#>\n"
 			+ "PREFIX void: <http://rdfs.org/ns/void#>\n"
@@ -165,7 +169,7 @@ class Void {
 
 		vocabularyModel = ModelFactory.createOntologyModel(vocabularyModelSpec);
 		Ontology vocabularyOntology = vocabularyModel
-				.createOntology("http://inova8.com/consolidatedmodel");
+				.createOntology(HTTP_INOVA8_COM_CONSOLIDATEDMODEL);
 
 		for (Dataset dataset : datasets) {
 			for (OntResource vocabulary : dataset.getVocabularies()) {
@@ -346,7 +350,7 @@ class Void {
 	public ByteArrayInputStream writeVocabularyModel() {
 
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
-		vocabularyModel.write(out, "RDF/XML-ABBREV");
+		vocabularyModel.write(out, FORMAT);
 		ByteArrayInputStream in = new ByteArrayInputStream(out.toByteArray());
 		return in;
 	}
@@ -358,14 +362,14 @@ class Void {
 				infModel = ModelFactory.createInfModel(this.boundReasoner,
 						clause.getDataModel(queryVars));
 				Property rdfType = infModel
-						.getProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+						.getProperty(HTTP_WWW_W3_ORG_1999_02_22_RDF_SYNTAX_NS_TYPE);
 				for (Term term : clause.getHead().getArguments()) {
 					QueryVar queryVar = queryVars.get(term
 							.getMinVariableIndex());
 					// Check not a blank node
 					if (queryVar != null) {
 						Resource nForce = infModel
-								.getResource("http://inova8.com/variable#"
+								.getResource(HTTP_INOVA8_COM_VARIABLE
 										+ queryVars.get(
 												term.getMinVariableIndex())
 												.getName());

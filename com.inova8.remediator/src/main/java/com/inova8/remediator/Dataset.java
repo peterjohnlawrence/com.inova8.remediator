@@ -35,6 +35,7 @@ import com.inova8.requiem.rewriter.TermFactory;
 import com.inova8.requiem.rewriter.Variable;
 
 class Dataset {
+	private static final String HTTP_WWW_W3_ORG_1999_02_22_RDF_SYNTAX_NS_TYPE = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
 	private static final Integer DEFAULT_DISTINCTSUBJECTS = 100;
 	private static final Integer DEFAULT_CLASSES = 10;
 	private static final Integer DEFAULT_ENTITIES = 100;
@@ -842,7 +843,7 @@ class Dataset {
 			Node clas = NodeFactory.createURI(term.getName());
 			Node object = termToNode(queryVars, term.getArgument(0));
 			return Triple
-					.create(object, NodeFactory.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), clas);
+					.create(object, NodeFactory.createURI(HTTP_WWW_W3_ORG_1999_02_22_RDF_SYNTAX_NS_TYPE), clas);
 		} else if (term.getArity() == 2) {
 			Node pred = NodeFactory.createURI(term.getName());
 			Node subj = termToNode(queryVars, term.getArgument(0));

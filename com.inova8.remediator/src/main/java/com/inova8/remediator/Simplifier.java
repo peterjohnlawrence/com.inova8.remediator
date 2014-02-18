@@ -41,10 +41,9 @@ import com.hp.hpl.jena.sparql.core.BasicPattern;
 
 public class Simplifier extends TransformCopy {
 
-	private Op simplifiedOp;
 	public Simplifier() {
 		super();
-		simplifiedOp = OpNull.create();
+		OpNull.create();
 	}
 
 	@Override
