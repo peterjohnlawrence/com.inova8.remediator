@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://inova8.com/Q2/book-publisher#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:book-schema="http://inova8.com/Q2/book-schema#"
+    xmlns:publisher-schema="http://inova8.com/Q2/publisher-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://inova8.com/Q2/book-publisher">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://rdfs.org/ns/void"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+    <owl:imports rdf:resource="http://inova8.com/Q2/book-schema"/>
+    <owl:imports rdf:resource="http://inova8.com/Q2/publisher-schema"/>
+  </owl:Ontology>
+  <void:Linkset rdf:about="http://rdfs.org/ns/void#Book-Publisher">
+    <void:vocabulary rdf:resource=""/>
+  </void:Linkset>
+  <rdf:Description rdf:about="http://inova8.com/Q2/book-schema#Mathematics">
+    <rdfs:subClassOf rdf:resource="http://inova8.com/Q2/publisher-schema#Science"/>
+  </rdf:Description>
+  <void:Dataset rdf:about="http://rdfs.org/ns/void#Publisher">
+    <void:vocabulary rdf:resource="http://inova8.com/Q2/publisher-schema"/>
+    <void:sparqlEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/Q2/publisher-data&gt;</void:sparqlEndpoint>
+  </void:Dataset>
+  <void:Dataset rdf:about="http://rdfs.org/ns/void#Book">
+    <void:vocabulary rdf:resource="http://inova8.com/Q2/book-schema"/>
+    <void:sparqlEndpoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/Q2/book-data&gt;</void:sparqlEndpoint>
+  </void:Dataset>
+  <rdf:Description rdf:about="http://inova8.com/Q2/book-schema#Textbook">
+    <rdfs:subClassOf rdf:resource="http://inova8.com/Q2/publisher-schema#Book"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/Q2/publisher-schema#Biography">
+    <owl:equivalentClass rdf:resource="http://inova8.com/Q2/book-schema#Biography"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/Q2/book-schema#name">
+    <owl:equivalentProperty rdf:resource="http://inova8.com/Q2/publisher-schema#name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/Q2/book-schema#Publisher">
+    <owl:equivalentClass rdf:resource="http://inova8.com/Q2/publisher-schema#Publisher"/>
+  </rdf:Description>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

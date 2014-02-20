@@ -1,0 +1,10 @@
+PREFIX publisher-schema: <http://inova8.com/Q2/publisher-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?id
+WHERE
+{
+?x rdf:type publisher-schema:Product .
+?x publisher-schema:id ?id.
+?x publisher-schema:name ?name.
+FILTER(?name="Linux")
+}

@@ -1,0 +1,20 @@
+QueryPlan [
+Step=1
+MergedJoin [ optimizerCost=10000.0
+,	queryVars=QueryVars [Var:name, Var:x, ]
+,	datasetQueries [
+		dataset=Dataset:http://rdfs.org/ns/void#Book
+		queryClauses [
+			QueryClause [Q(?0,?1)  <-  http://inova8.com/Q2/book-schema#Mathematics(?0), http://inova8.com/Q2/book-schema#name(?0,?1)]
+			QueryClause [Q(?0,?1)  <-  http://inova8.com/Q2/book-schema#name(?0,?1), http://inova8.com/publishing/src#Popular(?0)]
+		]
+		dataset=Dataset:http://rdfs.org/ns/void#Publisher
+		queryClauses [
+			QueryClause [Q(?0,?1)  <-  http://inova8.com/Q2/publisher-schema#Computer(?0), http://inova8.com/Q2/publisher-schema#Pocket(?0), http://inova8.com/Q2/publisher-schema#name(?0,?1)]
+			QueryClause [Q(?0,?1)  <-  http://inova8.com/Q2/publisher-schema#Mathematics(?0), http://inova8.com/Q2/publisher-schema#Pocket(?0), http://inova8.com/Q2/publisher-schema#name(?0,?1)]
+			QueryClause [Q(?0,?1)  <-  http://inova8.com/Q2/publisher-schema#NewPublication(?0), http://inova8.com/Q2/publisher-schema#Pocket(?0), http://inova8.com/Q2/publisher-schema#name(?0,?1)]
+			QueryClause [Q(?0,?1)  <-  http://inova8.com/Q2/publisher-schema#Pocket(?0), http://inova8.com/Q2/publisher-schema#Popular(?0), http://inova8.com/Q2/publisher-schema#name(?0,?1)]
+			QueryClause [Q(?0,?1)  <-  http://inova8.com/Q2/publisher-schema#Pocket(?0), http://inova8.com/Q2/publisher-schema#Science(?0), http://inova8.com/Q2/publisher-schema#name(?0,?1)]
+		]
+]
+]

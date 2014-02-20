@@ -1,0 +1,145 @@
+SELECT  ?id
+WHERE
+  { SERVICE <http://rdfs.org/ns/void#Publisher>
+      {   {   {   {   {   {   {   {   {   {   {   {   {   { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Autobiography> .
+                                                            ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+                                                            ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+                                                            FILTER ( ?name = "Linux" )
+                                                          }
+                                                        UNION
+                                                          { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Biography> .
+                                                            ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+                                                            ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+                                                            FILTER ( ?name = "Linux" )
+                                                          }
+                                                      }
+                                                    UNION
+                                                      { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Book> .
+                                                        ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+                                                        ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+                                                        FILTER ( ?name = "Linux" )
+                                                      }
+                                                  }
+                                                UNION
+                                                  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#CD> .
+                                                    ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+                                                    ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+                                                    FILTER ( ?name = "Linux" )
+                                                  }
+                                              }
+                                            UNION
+                                              { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Computer> .
+                                                ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+                                                ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+                                                FILTER ( ?name = "Linux" )
+                                              }
+                                          }
+                                        UNION
+                                          { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Mathematics> .
+                                            ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+                                            ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+                                            FILTER ( ?name = "Linux" )
+                                          }
+                                      }
+                                    UNION
+                                      { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#NewPublication> .
+                                        ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+                                        ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+                                        FILTER ( ?name = "Linux" )
+                                      }
+                                  }
+                                UNION
+                                  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Novel> .
+                                    ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+                                    ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+                                    FILTER ( ?name = "Linux" )
+                                  }
+                              }
+                            UNION
+                              { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Pocket> .
+                                ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+                                ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+                                FILTER ( ?name = "Linux" )
+                              }
+                          }
+                        UNION
+                          { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Poetry> .
+                            ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+                            ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+                            FILTER ( ?name = "Linux" )
+                          }
+                      }
+                    UNION
+                      { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Popular> .
+                        ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+                        ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+                        FILTER ( ?name = "Linux" )
+                      }
+                  }
+                UNION
+                  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Product> .
+                    ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+                    ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+                    FILTER ( ?name = "Linux" )
+                  }
+              }
+            UNION
+              { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Science> .
+                ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+                ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+                FILTER ( ?name = "Linux" )
+              }
+          }
+        UNION
+          { ?x <http://inova8.com/Q2/publisher-schema#publisher> ?3 .
+            ?x <http://inova8.com/Q2/publisher-schema#id> ?id .
+            ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+            FILTER ( ?name = "Linux" )
+          }}
+    SERVICE <http://rdfs.org/ns/void#Book>
+      {   {   {   {   {   {   {   { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/book-schema#Bestseller> .
+                                    ?x <http://inova8.com/Q2/book-schema#name> ?name
+                                    FILTER ( ?name = "Linux" )
+                                  }
+                                UNION
+                                  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/book-schema#Biography> .
+                                    ?x <http://inova8.com/Q2/book-schema#name> ?name
+                                    FILTER ( ?name = "Linux" )
+                                  }
+                              }
+                            UNION
+                              { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/book-schema#Literature> .
+                                ?x <http://inova8.com/Q2/book-schema#name> ?name
+                                FILTER ( ?name = "Linux" )
+                              }
+                          }
+                        UNION
+                          { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/book-schema#Mathematics> .
+                            ?x <http://inova8.com/Q2/book-schema#name> ?name
+                            FILTER ( ?name = "Linux" )
+                          }
+                      }
+                    UNION
+                      { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/book-schema#Textbook> .
+                        ?x <http://inova8.com/Q2/book-schema#name> ?name
+                        FILTER ( ?name = "Linux" )
+                      }
+                  }
+                UNION
+                  { ?x <http://inova8.com/Q2/book-schema#author> ?3 .
+                    ?x <http://inova8.com/Q2/book-schema#name> ?name
+                    FILTER ( ?name = "Linux" )
+                  }
+              }
+            UNION
+              { ?3 <http://inova8.com/Q2/book-schema#publishes> ?x .
+                ?x <http://inova8.com/Q2/book-schema#name> ?name
+                FILTER ( ?name = "Linux" )
+              }
+          }
+        UNION
+          { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/publishing/src#Popular> .
+            ?x <http://inova8.com/Q2/book-schema#name> ?name
+            FILTER ( ?name = "Linux" )
+          }}
+  }

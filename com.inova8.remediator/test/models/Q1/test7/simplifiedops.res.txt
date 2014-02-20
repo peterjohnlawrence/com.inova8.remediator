@@ -1,0 +1,4 @@
+(bgp
+  (triple ?Person <http://inova8.com/schema/people-schema#hasCollege> ?College)
+  (triple ?Actor <http://inova8.com/schema/people-schema#portrayedPerson> ?Person)
+)

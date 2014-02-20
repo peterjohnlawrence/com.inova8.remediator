@@ -1,0 +1,49 @@
+(sequence
+  (union
+    (service <http://rdfs.org/ns/void#Book>
+      (union
+        (project (?name)
+          (bgp
+            (triple ?x <http://inova8.com/Q2/book-schema#name> ?name)
+            (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/book-schema#Mathematics>)
+          ))
+        (project (?name)
+          (bgp
+            (triple ?x <http://inova8.com/Q2/book-schema#name> ?name)
+            (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/publishing/src#Popular>)
+          ))))
+    (service <http://rdfs.org/ns/void#Publisher>
+      (union
+        (union
+          (union
+            (union
+              (project (?name)
+                (bgp
+                  (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                  (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#NewPublication>)
+                  (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Pocket>)
+                ))
+              (project (?name)
+                (bgp
+                  (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                  (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Mathematics>)
+                  (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Pocket>)
+                )))
+            (project (?name)
+              (bgp
+                (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Science>)
+                (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Pocket>)
+              )))
+          (project (?name)
+            (bgp
+              (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+              (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Popular>)
+              (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Pocket>)
+            )))
+        (project (?name)
+          (bgp
+            (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+            (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Computer>)
+            (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Pocket>)
+          ))))))

@@ -1,0 +1,11 @@
+QueryPlan [
+Step=1
+MergedJoin [ optimizerCost=75.0
+,	queryVars=QueryVars [Var:Child, Var:Person, Var:PersonName, ]
+,	datasetQueries [
+		dataset=Dataset:http://rdfs.org/ns/void#Celebrity
+		queryClauses [
+			QueryClause [Q(?0,?2,?1)  <-  http://inova8.com/schema/celebrity-schema#child(?0,?2), http://inova8.com/schema/celebrity-schema#name(?0,?1)]
+		]
+]
+]

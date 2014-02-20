@@ -1,0 +1,11 @@
+SELECT  ?x
+WHERE
+  {   { SERVICE <http://rdfs.org/ns/void#Book>
+          { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?y}
+      }
+    UNION
+      { SERVICE <http://rdfs.org/ns/void#Publisher>
+          { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?y .
+            ?y <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://inova8.com/Q2/publisher-schema#Computer>}
+      }
+  }

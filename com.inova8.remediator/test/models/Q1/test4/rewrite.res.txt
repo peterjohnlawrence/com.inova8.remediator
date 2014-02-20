@@ -1,0 +1,7 @@
+SELECT  *
+WHERE
+  { SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/celebrities>
+      { ?Person <http://inova8.com/schema/celebrity-schema#name> ?DS3PersonName
+        { ?Person <http://inova8.com/schema/celebrity-schema#child> ?Child }
+      }
+  }

@@ -1,0 +1,15 @@
+QueryPlan [
+Step=1
+MergedJoin [ optimizerCost=1.0
+,	queryVars=QueryVars [Var:x, Var:y, ]
+,	datasetQueries [
+		dataset=Dataset:http://rdfs.org/ns/void#Book
+		queryClauses [
+		QueryClause [Q(?0,?1)  <-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type(?0,?1)]
+	]
+		dataset=Dataset:http://rdfs.org/ns/void#Publisher
+		queryClauses [
+		QueryClause [Q(?0,?1)  <-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type(?0,?1), http://www.w3.org/2000/01/rdf-schema#subClassOf(?1,http://inova8.com/Q2/publisher-schema#Computer)]
+	]
+]
+]

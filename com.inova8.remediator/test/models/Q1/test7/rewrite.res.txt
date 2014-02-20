@@ -1,0 +1,9 @@
+SELECT  *
+WHERE
+  { SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/movies>
+      { ?Actor <http://inova8.com/schema/movie-schema#portrayedPerson> ?DS2Person}
+    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/instance-linking/kennedyperson-movieperson>
+      { ?DS3Person <http://www.w3.org/2002/07/owl#sameAs> ?DS2Person}
+    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/celebrities>
+      { ?DS3Person <http://inova8.com/schema/celebrity-schema#almaMater> ?College}
+  }

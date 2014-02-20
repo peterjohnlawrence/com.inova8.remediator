@@ -1,0 +1,5 @@
+(bgp
+  (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Product>)
+  (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+  (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+)

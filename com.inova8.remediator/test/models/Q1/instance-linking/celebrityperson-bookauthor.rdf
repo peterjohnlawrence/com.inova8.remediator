@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://inova8.com/instance-linking/celebrityperson-bookauthor#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://inova8.com/instance-linking/celebrityperson-bookauthor">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://inova8.com/schema/celebrity-schema"/>
+    <owl:imports rdf:resource="http://rdfs.org/ns/void"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+    <owl:imports rdf:resource="http://inova8.com/data/books"/>
+    <owl:imports rdf:resource="http://inova8.com/data/celebrities"/>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://inova8.com/data/celebrities#JohnKennedy">
+    <owl:sameAs rdf:resource="http://inova8.com/data/books#Author_1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/data/celebrities#EdwardKennedy">
+    <owl:sameAs rdf:resource="http://inova8.com/data/books#Author_4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/data/celebrities#CarolineKennedy">
+    <owl:sameAs rdf:resource="http://inova8.com/data/books#Author_3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/data/celebrities#RobertKennedy">
+    <owl:sameAs rdf:resource="http://inova8.com/data/books#Author_2"/>
+  </rdf:Description>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

@@ -1,0 +1,169 @@
+(sequence
+  (service <http://rdfs.org/ns/void#Publisher>
+    (union
+      (union
+        (union
+          (union
+            (union
+              (union
+                (union
+                  (union
+                    (union
+                      (union
+                        (union
+                          (union
+                            (union
+                              (project (?id)
+                                (filter (= ?name "Linux")
+                                  (bgp
+                                    (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Autobiography>)
+                                    (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+                                    (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                                  )))
+                              (project (?id)
+                                (filter (= ?name "Linux")
+                                  (bgp
+                                    (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Biography>)
+                                    (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+                                    (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                                  ))))
+                            (project (?id)
+                              (filter (= ?name "Linux")
+                                (bgp
+                                  (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Book>)
+                                  (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+                                  (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                                ))))
+                          (project (?id)
+                            (filter (= ?name "Linux")
+                              (bgp
+                                (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#CD>)
+                                (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+                                (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                              ))))
+                        (project (?id)
+                          (filter (= ?name "Linux")
+                            (bgp
+                              (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Computer>)
+                              (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+                              (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                            ))))
+                      (project (?id)
+                        (filter (= ?name "Linux")
+                          (bgp
+                            (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Mathematics>)
+                            (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+                            (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                          ))))
+                    (project (?id)
+                      (filter (= ?name "Linux")
+                        (bgp
+                          (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#NewPublication>)
+                          (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+                          (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                        ))))
+                  (project (?id)
+                    (filter (= ?name "Linux")
+                      (bgp
+                        (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Novel>)
+                        (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+                        (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                      ))))
+                (project (?id)
+                  (filter (= ?name "Linux")
+                    (bgp
+                      (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Pocket>)
+                      (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+                      (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                    ))))
+              (project (?id)
+                (filter (= ?name "Linux")
+                  (bgp
+                    (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Poetry>)
+                    (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+                    (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                  ))))
+            (project (?id)
+              (filter (= ?name "Linux")
+                (bgp
+                  (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Popular>)
+                  (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+                  (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+                ))))
+          (project (?id)
+            (filter (= ?name "Linux")
+              (bgp
+                (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Product>)
+                (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+                (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+              ))))
+        (project (?id)
+          (filter (= ?name "Linux")
+            (bgp
+              (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Science>)
+              (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+              (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+            ))))
+      (project (?id)
+        (filter (= ?name "Linux")
+          (bgp
+            (triple ?x <http://inova8.com/Q2/publisher-schema#publisher> ?3)
+            (triple ?x <http://inova8.com/Q2/publisher-schema#id> ?id)
+            (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+          )))))
+  (service <http://rdfs.org/ns/void#Book>
+    (union
+      (union
+        (union
+          (union
+            (union
+              (union
+                (union
+                  (project (?id)
+                    (filter (= ?name "Linux")
+                      (bgp
+                        (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/book-schema#Bestseller>)
+                        (triple ?x <http://inova8.com/Q2/book-schema#name> ?name)
+                      )))
+                  (project (?id)
+                    (filter (= ?name "Linux")
+                      (bgp
+                        (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/book-schema#Biography>)
+                        (triple ?x <http://inova8.com/Q2/book-schema#name> ?name)
+                      ))))
+                (project (?id)
+                  (filter (= ?name "Linux")
+                    (bgp
+                      (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/book-schema#Literature>)
+                      (triple ?x <http://inova8.com/Q2/book-schema#name> ?name)
+                    ))))
+              (project (?id)
+                (filter (= ?name "Linux")
+                  (bgp
+                    (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/book-schema#Mathematics>)
+                    (triple ?x <http://inova8.com/Q2/book-schema#name> ?name)
+                  ))))
+            (project (?id)
+              (filter (= ?name "Linux")
+                (bgp
+                  (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/book-schema#Textbook>)
+                  (triple ?x <http://inova8.com/Q2/book-schema#name> ?name)
+                ))))
+          (project (?id)
+            (filter (= ?name "Linux")
+              (bgp
+                (triple ?x <http://inova8.com/Q2/book-schema#author> ?3)
+                (triple ?x <http://inova8.com/Q2/book-schema#name> ?name)
+              ))))
+        (project (?id)
+          (filter (= ?name "Linux")
+            (bgp
+              (triple ?3 <http://inova8.com/Q2/book-schema#publishes> ?x)
+              (triple ?x <http://inova8.com/Q2/book-schema#name> ?name)
+            ))))
+      (project (?id)
+        (filter (= ?name "Linux")
+          (bgp
+            (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/publishing/src#Popular>)
+            (triple ?x <http://inova8.com/Q2/book-schema#name> ?name)
+          ))))))

@@ -1,0 +1,19 @@
+SELECT  ?name
+WHERE
+  {   { SERVICE <http://rdfs.org/ns/void#Book>
+          { ?x <http://inova8.com/Q2/book-schema#name> ?name}
+      }
+    UNION
+      { SERVICE <http://rdfs.org/ns/void#Publisher>
+          { {   { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Poetry> }
+              UNION
+                { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Autobiography> }
+              { ?x <http://inova8.com/Q2/publisher-schema#author> ?author .
+                ?x <http://inova8.com/Q2/publisher-schema#name> ?name
+              }
+            }
+            FILTER regex(?author, "Dante")
+          }
+      }
+  }
+LIMIT   10

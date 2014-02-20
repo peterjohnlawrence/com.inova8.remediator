@@ -1,0 +1,2066 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:celebrities="http://inova8.com/data/celebrities#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:celebrity="http://inova8.com/schema/celebrity-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://inova8.com/data/celebrities">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://inova8.com/schema/celebrity-schema"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+  </owl:Ontology>
+  <celebrity:Person rdf:ID="MaryCKennedy">
+    <celebrity:spouse>
+      <celebrity:Person rdf:ID="JeffreyRuhe">
+        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Jeffrey</celebrity:firstName>
+        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Robert</celebrity:middleName>
+        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1952</celebrity:birthYear>
+        <celebrity:gender>
+          <celebrity:Gender rdf:ID="male">
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >male</rdfs:label>
+          </celebrity:Gender>
+        </celebrity:gender>
+        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Jeffrey Ruhe</celebrity:name>
+        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Ruhe</celebrity:lastName>
+        <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >R</celebrity:middleInitial>
+        <celebrity:spouse rdf:resource="#MaryCKennedy"/>
+      </celebrity:Person>
+    </celebrity:spouse>
+    <celebrity:gender>
+      <celebrity:Gender rdf:ID="female">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >female</rdfs:label>
+      </celebrity:Gender>
+    </celebrity:gender>
+    <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mary</celebrity:firstName>
+    <celebrity:parent>
+      <celebrity:Person rdf:ID="RobertKennedy">
+        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Francis</celebrity:middleName>
+        <celebrity:child>
+          <celebrity:Person rdf:ID="RobertKennedyJr">
+            <celebrity:almaMater>
+              <celebrity:College rdf:ID="Harvard">
+                <rdfs:label>Harvard University</rdfs:label>
+                <celebrity:ivyLeague rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >true</celebrity:ivyLeague>
+              </celebrity:College>
+            </celebrity:almaMater>
+            <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/250px-RobertFKennedyJr.jpg"/>
+            <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Robert Kennedy Jr</celebrity:name>
+            <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Kennedy</celebrity:lastName>
+            <celebrity:parent>
+              <celebrity:Person rdf:ID="EthelSkakel">
+                <celebrity:profession>
+                  <celebrity:Profession rdf:ID="non-profit">
+                    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >non-profit</rdfs:label>
+                  </celebrity:Profession>
+                </celebrity:profession>
+                <celebrity:child>
+                  <celebrity:Person rdf:ID="JosephKennedyII">
+                    <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</celebrity:lastName>
+                    <celebrity:parent rdf:resource="#RobertKennedy"/>
+                    <celebrity:profession>
+                      <celebrity:Profession rdf:ID="congressman">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >congressman</rdfs:label>
+                      </celebrity:Profession>
+                    </celebrity:profession>
+                    <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Joseph</celebrity:firstName>
+                    <celebrity:spouse>
+                      <celebrity:Person rdf:ID="AnneKelly">
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Elizabeth</celebrity:middleName>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1957</celebrity:birthYear>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Anne</celebrity:firstName>
+                        <celebrity:gender rdf:resource="#female"/>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Kelly</celebrity:lastName>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Anne Kelly</celebrity:name>
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >E</celebrity:middleInitial>
+                        <celebrity:spouse rdf:resource="#JosephKennedyII"/>
+                      </celebrity:Person>
+                    </celebrity:spouse>
+                    <celebrity:parent rdf:resource="#EthelSkakel"/>
+                    <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1952</celebrity:birthYear>
+                    <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Joseph Kennedy II</celebrity:name>
+                    <celebrity:gender rdf:resource="#male"/>
+                    <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/160px-Joe_Kennedy.jpg"/>
+                    <celebrity:suffix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >II</celebrity:suffix>
+                    <celebrity:spouse>
+                      <celebrity:Person rdf:ID="SheilaRauch">
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Rauch</celebrity:lastName>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1949</celebrity:birthYear>
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Brewster</celebrity:middleName>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Sheila</celebrity:firstName>
+                        <celebrity:gender rdf:resource="#female"/>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Sheila Rauch</celebrity:name>
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >B</celebrity:middleInitial>
+                        <celebrity:spouse rdf:resource="#JosephKennedyII"/>
+                      </celebrity:Person>
+                    </celebrity:spouse>
+                  </celebrity:Person>
+                </celebrity:child>
+                <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Skakel</celebrity:lastName>
+                <celebrity:child rdf:resource="#RobertKennedyJr"/>
+                <celebrity:child>
+                  <celebrity:Person rdf:ID="KathleenHKennedy">
+                    <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Hartington</celebrity:middleName>
+                    <celebrity:spouse>
+                      <celebrity:Person rdf:ID="DavidTownsend">
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >David</celebrity:firstName>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1947</celebrity:birthYear>
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Lee</celebrity:middleName>
+                        <celebrity:gender rdf:resource="#male"/>
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >L</celebrity:middleInitial>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >David Townsend</celebrity:name>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Townsend</celebrity:lastName>
+                        <celebrity:spouse rdf:resource="#KathleenHKennedy"/>
+                      </celebrity:Person>
+                    </celebrity:spouse>
+                    <celebrity:almaMater rdf:resource="#Harvard"/>
+                    <celebrity:parent rdf:resource="#EthelSkakel"/>
+                    <celebrity:almaMater>
+                      <celebrity:College rdf:ID="UniversityOfNewMexico">
+                        <rdfs:label>University of New Mexico</rdfs:label>
+                      </celebrity:College>
+                    </celebrity:almaMater>
+                    <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1951</celebrity:birthYear>
+                    <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/Kathleen_Kennedy_Townsend.jpg"/>
+                    <celebrity:profession>
+                      <celebrity:Profession rdf:ID="Lt-governor"/>
+                    </celebrity:profession>
+                    <celebrity:gender rdf:resource="#female"/>
+                    <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</celebrity:lastName>
+                    <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kathleen</celebrity:firstName>
+                    <celebrity:parent rdf:resource="#RobertKennedy"/>
+                    <celebrity:profession>
+                      <celebrity:Profession rdf:ID="attorney">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >attorney</rdfs:label>
+                      </celebrity:Profession>
+                    </celebrity:profession>
+                    <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >H</celebrity:middleInitial>
+                    <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kathleen H. Kennedy</celebrity:name>
+                  </celebrity:Person>
+                </celebrity:child>
+                <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1928</celebrity:birthYear>
+                <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Ethel Skakel</celebrity:name>
+                <celebrity:child>
+                  <celebrity:Person rdf:ID="RoryKennedy">
+                    <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >E</celebrity:middleInitial>
+                    <celebrity:gender rdf:resource="#female"/>
+                    <celebrity:parent rdf:resource="#EthelSkakel"/>
+                    <celebrity:almaMater>
+                      <celebrity:College rdf:ID="Brown">
+                        <rdfs:label>Brown University</rdfs:label>
+                        <celebrity:ivyLeague rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</celebrity:ivyLeague>
+                      </celebrity:College>
+                    </celebrity:almaMater>
+                    <celebrity:profession>
+                      <celebrity:Profession rdf:ID="producer">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >producer</rdfs:label>
+                      </celebrity:Profession>
+                    </celebrity:profession>
+                    <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Rory</celebrity:firstName>
+                    <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1968</celebrity:birthYear>
+                    <celebrity:parent rdf:resource="#RobertKennedy"/>
+                    <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Elizabeth</celebrity:middleName>
+                    <celebrity:spouse>
+                      <celebrity:Person rdf:ID="MarkBailey">
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1967</celebrity:birthYear>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Bailey</celebrity:lastName>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Mark</celebrity:firstName>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Mark Bailey</celebrity:name>
+                        <celebrity:gender rdf:resource="#male"/>
+                        <celebrity:spouse rdf:resource="#RoryKennedy"/>
+                      </celebrity:Person>
+                    </celebrity:spouse>
+                    <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</celebrity:lastName>
+                    <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Rory Kennedy</celebrity:name>
+                  </celebrity:Person>
+                </celebrity:child>
+                <celebrity:almaMater>
+                  <celebrity:College rdf:ID="ManhattanvilleCollege">
+                    <rdfs:label>Manhattanville College</rdfs:label>
+                    <celebrity:ivyLeague rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >false</celebrity:ivyLeague>
+                  </celebrity:College>
+                </celebrity:almaMater>
+                <celebrity:child>
+                  <celebrity:Person rdf:ID="MaryKKennedy">
+                    <celebrity:parent rdf:resource="#EthelSkakel"/>
+                    <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Mary</celebrity:firstName>
+                    <celebrity:spouse>
+                      <celebrity:Person rdf:ID="AndrewCuomo">
+                        <celebrity:profession>
+                          <celebrity:Profession rdf:ID="cabinet-secretary">
+                            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >cabinet-secretary</rdfs:label>
+                          </celebrity:Profession>
+                        </celebrity:profession>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Cuomo</celebrity:lastName>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Andrew</celebrity:firstName>
+                        <celebrity:spouse rdf:resource="#MaryKKennedy"/>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Andrew Cuomo</celebrity:name>
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >M</celebrity:middleInitial>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1957</celebrity:birthYear>
+                        <celebrity:gender rdf:resource="#male"/>
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Mark</celebrity:middleName>
+                      </celebrity:Person>
+                    </celebrity:spouse>
+                    <celebrity:parent rdf:resource="#RobertKennedy"/>
+                    <celebrity:profession rdf:resource="#non-profit"/>
+                    <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kerry</celebrity:middleName>
+                    <celebrity:gender rdf:resource="#female"/>
+                    <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Mary Kennedy</celebrity:name>
+                    <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1959</celebrity:birthYear>
+                    <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >K</celebrity:middleInitial>
+                    <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</celebrity:lastName>
+                  </celebrity:Person>
+                </celebrity:child>
+                <celebrity:child>
+                  <celebrity:Person rdf:ID="DouglasKennedy">
+                    <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Harriman</celebrity:middleName>
+                    <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >H</celebrity:middleInitial>
+                    <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Douglas</celebrity:firstName>
+                    <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Douglas Kennedy</celebrity:name>
+                    <celebrity:gender rdf:resource="#male"/>
+                    <celebrity:spouse>
+                      <celebrity:Person rdf:ID="MollyStark">
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Molly Stark</celebrity:name>
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Elizabeth</celebrity:middleName>
+                        <celebrity:gender rdf:resource="#female"/>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Molly</celebrity:firstName>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1968</celebrity:birthYear>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Stark</celebrity:lastName>
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >E</celebrity:middleInitial>
+                        <celebrity:spouse rdf:resource="#DouglasKennedy"/>
+                      </celebrity:Person>
+                    </celebrity:spouse>
+                    <celebrity:parent rdf:resource="#RobertKennedy"/>
+                    <celebrity:parent rdf:resource="#EthelSkakel"/>
+                    <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1967</celebrity:birthYear>
+                    <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</celebrity:lastName>
+                    <celebrity:almaMater rdf:resource="#Brown"/>
+                    <celebrity:profession>
+                      <celebrity:Profession rdf:ID="reporter">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >reporter</rdfs:label>
+                      </celebrity:Profession>
+                    </celebrity:profession>
+                  </celebrity:Person>
+                </celebrity:child>
+                <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Ethel</celebrity:firstName>
+                <celebrity:child>
+                  <celebrity:Person rdf:ID="MichaelKennedy">
+                    <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1958</celebrity:birthYear>
+                    <celebrity:parent rdf:resource="#EthelSkakel"/>
+                    <celebrity:spouse>
+                      <celebrity:Person rdf:ID="VictoriaGifford">
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Victoria</celebrity:firstName>
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Denise</celebrity:middleName>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Victoria Gifford</celebrity:name>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1957</celebrity:birthYear>
+                        <celebrity:gender rdf:resource="#female"/>
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >D</celebrity:middleInitial>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Gifford</celebrity:lastName>
+                        <celebrity:spouse rdf:resource="#MichaelKennedy"/>
+                      </celebrity:Person>
+                    </celebrity:spouse>
+                    <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >LeMoyne</celebrity:middleName>
+                    <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >L</celebrity:middleInitial>
+                    <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Michael Kennedy</celebrity:name>
+                    <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Michael</celebrity:firstName>
+                    <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</celebrity:lastName>
+                    <celebrity:parent rdf:resource="#RobertKennedy"/>
+                    <celebrity:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1997</celebrity:deathYear>
+                    <celebrity:gender rdf:resource="#male"/>
+                  </celebrity:Person>
+                </celebrity:child>
+                <celebrity:gender rdf:resource="#female"/>
+                <celebrity:profession>
+                  <celebrity:Profession rdf:ID="home-maker">
+                    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >home-maker</rdfs:label>
+                  </celebrity:Profession>
+                </celebrity:profession>
+                <celebrity:child>
+                  <celebrity:Person rdf:ID="ChristopherKennedy">
+                    <celebrity:parent rdf:resource="#RobertKennedy"/>
+                    <celebrity:spouse>
+                      <celebrity:Person rdf:ID="SheilaBerner">
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >S</celebrity:middleInitial>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1962</celebrity:birthYear>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Berner</celebrity:lastName>
+                        <celebrity:gender rdf:resource="#female"/>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Sheila Berner</celebrity:name>
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Sinclair</celebrity:middleName>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Sheila</celebrity:firstName>
+                        <celebrity:spouse rdf:resource="#ChristopherKennedy"/>
+                      </celebrity:Person>
+                    </celebrity:spouse>
+                    <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Christopher Kennedy</celebrity:name>
+                    <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >George</celebrity:middleName>
+                    <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >G</celebrity:middleInitial>
+                    <celebrity:parent rdf:resource="#EthelSkakel"/>
+                    <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Christopher</celebrity:firstName>
+                    <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1963</celebrity:birthYear>
+                    <celebrity:gender rdf:resource="#male"/>
+                    <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</celebrity:lastName>
+                  </celebrity:Person>
+                </celebrity:child>
+                <celebrity:child>
+                  <celebrity:Person rdf:ID="DavidKennedy">
+                    <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >A</celebrity:middleInitial>
+                    <celebrity:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1984</celebrity:deathYear>
+                    <celebrity:profession>
+                      <celebrity:Profession rdf:ID="writer">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >writer</rdfs:label>
+                      </celebrity:Profession>
+                    </celebrity:profession>
+                    <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Anthony</celebrity:middleName>
+                    <celebrity:gender rdf:resource="#male"/>
+                    <celebrity:parent rdf:resource="#EthelSkakel"/>
+                    <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >David</celebrity:firstName>
+                    <celebrity:parent rdf:resource="#RobertKennedy"/>
+                    <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >David Kennedy</celebrity:name>
+                    <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</celebrity:lastName>
+                    <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1955</celebrity:birthYear>
+                  </celebrity:Person>
+                </celebrity:child>
+                <celebrity:child>
+                  <celebrity:Person rdf:ID="MatthewKennedy">
+                    <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</celebrity:lastName>
+                    <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Matthew</celebrity:firstName>
+                    <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >M</celebrity:middleInitial>
+                    <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Maxwell</celebrity:middleName>
+                    <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1965</celebrity:birthYear>
+                    <celebrity:parent rdf:resource="#RobertKennedy"/>
+                    <celebrity:spouse>
+                      <celebrity:Person rdf:ID="VictoriaStauss">
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Stauss</celebrity:lastName>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Victoria Stauss</celebrity:name>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Victoria</celebrity:firstName>
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Anne</celebrity:middleName>
+                        <celebrity:gender rdf:resource="#female"/>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1964</celebrity:birthYear>
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >A</celebrity:middleInitial>
+                        <celebrity:spouse rdf:resource="#MatthewKennedy"/>
+                      </celebrity:Person>
+                    </celebrity:spouse>
+                    <celebrity:gender rdf:resource="#male"/>
+                    <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Matthew Kennedy</celebrity:name>
+                    <celebrity:parent rdf:resource="#EthelSkakel"/>
+                  </celebrity:Person>
+                </celebrity:child>
+                <celebrity:spouse rdf:resource="#RobertKennedy"/>
+                <celebrity:child rdf:resource="#MaryCKennedy"/>
+              </celebrity:Person>
+            </celebrity:parent>
+            <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1954</celebrity:birthYear>
+            <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Robert</celebrity:firstName>
+            <celebrity:profession>
+              <celebrity:Profession rdf:ID="professor">
+                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >professor</rdfs:label>
+              </celebrity:Profession>
+            </celebrity:profession>
+            <celebrity:profession>
+              <celebrity:Profession rdf:ID="broadcaster">
+                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >broadcaster</rdfs:label>
+              </celebrity:Profession>
+            </celebrity:profession>
+            <celebrity:spouse>
+              <celebrity:Person rdf:ID="MaryRichardson">
+                <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Mary</celebrity:firstName>
+                <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1960</celebrity:birthYear>
+                <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Richardson</celebrity:lastName>
+                <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Mary Richardson</celebrity:name>
+                <celebrity:gender rdf:resource="#female"/>
+                <celebrity:spouse rdf:resource="#RobertKennedyJr"/>
+              </celebrity:Person>
+            </celebrity:spouse>
+            <celebrity:suffix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Jr</celebrity:suffix>
+            <celebrity:profession rdf:resource="#attorney"/>
+            <celebrity:parent rdf:resource="#RobertKennedy"/>
+            <celebrity:almaMater>
+              <celebrity:College rdf:ID="UniversityOfVirginia">
+                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >University of Virginia</rdfs:label>
+              </celebrity:College>
+            </celebrity:almaMater>
+            <celebrity:spouse>
+              <celebrity:Person rdf:ID="EmilyBlack">
+                <celebrity:gender rdf:resource="#female"/>
+                <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >R</celebrity:middleInitial>
+                <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Ruth</celebrity:middleName>
+                <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1957</celebrity:birthYear>
+                <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Black</celebrity:lastName>
+                <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Emily Black</celebrity:name>
+                <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Emily</celebrity:firstName>
+                <celebrity:spouse rdf:resource="#RobertKennedyJr"/>
+              </celebrity:Person>
+            </celebrity:spouse>
+            <celebrity:gender rdf:resource="#male"/>
+          </celebrity:Person>
+        </celebrity:child>
+        <celebrity:child rdf:resource="#KathleenHKennedy"/>
+        <celebrity:child rdf:resource="#MaryCKennedy"/>
+        <celebrity:child rdf:resource="#DavidKennedy"/>
+        <celebrity:child rdf:resource="#JosephKennedyII"/>
+        <celebrity:parent>
+          <celebrity:Matriarch rdf:ID="RoseFitzgerald">
+            <celebrity:gender rdf:resource="#female"/>
+            <celebrity:profession rdf:resource="#home-maker"/>
+            <celebrity:child>
+              <celebrity:Person rdf:ID="EuniceKennedy">
+                <celebrity:child>
+                  <celebrity:Person rdf:ID="TimothyShriver">
+                    <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Perry</celebrity:middleName>
+                    <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >P</celebrity:middleInitial>
+                    <celebrity:gender rdf:resource="#male"/>
+                    <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Timothy Shriver</celebrity:name>
+                    <celebrity:almaMater>
+                      <celebrity:College rdf:ID="Yale">
+                        <rdfs:label>Yale</rdfs:label>
+                        <celebrity:ivyLeague rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >true</celebrity:ivyLeague>
+                      </celebrity:College>
+                    </celebrity:almaMater>
+                    <celebrity:parent>
+                      <celebrity:Person rdf:ID="RobertShriver">
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Sargent</celebrity:middleName>
+                        <celebrity:gender rdf:resource="#male"/>
+                        <celebrity:child>
+                          <celebrity:Person rdf:ID="AnthonyShriver">
+                            <celebrity:parent rdf:resource="#EuniceKennedy"/>
+                            <celebrity:birthYear rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#integer"
+                            >1965</celebrity:birthYear>
+                            <celebrity:gender rdf:resource="#male"/>
+                            <celebrity:spouse>
+                              <celebrity:Person rdf:ID="AlinaMojica">
+                                <celebrity:name rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Alina Mojica</celebrity:name>
+                                <celebrity:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Mojica</celebrity:lastName>
+                                <celebrity:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1965</celebrity:birthYear>
+                                <celebrity:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Alina</celebrity:firstName>
+                                <celebrity:gender rdf:resource="#female"/>
+                                <celebrity:spouse rdf:resource="#AnthonyShriver"/>
+                              </celebrity:Person>
+                            </celebrity:spouse>
+                            <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Anthony Shriver</celebrity:name>
+                            <celebrity:middleName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Kennedy</celebrity:middleName>
+                            <celebrity:parent rdf:resource="#RobertShriver"/>
+                            <celebrity:lastName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Shriver</celebrity:lastName>
+                            <celebrity:firstName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Anthony</celebrity:firstName>
+                            <celebrity:middleInitial rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >K</celebrity:middleInitial>
+                          </celebrity:Person>
+                        </celebrity:child>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Robert</celebrity:firstName>
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >S</celebrity:middleInitial>
+                        <celebrity:profession>
+                          <celebrity:Profession rdf:ID="ambassador">
+                            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >ambassador</rdfs:label>
+                          </celebrity:Profession>
+                        </celebrity:profession>
+                        <celebrity:spouse rdf:resource="#EuniceKennedy"/>
+                        <celebrity:child>
+                          <celebrity:Person rdf:ID="MariaShriver">
+                            <celebrity:middleName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Owings</celebrity:middleName>
+                            <celebrity:gender rdf:resource="#female"/>
+                            <celebrity:lastName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Shriver</celebrity:lastName>
+                            <rdfs:label>Maria Shriver</rdfs:label>
+                            <celebrity:parent rdf:resource="#EuniceKennedy"/>
+                            <celebrity:middleInitial rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >O</celebrity:middleInitial>
+                            <celebrity:profession rdf:resource="#reporter"/>
+                            <celebrity:birthYear rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#integer"
+                            >1955</celebrity:birthYear>
+                            <celebrity:almaMater>
+                              <celebrity:College rdf:ID="GeorgetownUniversity">
+                                <rdfs:label>Georgetown University</rdfs:label>
+                                <celebrity:ivyLeague rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                >false</celebrity:ivyLeague>
+                              </celebrity:College>
+                            </celebrity:almaMater>
+                            <celebrity:spouse>
+                              <celebrity:Person rdf:ID="ArnoldSchwarzenegger">
+                                <celebrity:spouse rdf:resource="#MariaShriver"/>
+                                <celebrity:middleName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Alois</celebrity:middleName>
+                                <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/Arnold_Schwarzenegger_2004-01-30.jpg"/>
+                                <celebrity:profession>
+                                  <celebrity:Profession rdf:ID="governor">
+                                    <rdfs:label rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >governor</rdfs:label>
+                                  </celebrity:Profession>
+                                </celebrity:profession>
+                                <celebrity:middleInitial rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >A</celebrity:middleInitial>
+                                <celebrity:name rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Arnold Schwarzenegger</celebrity:name>
+                                <celebrity:profession>
+                                  <celebrity:Profession rdf:ID="actor">
+                                    <rdfs:label rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >actor</rdfs:label>
+                                  </celebrity:Profession>
+                                </celebrity:profession>
+                                <celebrity:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Schwarzenegger</celebrity:lastName>
+                                <celebrity:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1947</celebrity:birthYear>
+                                <celebrity:profession>
+                                  <celebrity:Profession rdf:ID="body-builder">
+                                    <rdfs:label rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >body-builder</rdfs:label>
+                                  </celebrity:Profession>
+                                </celebrity:profession>
+                                <celebrity:almaMater>
+                                  <celebrity:College rdf:ID="UniversityOfWisconsin">
+                                    <rdfs:label>University of Wisconsin</rdfs:label>
+                                    <celebrity:ivyLeague rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >false</celebrity:ivyLeague>
+                                  </celebrity:College>
+                                </celebrity:almaMater>
+                                <celebrity:gender rdf:resource="#male"/>
+                                <celebrity:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Arnold</celebrity:firstName>
+                              </celebrity:Person>
+                            </celebrity:spouse>
+                            <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Maria Shriver</celebrity:name>
+                            <celebrity:parent rdf:resource="#RobertShriver"/>
+                            <celebrity:firstName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Maria</celebrity:firstName>
+                          </celebrity:Person>
+                        </celebrity:child>
+                        <celebrity:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >2011</celebrity:deathYear>
+                        <celebrity:almaMater rdf:resource="#Yale"/>
+                        <celebrity:child>
+                          <celebrity:Person rdf:ID="RobertShriverIII">
+                            <celebrity:profession rdf:resource="#attorney"/>
+                            <celebrity:parent rdf:resource="#RobertShriver"/>
+                            <celebrity:almaMater rdf:resource="#Yale"/>
+                            <celebrity:suffix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >III</celebrity:suffix>
+                            <celebrity:profession rdf:resource="#producer"/>
+                            <celebrity:parent rdf:resource="#EuniceKennedy"/>
+                            <celebrity:profession>
+                              <celebrity:Profession rdf:ID="goverment">
+                                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >goverment</rdfs:label>
+                              </celebrity:Profession>
+                            </celebrity:profession>
+                            <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Robert Shriver III</celebrity:name>
+                            <celebrity:gender rdf:resource="#male"/>
+                            <celebrity:firstName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Robert</celebrity:firstName>
+                            <celebrity:birthYear rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#integer"
+                            >1954</celebrity:birthYear>
+                            <celebrity:lastName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Shriver</celebrity:lastName>
+                          </celebrity:Person>
+                        </celebrity:child>
+                        <celebrity:child rdf:resource="#TimothyShriver"/>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1915</celebrity:birthYear>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Shriver</celebrity:lastName>
+                        <celebrity:child>
+                          <celebrity:Person rdf:ID="MarkShriver">
+                            <celebrity:spouse>
+                              <celebrity:Person rdf:ID="JeannieRipp">
+                                <celebrity:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Ripp</celebrity:lastName>
+                                <celebrity:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Jeannie</celebrity:firstName>
+                                <celebrity:name rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Jeannie Ripp</celebrity:name>
+                                <celebrity:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1965</celebrity:birthYear>
+                                <celebrity:gender rdf:resource="#female"/>
+                                <celebrity:spouse rdf:resource="#MarkShriver"/>
+                              </celebrity:Person>
+                            </celebrity:spouse>
+                            <celebrity:parent rdf:resource="#EuniceKennedy"/>
+                            <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Mark Shriver</celebrity:name>
+                            <celebrity:middleInitial rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >K</celebrity:middleInitial>
+                            <celebrity:middleName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Kennedy</celebrity:middleName>
+                            <celebrity:birthYear rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#integer"
+                            >1964</celebrity:birthYear>
+                            <celebrity:gender rdf:resource="#male"/>
+                            <celebrity:parent rdf:resource="#RobertShriver"/>
+                            <celebrity:firstName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Mark</celebrity:firstName>
+                            <celebrity:lastName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Shriver</celebrity:lastName>
+                          </celebrity:Person>
+                        </celebrity:child>
+                        <celebrity:profession>
+                          <celebrity:Profession rdf:ID="navy">
+                            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >navy</rdfs:label>
+                          </celebrity:Profession>
+                        </celebrity:profession>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Robert Shriver</celebrity:name>
+                        <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/2002F_Shriver12.jpg"/>
+                        <celebrity:profession>
+                          <celebrity:Profession rdf:ID="peace-corp">
+                            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >peace-corp</rdfs:label>
+                          </celebrity:Profession>
+                        </celebrity:profession>
+                      </celebrity:Person>
+                    </celebrity:parent>
+                    <celebrity:profession>
+                      <celebrity:Profession rdf:ID="teacher">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >teacher</rdfs:label>
+                      </celebrity:Profession>
+                    </celebrity:profession>
+                    <celebrity:almaMater>
+                      <celebrity:College rdf:ID="UniversityOfConnecticut">
+                        <rdfs:label>University of Connecticut</rdfs:label>
+                        <celebrity:ivyLeague rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</celebrity:ivyLeague>
+                      </celebrity:College>
+                    </celebrity:almaMater>
+                    <celebrity:parent rdf:resource="#EuniceKennedy"/>
+                    <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1959</celebrity:birthYear>
+                    <celebrity:almaMater>
+                      <celebrity:College rdf:ID="CatholicUniversity">
+                        <rdfs:label>Catholic University</rdfs:label>
+                        <celebrity:ivyLeague rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                        >false</celebrity:ivyLeague>
+                      </celebrity:College>
+                    </celebrity:almaMater>
+                    <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Shriver</celebrity:lastName>
+                    <celebrity:spouse>
+                      <celebrity:Person rdf:ID="LindaPotter">
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Sophia</celebrity:middleName>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1956</celebrity:birthYear>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Linda Potter</celebrity:name>
+                        <celebrity:gender rdf:resource="#female"/>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Linda</celebrity:firstName>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Potter</celebrity:lastName>
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >S</celebrity:middleInitial>
+                        <celebrity:spouse rdf:resource="#TimothyShriver"/>
+                      </celebrity:Person>
+                    </celebrity:spouse>
+                    <celebrity:profession rdf:resource="#non-profit"/>
+                    <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Timothy</celebrity:firstName>
+                  </celebrity:Person>
+                </celebrity:child>
+                <celebrity:child rdf:resource="#MariaShriver"/>
+                <celebrity:child rdf:resource="#RobertShriverIII"/>
+                <celebrity:child rdf:resource="#MarkShriver"/>
+                <celebrity:parent rdf:resource="#RoseFitzgerald"/>
+                <celebrity:parent>
+                  <celebrity:Patriarch rdf:ID="JosephKennedy">
+                    <celebrity:profession>
+                      <celebrity:Profession rdf:ID="banker">
+                        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >banker</rdfs:label>
+                      </celebrity:Profession>
+                    </celebrity:profession>
+                    <celebrity:child>
+                      <celebrity:Person rdf:ID="JohnKennedy">
+                        <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/204px-John_F._Kennedy,_White_House_color_photo_portrait.jpg"/>
+                        <celebrity:spouse>
+                          <celebrity:Person rdf:ID="JacquelineBouvier">
+                            <celebrity:child>
+                              <celebrity:Person rdf:ID="CarolineKennedy">
+                                <celebrity:spouse>
+                                  <celebrity:Person rdf:ID="EdwinSchlossberg">
+                                    <celebrity:middleInitial rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >A</celebrity:middleInitial>
+                                    <celebrity:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Edwin</celebrity:firstName>
+                                    <celebrity:middleName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Arthur</celebrity:middleName>
+                                    <celebrity:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Edwin Schlossberg</celebrity:name>
+                                    <celebrity:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1945</celebrity:birthYear>
+                                    <celebrity:gender rdf:resource="#male"/>
+                                    <celebrity:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Schlossberg</celebrity:lastName>
+                                    <celebrity:spouse rdf:resource="#CarolineKennedy"/>
+                                  </celebrity:Person>
+                                </celebrity:spouse>
+                                <celebrity:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Kennedy</celebrity:lastName>
+                                <celebrity:profession rdf:resource="#non-profit"/>
+                                <celebrity:middleInitial rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >B</celebrity:middleInitial>
+                                <celebrity:middleName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Bouvier</celebrity:middleName>
+                                <celebrity:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Caroline</celebrity:firstName>
+                                <celebrity:name rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Caroline Kennedy</celebrity:name>
+                                <celebrity:gender rdf:resource="#female"/>
+                                <celebrity:almaMater>
+                                  <celebrity:College rdf:ID="Columbia">
+                                    <rdfs:label>Columbia University</rdfs:label>
+                                    <celebrity:ivyLeague rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >true</celebrity:ivyLeague>
+                                  </celebrity:College>
+                                </celebrity:almaMater>
+                                <celebrity:parent rdf:resource="#JohnKennedy"/>
+                                <celebrity:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1957</celebrity:birthYear>
+                                <celebrity:parent rdf:resource="#JacquelineBouvier"/>
+                                <celebrity:almaMater rdf:resource="#Harvard"/>
+                              </celebrity:Person>
+                            </celebrity:child>
+                            <celebrity:gender rdf:resource="#female"/>
+                            <celebrity:child>
+                              <celebrity:Person rdf:ID="JohnKennedyJr">
+                                <celebrity:parent rdf:resource="#JacquelineBouvier"/>
+                                <celebrity:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1960</celebrity:birthYear>
+                                <celebrity:almaMater>
+                                  <celebrity:College rdf:ID="NYU">
+                                    <rdfs:label>New York University</rdfs:label>
+                                    <celebrity:ivyLeague rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#boolean"
+                                    >false</celebrity:ivyLeague>
+                                  </celebrity:College>
+                                </celebrity:almaMater>
+                                <celebrity:name rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >John Kennedy Jr</celebrity:name>
+                                <celebrity:almaMater rdf:resource="#Brown"/>
+                                <celebrity:profession>
+                                  <celebrity:Profession rdf:ID="district-attorney">
+                                    <rdfs:label rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >district-attorney</rdfs:label>
+                                  </celebrity:Profession>
+                                </celebrity:profession>
+                                <celebrity:gender rdf:resource="#male"/>
+                                <celebrity:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Kennedy</celebrity:lastName>
+                                <celebrity:suffix rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Jr</celebrity:suffix>
+                                <celebrity:spouse>
+                                  <celebrity:Person rdf:ID="CarolynBessette">
+                                    <celebrity:deathYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1999</celebrity:deathYear>
+                                    <celebrity:gender rdf:resource="#female"/>
+                                    <celebrity:almaMater>
+                                      <celebrity:College rdf:ID="BostonUniversity">
+                                        <rdfs:label>Boston University</rdfs:label>
+                                        <celebrity:ivyLeague rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#boolean"
+                                        >false</celebrity:ivyLeague>
+                                      </celebrity:College>
+                                    </celebrity:almaMater>
+                                    <celebrity:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Carolyn Bessette</celebrity:name>
+                                    <celebrity:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Bessette</celebrity:lastName>
+                                    <celebrity:profession>
+                                      <celebrity:Profession rdf:ID="PR"/>
+                                    </celebrity:profession>
+                                    <celebrity:spouse rdf:resource="#JohnKennedyJr"/>
+                                    <celebrity:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Carolyn</celebrity:firstName>
+                                    <celebrity:profession>
+                                      <celebrity:Profession rdf:ID="model">
+                                        <rdfs:label rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >model</rdfs:label>
+                                      </celebrity:Profession>
+                                    </celebrity:profession>
+                                    <celebrity:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1966</celebrity:birthYear>
+                                  </celebrity:Person>
+                                </celebrity:spouse>
+                                <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/180px-JFKJr2.jpg"/>
+                                <celebrity:deathYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1999</celebrity:deathYear>
+                                <celebrity:parent rdf:resource="#JohnKennedy"/>
+                                <celebrity:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >John</celebrity:firstName>
+                                <celebrity:profession>
+                                  <celebrity:Profession rdf:ID="publisher">
+                                    <rdfs:label rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >publisher</rdfs:label>
+                                  </celebrity:Profession>
+                                </celebrity:profession>
+                              </celebrity:Person>
+                            </celebrity:child>
+                            <celebrity:spouse>
+                              <celebrity:Person rdf:ID="AristotleOnassis">
+                                <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/AristotleOnassis.jpg"/>
+                                <celebrity:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1906</celebrity:birthYear>
+                                <celebrity:gender rdf:resource="#male"/>
+                                <celebrity:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Aristotle</celebrity:firstName>
+                                <celebrity:name rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Aristotle Onassis</celebrity:name>
+                                <celebrity:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Onassis</celebrity:lastName>
+                                <celebrity:deathYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1975</celebrity:deathYear>
+                                <celebrity:profession>
+                                  <celebrity:Profession rdf:ID="shipping">
+                                    <rdfs:label rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >shipping</rdfs:label>
+                                  </celebrity:Profession>
+                                </celebrity:profession>
+                                <celebrity:spouse rdf:resource="#JacquelineBouvier"/>
+                              </celebrity:Person>
+                            </celebrity:spouse>
+                            <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/175px-Whitehouseportraitjackie_curvecorrected.jpg"/>
+                            <celebrity:middleInitial rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >L</celebrity:middleInitial>
+                            <celebrity:profession rdf:resource="#home-maker"/>
+                            <celebrity:birthYear rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#integer"
+                            >1929</celebrity:birthYear>
+                            <celebrity:deathYear rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#integer"
+                            >1994</celebrity:deathYear>
+                            <celebrity:child>
+                              <celebrity:Person rdf:ID="PatrickBKennedy">
+                                <celebrity:middleName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Bouvier</celebrity:middleName>
+                                <celebrity:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Kennedy</celebrity:lastName>
+                                <celebrity:parent rdf:resource="#JacquelineBouvier"/>
+                                <celebrity:parent rdf:resource="#JohnKennedy"/>
+                                <celebrity:name rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Patrick B. Kennedy</celebrity:name>
+                                <celebrity:middleInitial rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >B</celebrity:middleInitial>
+                                <celebrity:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1963</celebrity:birthYear>
+                                <celebrity:gender rdf:resource="#male"/>
+                                <celebrity:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Patrick</celebrity:firstName>
+                                <celebrity:deathYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1963</celebrity:deathYear>
+                              </celebrity:Person>
+                            </celebrity:child>
+                            <celebrity:spouse rdf:resource="#JohnKennedy"/>
+                            <celebrity:firstName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Jacqueline</celebrity:firstName>
+                            <celebrity:lastName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Bouvier</celebrity:lastName>
+                            <celebrity:middleName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Lee</celebrity:middleName>
+                            <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Jacqueline Bouvier</celebrity:name>
+                            <celebrity:almaMater>
+                              <celebrity:College rdf:ID="GeorgeWashingtonU">
+                                <rdfs:label>George Washington University</rdfs:label>
+                                <celebrity:ivyLeague rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                >false</celebrity:ivyLeague>
+                              </celebrity:College>
+                            </celebrity:almaMater>
+                            <celebrity:profession>
+                              <celebrity:Profession rdf:ID="photographer">
+                                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >photographer</rdfs:label>
+                              </celebrity:Profession>
+                            </celebrity:profession>
+                            <celebrity:profession>
+                              <celebrity:Profession rdf:ID="editor">
+                                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >editor</rdfs:label>
+                              </celebrity:Profession>
+                            </celebrity:profession>
+                          </celebrity:Person>
+                        </celebrity:spouse>
+                        <celebrity:profession>
+                          <celebrity:Profession rdf:ID="senator">
+                            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >senator</rdfs:label>
+                          </celebrity:Profession>
+                        </celebrity:profession>
+                        <celebrity:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1963</celebrity:deathYear>
+                        <celebrity:child rdf:resource="#CarolineKennedy"/>
+                        <celebrity:gender rdf:resource="#male"/>
+                        <celebrity:almaMater>
+                          <celebrity:College rdf:ID="Princeton">
+                            <rdfs:label>Princeton</rdfs:label>
+                            <celebrity:ivyLeague rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#boolean"
+                            >true</celebrity:ivyLeague>
+                          </celebrity:College>
+                        </celebrity:almaMater>
+                        <celebrity:parent rdf:resource="#RoseFitzgerald"/>
+                        <celebrity:almaMater rdf:resource="#Harvard"/>
+                        <celebrity:profession>
+                          <celebrity:Profession rdf:ID="president">
+                            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >president</rdfs:label>
+                          </celebrity:Profession>
+                        </celebrity:profession>
+                        <celebrity:parent rdf:resource="#JosephKennedy"/>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >John</celebrity:firstName>
+                        <celebrity:child rdf:resource="#PatrickBKennedy"/>
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Fitzgerald</celebrity:middleName>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >John Kennedy</celebrity:name>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Kennedy</celebrity:lastName>
+                        <celebrity:child rdf:resource="#JohnKennedyJr"/>
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >F</celebrity:middleInitial>
+                        <celebrity:profession rdf:resource="#navy"/>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1917</celebrity:birthYear>
+                        <celebrity:profession rdf:resource="#congressman"/>
+                      </celebrity:Person>
+                    </celebrity:child>
+                    <celebrity:child>
+                      <celebrity:Person rdf:ID="KathleenAKennedy">
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >A</celebrity:middleInitial>
+                        <celebrity:spouse>
+                          <celebrity:Person rdf:ID="WilliamCavendish">
+                            <celebrity:middleName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >John Robert</celebrity:middleName>
+                            <celebrity:deathYear rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#integer"
+                            >1944</celebrity:deathYear>
+                            <celebrity:firstName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >William</celebrity:firstName>
+                            <celebrity:birthYear rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#integer"
+                            >1917</celebrity:birthYear>
+                            <celebrity:lastName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Cavendish</celebrity:lastName>
+                            <celebrity:profession>
+                              <celebrity:Profession rdf:ID="army">
+                                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >army</rdfs:label>
+                              </celebrity:Profession>
+                            </celebrity:profession>
+                            <celebrity:gender rdf:resource="#male"/>
+                            <celebrity:middleInitial rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >JR</celebrity:middleInitial>
+                            <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >William Cavendish</celebrity:name>
+                            <celebrity:spouse rdf:resource="#KathleenAKennedy"/>
+                          </celebrity:Person>
+                        </celebrity:spouse>
+                        <celebrity:parent rdf:resource="#RoseFitzgerald"/>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Kennedy</celebrity:lastName>
+                        <celebrity:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1948</celebrity:deathYear>
+                        <celebrity:gender rdf:resource="#female"/>
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Agnes</celebrity:middleName>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1920</celebrity:birthYear>
+                        <celebrity:profession>
+                          <celebrity:Profession rdf:ID="volunteer">
+                            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >volunteer</rdfs:label>
+                          </celebrity:Profession>
+                        </celebrity:profession>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Kathleen A. Kennedy</celebrity:name>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Kathleen</celebrity:firstName>
+                        <celebrity:parent rdf:resource="#JosephKennedy"/>
+                      </celebrity:Person>
+                    </celebrity:child>
+                    <celebrity:gender rdf:resource="#male"/>
+                    <celebrity:profession rdf:resource="#ambassador"/>
+                    <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Kennedy</celebrity:lastName>
+                    <celebrity:almaMater rdf:resource="#Harvard"/>
+                    <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/Joseph_Kennedy.jpg"/>
+                    <celebrity:child>
+                      <celebrity:Person rdf:ID="PatriciaKennedy">
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Kennedy</celebrity:lastName>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Patricia Kennedy</celebrity:name>
+                        <celebrity:child>
+                          <celebrity:Person rdf:ID="RobinLawford">
+                            <celebrity:birthYear rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#integer"
+                            >1961</celebrity:birthYear>
+                            <celebrity:parent>
+                              <celebrity:Person rdf:ID="PeterLawford">
+                                <celebrity:spouse rdf:resource="#PatriciaKennedy"/>
+                                <celebrity:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1923</celebrity:birthYear>
+                                <celebrity:gender rdf:resource="#male"/>
+                                <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/220px-Peter_Lawford_in_Royal_Wedding_(2).jpg"/>
+                                <celebrity:child>
+                                  <celebrity:Person rdf:ID="VictoriaLawford">
+                                    <celebrity:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Victoria</celebrity:firstName>
+                                    <celebrity:spouse>
+                                      <celebrity:Person rdf:ID="RobertPenderJr">
+                                        <celebrity:suffix rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Jr</celebrity:suffix>
+                                        <celebrity:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1953</celebrity:birthYear>
+                                        <celebrity:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Robert</celebrity:firstName>
+                                        <celebrity:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Pender</celebrity:lastName>
+                                        <celebrity:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Robert Pender Jr</celebrity:name>
+                                        <celebrity:gender rdf:resource="#male"/>
+                                        <celebrity:spouse rdf:resource="#VictoriaLawford"/>
+                                      </celebrity:Person>
+                                    </celebrity:spouse>
+                                    <celebrity:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Victoria Lawford</celebrity:name>
+                                    <celebrity:gender rdf:resource="#female"/>
+                                    <celebrity:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1958</celebrity:birthYear>
+                                    <celebrity:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Lawford</celebrity:lastName>
+                                    <celebrity:parent rdf:resource="#PatriciaKennedy"/>
+                                    <celebrity:parent rdf:resource="#PeterLawford"/>
+                                  </celebrity:Person>
+                                </celebrity:child>
+                                <celebrity:child>
+                                  <celebrity:Person rdf:ID="SydneyLawford">
+                                    <celebrity:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Sydney Lawford</celebrity:name>
+                                    <celebrity:middleInitial rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >M</celebrity:middleInitial>
+                                    <celebrity:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Sydney</celebrity:firstName>
+                                    <celebrity:parent rdf:resource="#PatriciaKennedy"/>
+                                    <celebrity:spouse>
+                                      <celebrity:Person rdf:ID="JamesMcKelvy">
+                                        <celebrity:gender rdf:resource="#male"/>
+                                        <celebrity:middleInitial
+                                         rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                        >P</celebrity:middleInitial>
+                                        <celebrity:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1955</celebrity:birthYear>
+                                        <celebrity:middleName
+                                         rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                        >Peter</celebrity:middleName>
+                                        <celebrity:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >James McKelvy</celebrity:name>
+                                        <celebrity:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >James</celebrity:firstName>
+                                        <celebrity:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >McKelvy</celebrity:lastName>
+                                        <celebrity:spouse rdf:resource="#SydneyLawford"/>
+                                      </celebrity:Person>
+                                    </celebrity:spouse>
+                                    <celebrity:middleName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Maleia</celebrity:middleName>
+                                    <celebrity:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Lawford</celebrity:lastName>
+                                    <celebrity:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1956</celebrity:birthYear>
+                                    <celebrity:parent rdf:resource="#PeterLawford"/>
+                                    <celebrity:gender rdf:resource="#female"/>
+                                  </celebrity:Person>
+                                </celebrity:child>
+                                <celebrity:name rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Peter Lawford</celebrity:name>
+                                <celebrity:profession rdf:resource="#actor"/>
+                                <celebrity:child>
+                                  <celebrity:Person rdf:ID="ChristopherLawford">
+                                    <celebrity:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Christopher Lawford</celebrity:name>
+                                    <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/ChristopherLawford.jpg"/>
+                                    <celebrity:spouse>
+                                      <celebrity:Person rdf:ID="JeanOlsson">
+                                        <celebrity:gender rdf:resource="#female"/>
+                                        <celebrity:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1955</celebrity:birthYear>
+                                        <celebrity:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Olsson</celebrity:lastName>
+                                        <celebrity:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Jean</celebrity:firstName>
+                                        <celebrity:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Jean Olsson</celebrity:name>
+                                        <celebrity:spouse rdf:resource="#ChristopherLawford"/>
+                                      </celebrity:Person>
+                                    </celebrity:spouse>
+                                    <celebrity:gender rdf:resource="#male"/>
+                                    <celebrity:middleInitial rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >K</celebrity:middleInitial>
+                                    <celebrity:parent rdf:resource="#PeterLawford"/>
+                                    <celebrity:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1955</celebrity:birthYear>
+                                    <celebrity:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Christopher</celebrity:firstName>
+                                    <celebrity:profession rdf:resource="#actor"/>
+                                    <celebrity:middleName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Kennedy</celebrity:middleName>
+                                    <celebrity:parent rdf:resource="#PatriciaKennedy"/>
+                                    <celebrity:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Lawford</celebrity:lastName>
+                                  </celebrity:Person>
+                                </celebrity:child>
+                                <celebrity:deathYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1984</celebrity:deathYear>
+                                <celebrity:almaMater rdf:resource="#Columbia"/>
+                                <celebrity:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Lawford</celebrity:lastName>
+                                <celebrity:child rdf:resource="#RobinLawford"/>
+                                <celebrity:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Peter</celebrity:firstName>
+                              </celebrity:Person>
+                            </celebrity:parent>
+                            <celebrity:firstName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Robin</celebrity:firstName>
+                            <celebrity:lastName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Lawford</celebrity:lastName>
+                            <celebrity:gender rdf:resource="#female"/>
+                            <celebrity:parent rdf:resource="#PatriciaKennedy"/>
+                            <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Robin Lawford</celebrity:name>
+                            <celebrity:middleName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Elizabeth</celebrity:middleName>
+                            <celebrity:middleInitial rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >E</celebrity:middleInitial>
+                          </celebrity:Person>
+                        </celebrity:child>
+                        <celebrity:child rdf:resource="#ChristopherLawford"/>
+                        <celebrity:almaMater>
+                          <celebrity:College rdf:ID="RosemontCollege">
+                            <rdfs:label>Rosemont College</rdfs:label>
+                            <celebrity:ivyLeague rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#boolean"
+                            >false</celebrity:ivyLeague>
+                          </celebrity:College>
+                        </celebrity:almaMater>
+                        <celebrity:parent rdf:resource="#RoseFitzgerald"/>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1924</celebrity:birthYear>
+                        <celebrity:profession rdf:resource="#home-maker"/>
+                        <celebrity:parent rdf:resource="#JosephKennedy"/>
+                        <celebrity:spouse rdf:resource="#PeterLawford"/>
+                        <celebrity:profession rdf:resource="#producer"/>
+                        <celebrity:child rdf:resource="#VictoriaLawford"/>
+                        <celebrity:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >2006</celebrity:deathYear>
+                        <celebrity:gender rdf:resource="#female"/>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Patricia</celebrity:firstName>
+                        <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/Patriciakennedylawford.jpg"/>
+                        <celebrity:child rdf:resource="#SydneyLawford"/>
+                      </celebrity:Person>
+                    </celebrity:child>
+                    <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Patrick</celebrity:middleName>
+                    <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1888</celebrity:birthYear>
+                    <celebrity:profession rdf:resource="#producer"/>
+                    <celebrity:child>
+                      <celebrity:Person rdf:ID="JeanKennedy">
+                        <celebrity:child>
+                          <celebrity:Person rdf:ID="StephenSmithJr">
+                            <celebrity:suffix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Jr</celebrity:suffix>
+                            <celebrity:firstName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Stephen</celebrity:firstName>
+                            <celebrity:parent rdf:resource="#JeanKennedy"/>
+                            <celebrity:gender rdf:resource="#male"/>
+                            <celebrity:birthYear rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#integer"
+                            >1957</celebrity:birthYear>
+                            <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Stephen Smith Jr</celebrity:name>
+                            <celebrity:lastName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Smith</celebrity:lastName>
+                            <celebrity:parent>
+                              <celebrity:Person rdf:ID="StephenSmith">
+                                <celebrity:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1927</celebrity:birthYear>
+                                <celebrity:name rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Stephen Smith</celebrity:name>
+                                <celebrity:middleInitial rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >E</celebrity:middleInitial>
+                                <celebrity:child>
+                                  <celebrity:Person rdf:ID="WilliamSmith">
+                                    <celebrity:profession>
+                                      <celebrity:Profession rdf:ID="doctor">
+                                        <rdfs:label rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >doctor</rdfs:label>
+                                      </celebrity:Profession>
+                                    </celebrity:profession>
+                                    <celebrity:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1960</celebrity:birthYear>
+                                    <celebrity:parent rdf:resource="#StephenSmith"/>
+                                    <celebrity:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >William Smith</celebrity:name>
+                                    <celebrity:parent rdf:resource="#JeanKennedy"/>
+                                    <celebrity:middleInitial rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >K</celebrity:middleInitial>
+                                    <celebrity:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Smith</celebrity:lastName>
+                                    <celebrity:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >William</celebrity:firstName>
+                                    <celebrity:gender rdf:resource="#male"/>
+                                    <celebrity:middleName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Kennedy</celebrity:middleName>
+                                  </celebrity:Person>
+                                </celebrity:child>
+                                <celebrity:child>
+                                  <celebrity:Person rdf:ID="KymSmith">
+                                    <celebrity:parent rdf:resource="#JeanKennedy"/>
+                                    <celebrity:gender rdf:resource="#female"/>
+                                    <celebrity:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Kym Smith</celebrity:name>
+                                    <celebrity:middleInitial rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >M</celebrity:middleInitial>
+                                    <celebrity:middleName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Maria</celebrity:middleName>
+                                    <celebrity:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1972</celebrity:birthYear>
+                                    <celebrity:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Smith</celebrity:lastName>
+                                    <celebrity:parent rdf:resource="#StephenSmith"/>
+                                    <celebrity:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Kym</celebrity:firstName>
+                                    <celebrity:spouse>
+                                      <celebrity:Person rdf:ID="AlfredTucker">
+                                        <celebrity:gender rdf:resource="#male"/>
+                                        <celebrity:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Alfred</celebrity:firstName>
+                                        <celebrity:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Alfred Tucker</celebrity:name>
+                                        <celebrity:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1967</celebrity:birthYear>
+                                        <celebrity:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Tucker</celebrity:lastName>
+                                        <celebrity:spouse rdf:resource="#KymSmith"/>
+                                      </celebrity:Person>
+                                    </celebrity:spouse>
+                                  </celebrity:Person>
+                                </celebrity:child>
+                                <celebrity:child>
+                                  <celebrity:Person rdf:ID="AmandaSmith">
+                                    <celebrity:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Amanda Smith</celebrity:name>
+                                    <celebrity:middleName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Mary</celebrity:middleName>
+                                    <celebrity:gender rdf:resource="#female"/>
+                                    <celebrity:parent rdf:resource="#StephenSmith"/>
+                                    <celebrity:middleInitial rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >M</celebrity:middleInitial>
+                                    <celebrity:parent rdf:resource="#JeanKennedy"/>
+                                    <celebrity:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1967</celebrity:birthYear>
+                                    <celebrity:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Smith</celebrity:lastName>
+                                    <celebrity:spouse>
+                                      <celebrity:Person rdf:ID="CartHood">
+                                        <celebrity:gender rdf:resource="#male"/>
+                                        <celebrity:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Cart</celebrity:firstName>
+                                        <celebrity:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Cart Hood</celebrity:name>
+                                        <celebrity:middleName
+                                         rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                        >Harmon</celebrity:middleName>
+                                        <celebrity:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1966</celebrity:birthYear>
+                                        <celebrity:middleInitial
+                                         rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                        >H</celebrity:middleInitial>
+                                        <celebrity:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Hood</celebrity:lastName>
+                                        <celebrity:spouse rdf:resource="#AmandaSmith"/>
+                                      </celebrity:Person>
+                                    </celebrity:spouse>
+                                    <celebrity:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Amanda</celebrity:firstName>
+                                  </celebrity:Person>
+                                </celebrity:child>
+                                <celebrity:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Smith</celebrity:lastName>
+                                <celebrity:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Stephen</celebrity:firstName>
+                                <celebrity:child rdf:resource="#StephenSmithJr"/>
+                                <celebrity:profession>
+                                  <celebrity:Profession rdf:ID="campaign-organizer">
+                                    <rdfs:label rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >campaign-organizer</rdfs:label>
+                                  </celebrity:Profession>
+                                </celebrity:profession>
+                                <celebrity:gender rdf:resource="#female"/>
+                                <celebrity:spouse rdf:resource="#JeanKennedy"/>
+                                <celebrity:deathYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1990</celebrity:deathYear>
+                                <celebrity:middleName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Edward</celebrity:middleName>
+                              </celebrity:Person>
+                            </celebrity:parent>
+                          </celebrity:Person>
+                        </celebrity:child>
+                        <celebrity:child rdf:resource="#WilliamSmith"/>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Kennedy</celebrity:lastName>
+                        <celebrity:profession rdf:resource="#non-profit"/>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Jean Kennedy</celebrity:name>
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >A</celebrity:middleInitial>
+                        <celebrity:profession rdf:resource="#ambassador"/>
+                        <celebrity:child rdf:resource="#AmandaSmith"/>
+                        <celebrity:profession rdf:resource="#writer"/>
+                        <celebrity:gender rdf:resource="#female"/>
+                        <celebrity:child rdf:resource="#KymSmith"/>
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Ann</celebrity:middleName>
+                        <celebrity:parent rdf:resource="#JosephKennedy"/>
+                        <celebrity:almaMater rdf:resource="#ManhattanvilleCollege"/>
+                        <celebrity:parent rdf:resource="#RoseFitzgerald"/>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Jean</celebrity:firstName>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1928</celebrity:birthYear>
+                        <celebrity:spouse rdf:resource="#StephenSmith"/>
+                      </celebrity:Person>
+                    </celebrity:child>
+                    <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Joseph</celebrity:firstName>
+                    <celebrity:child rdf:resource="#RobertKennedy"/>
+                    <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >Joseph Kennedy</celebrity:name>
+                    <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                    >P</celebrity:middleInitial>
+                    <celebrity:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                    >1969</celebrity:deathYear>
+                    <celebrity:child>
+                      <celebrity:Person rdf:ID="JosephKennedyJr">
+                        <celebrity:gender rdf:resource="#male"/>
+                        <celebrity:parent rdf:resource="#JosephKennedy"/>
+                        <celebrity:profession rdf:resource="#navy"/>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Kennedy</celebrity:lastName>
+                        <celebrity:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1944</celebrity:deathYear>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1915</celebrity:birthYear>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Joseph</celebrity:firstName>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Joseph Kennedy Jr</celebrity:name>
+                        <celebrity:suffix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Jr</celebrity:suffix>
+                        <celebrity:almaMater rdf:resource="#Harvard"/>
+                        <celebrity:parent rdf:resource="#RoseFitzgerald"/>
+                      </celebrity:Person>
+                    </celebrity:child>
+                    <celebrity:child>
+                      <celebrity:Person rdf:ID="EdwardKennedy">
+                        <celebrity:child>
+                          <celebrity:Person rdf:ID="EdwardKennedyJr">
+                            <celebrity:parent rdf:resource="#EdwardKennedy"/>
+                            <celebrity:profession>
+                              <celebrity:Profession rdf:ID="business">
+                                <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                                >business</rdfs:label>
+                              </celebrity:Profession>
+                            </celebrity:profession>
+                            <celebrity:birthYear rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#integer"
+                            >1961</celebrity:birthYear>
+                            <celebrity:almaMater rdf:resource="#UniversityOfConnecticut"/>
+                            <celebrity:suffix rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Jr</celebrity:suffix>
+                            <celebrity:parent>
+                              <celebrity:Person rdf:ID="VirginiaBennett">
+                                <celebrity:middleName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Joan</celebrity:middleName>
+                                <celebrity:child>
+                                  <celebrity:Person rdf:ID="PatrickJKennedy">
+                                    <celebrity:parent rdf:resource="#VirginiaBennett"/>
+                                    <celebrity:middleName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Joseph</celebrity:middleName>
+                                    <celebrity:profession rdf:resource="#congressman"/>
+                                    <celebrity:middleInitial rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >J</celebrity:middleInitial>
+                                    <celebrity:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Kennedy</celebrity:lastName>
+                                    <celebrity:gender rdf:resource="#male"/>
+                                    <celebrity:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Patrick J. Kennedy</celebrity:name>
+                                    <celebrity:parent rdf:resource="#EdwardKennedy"/>
+                                    <celebrity:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1967</celebrity:birthYear>
+                                    <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/160px-Patrick_J._Kennedy,.JPG"/>
+                                    <celebrity:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Patrick</celebrity:firstName>
+                                  </celebrity:Person>
+                                </celebrity:child>
+                                <celebrity:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Virginia</celebrity:firstName>
+                                <celebrity:profession rdf:resource="#model"/>
+                                <celebrity:almaMater rdf:resource="#ManhattanvilleCollege"/>
+                                <celebrity:profession rdf:resource="#home-maker"/>
+                                <celebrity:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1936</celebrity:birthYear>
+                                <celebrity:child>
+                                  <celebrity:Person rdf:ID="KaraKennedy">
+                                    <celebrity:gender rdf:resource="#female"/>
+                                    <celebrity:middleName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Anne</celebrity:middleName>
+                                    <celebrity:spouse>
+                                      <celebrity:Person rdf:ID="MichaelAllen">
+                                        <celebrity:gender rdf:resource="#male"/>
+                                        <celebrity:birthYear rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#integer"
+                                        >1958</celebrity:birthYear>
+                                        <celebrity:name rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Michael Allen</celebrity:name>
+                                        <celebrity:firstName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Michael</celebrity:firstName>
+                                        <celebrity:lastName rdf:datatype=
+                                        "http://www.w3.org/2001/XMLSchema#string"
+                                        >Allen</celebrity:lastName>
+                                        <celebrity:spouse rdf:resource="#KaraKennedy"/>
+                                      </celebrity:Person>
+                                    </celebrity:spouse>
+                                    <celebrity:name rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Kara Kennedy</celebrity:name>
+                                    <celebrity:lastName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Kennedy</celebrity:lastName>
+                                    <celebrity:middleInitial rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >A</celebrity:middleInitial>
+                                    <celebrity:birthYear rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#integer"
+                                    >1960</celebrity:birthYear>
+                                    <celebrity:parent rdf:resource="#VirginiaBennett"/>
+                                    <celebrity:firstName rdf:datatype=
+                                    "http://www.w3.org/2001/XMLSchema#string"
+                                    >Kara</celebrity:firstName>
+                                    <celebrity:parent rdf:resource="#EdwardKennedy"/>
+                                  </celebrity:Person>
+                                </celebrity:child>
+                                <celebrity:middleInitial rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >J</celebrity:middleInitial>
+                                <celebrity:gender rdf:resource="#female"/>
+                                <celebrity:spouse rdf:resource="#EdwardKennedy"/>
+                                <celebrity:name rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Virginia Bennett</celebrity:name>
+                                <celebrity:child rdf:resource="#EdwardKennedyJr"/>
+                                <celebrity:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Bennett</celebrity:lastName>
+                              </celebrity:Person>
+                            </celebrity:parent>
+                            <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Edward Kennedy Jr</celebrity:name>
+                            <celebrity:almaMater rdf:resource="#Yale"/>
+                            <celebrity:firstName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Edward</celebrity:firstName>
+                            <celebrity:almaMater>
+                              <celebrity:College rdf:ID="WesleyanUniversity">
+                                <rdfs:label>Wesleyan University</rdfs:label>
+                                <celebrity:ivyLeague rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#boolean"
+                                >false</celebrity:ivyLeague>
+                              </celebrity:College>
+                            </celebrity:almaMater>
+                            <celebrity:spouse>
+                              <celebrity:Person rdf:ID="KatherineGershman">
+                                <celebrity:middleName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Anne</celebrity:middleName>
+                                <celebrity:lastName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Gershman</celebrity:lastName>
+                                <celebrity:profession rdf:resource="#professor"/>
+                                <celebrity:firstName rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Katherine</celebrity:firstName>
+                                <celebrity:name rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >Katherine Gershman</celebrity:name>
+                                <celebrity:spouse rdf:resource="#EdwardKennedyJr"/>
+                                <celebrity:gender rdf:resource="#female"/>
+                                <celebrity:middleInitial rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#string"
+                                >A</celebrity:middleInitial>
+                                <celebrity:birthYear rdf:datatype=
+                                "http://www.w3.org/2001/XMLSchema#integer"
+                                >1959</celebrity:birthYear>
+                              </celebrity:Person>
+                            </celebrity:spouse>
+                            <celebrity:profession rdf:resource="#attorney"/>
+                            <celebrity:lastName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Kennedy</celebrity:lastName>
+                            <celebrity:gender rdf:resource="#male"/>
+                          </celebrity:Person>
+                        </celebrity:child>
+                        <celebrity:gender rdf:resource="#male"/>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Kennedy</celebrity:lastName>
+                        <celebrity:almaMater rdf:resource="#Harvard"/>
+                        <celebrity:spouse>
+                          <celebrity:Person rdf:ID="VictoriaReggie">
+                            <celebrity:middleInitial rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >A</celebrity:middleInitial>
+                            <celebrity:spouse rdf:resource="#EdwardKennedy"/>
+                            <celebrity:profession rdf:resource="#attorney"/>
+                            <celebrity:gender rdf:resource="#female"/>
+                            <celebrity:lastName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Reggie</celebrity:lastName>
+                            <celebrity:middleName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Anne</celebrity:middleName>
+                            <celebrity:firstName rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#string"
+                            >Victoria</celebrity:firstName>
+                            <celebrity:birthYear rdf:datatype=
+                            "http://www.w3.org/2001/XMLSchema#integer"
+                            >1954</celebrity:birthYear>
+                            <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                            >Victoria Reggie</celebrity:name>
+                          </celebrity:Person>
+                        </celebrity:spouse>
+                        <celebrity:almaMater rdf:resource="#UniversityOfVirginia"/>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1932</celebrity:birthYear>
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Moore</celebrity:middleName>
+                        <celebrity:spouse rdf:resource="#VirginiaBennett"/>
+                        <celebrity:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >2009</celebrity:deathYear>
+                        <celebrity:profession rdf:resource="#senator"/>
+                        <celebrity:child rdf:resource="#PatrickJKennedy"/>
+                        <celebrity:profession rdf:resource="#army"/>
+                        <celebrity:parent rdf:resource="#JosephKennedy"/>
+                        <celebrity:parent rdf:resource="#RoseFitzgerald"/>
+                        <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/Ted_Kennedy.jpg"/>
+                        <celebrity:child rdf:resource="#KaraKennedy"/>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Edward</celebrity:firstName>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Edward Kennedy</celebrity:name>
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >M</celebrity:middleInitial>
+                      </celebrity:Person>
+                    </celebrity:child>
+                    <celebrity:child>
+                      <celebrity:Person rdf:ID="RoseKennedy">
+                        <celebrity:parent rdf:resource="#JosephKennedy"/>
+                        <celebrity:middleInitial rdf:datatype=
+                        "http://www.w3.org/2001/XMLSchema#string"
+                        >M</celebrity:middleInitial>
+                        <celebrity:gender rdf:resource="#female"/>
+                        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Kennedy</celebrity:lastName>
+                        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >1918</celebrity:birthYear>
+                        <celebrity:parent rdf:resource="#RoseFitzgerald"/>
+                        <celebrity:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                        >2005</celebrity:deathYear>
+                        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Marie</celebrity:middleName>
+                        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Rose</celebrity:firstName>
+                        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                        >Rose Kennedy</celebrity:name>
+                      </celebrity:Person>
+                    </celebrity:child>
+                    <celebrity:child rdf:resource="#EuniceKennedy"/>
+                    <celebrity:spouse rdf:resource="#RoseFitzgerald"/>
+                  </celebrity:Patriarch>
+                </celebrity:parent>
+                <celebrity:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >2009</celebrity:deathYear>
+                <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Eunice</celebrity:firstName>
+                <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+                >1921</celebrity:birthYear>
+                <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Mary</celebrity:middleName>
+                <celebrity:profession rdf:resource="#volunteer"/>
+                <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Eunice Kennedy</celebrity:name>
+                <celebrity:child rdf:resource="#AnthonyShriver"/>
+                <celebrity:gender rdf:resource="#female"/>
+                <celebrity:spouse rdf:resource="#RobertShriver"/>
+                <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >Kennedy</celebrity:lastName>
+                <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/180px-Eunice-zurab.jpg"/>
+                <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >M</celebrity:middleInitial>
+              </celebrity:Person>
+            </celebrity:child>
+            <celebrity:child rdf:resource="#RoseKennedy"/>
+            <celebrity:child rdf:resource="#RobertKennedy"/>
+            <celebrity:child rdf:resource="#JeanKennedy"/>
+            <celebrity:child rdf:resource="#PatriciaKennedy"/>
+            <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Elizabeth</celebrity:middleName>
+            <celebrity:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1995</celebrity:deathYear>
+            <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/Rose_kennedy.JPG"/>
+            <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Rose</celebrity:firstName>
+            <celebrity:child rdf:resource="#JohnKennedy"/>
+            <celebrity:child rdf:resource="#EdwardKennedy"/>
+            <celebrity:child rdf:resource="#JosephKennedyJr"/>
+            <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >E</celebrity:middleInitial>
+            <celebrity:almaMater>
+              <celebrity:College rdf:ID="SacredHeartConvent">
+                <rdfs:label>Sacred Heart Convent</rdfs:label>
+                <celebrity:ivyLeague rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                >false</celebrity:ivyLeague>
+              </celebrity:College>
+            </celebrity:almaMater>
+            <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Rose Fitzgerald</celebrity:name>
+            <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1890</celebrity:birthYear>
+            <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Fitzgerald</celebrity:lastName>
+            <celebrity:child rdf:resource="#KathleenAKennedy"/>
+            <celebrity:spouse rdf:resource="#JosephKennedy"/>
+          </celebrity:Matriarch>
+        </celebrity:parent>
+        <celebrity:profession>
+          <celebrity:Profession rdf:ID="attorney-general">
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >attorney-general</rdfs:label>
+          </celebrity:Profession>
+        </celebrity:profession>
+        <celebrity:deathYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1968</celebrity:deathYear>
+        <celebrity:child rdf:resource="#MaryKKennedy"/>
+        <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >F</celebrity:middleInitial>
+        <celebrity:child rdf:resource="#MichaelKennedy"/>
+        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Robert Kennedy</celebrity:name>
+        <celebrity:child rdf:resource="#ChristopherKennedy"/>
+        <celebrity:child rdf:resource="#RoryKennedy"/>
+        <celebrity:child rdf:resource="#MatthewKennedy"/>
+        <celebrity:photo rdf:resource="http://www.topbraidcomposer.org/demos/kennedys/images/196px-Robertkennedy.jpg"/>
+        <celebrity:gender rdf:resource="#male"/>
+        <celebrity:profession rdf:resource="#senator"/>
+        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1925</celebrity:birthYear>
+        <celebrity:spouse rdf:resource="#EthelSkakel"/>
+        <celebrity:parent rdf:resource="#JosephKennedy"/>
+        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Robert</celebrity:firstName>
+        <celebrity:profession rdf:resource="#navy"/>
+        <celebrity:child rdf:resource="#DouglasKennedy"/>
+        <celebrity:almaMater rdf:resource="#UniversityOfVirginia"/>
+        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Kennedy</celebrity:lastName>
+      </celebrity:Person>
+    </celebrity:parent>
+    <celebrity:spouse>
+      <celebrity:Person rdf:ID="PaulHill">
+        <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1954</celebrity:birthYear>
+        <celebrity:gender rdf:resource="#male"/>
+        <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Hill</celebrity:lastName>
+        <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Michael</celebrity:middleName>
+        <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Paul Hill</celebrity:name>
+        <celebrity:firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Paul</celebrity:firstName>
+        <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >M</celebrity:middleInitial>
+        <celebrity:spouse rdf:resource="#MaryCKennedy"/>
+      </celebrity:Person>
+    </celebrity:spouse>
+    <celebrity:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mary Kennedy</celebrity:name>
+    <celebrity:middleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Courtney</celebrity:middleName>
+    <celebrity:parent rdf:resource="#EthelSkakel"/>
+    <celebrity:lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Kennedy</celebrity:lastName>
+    <celebrity:middleInitial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >C</celebrity:middleInitial>
+    <celebrity:birthYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1956</celebrity:birthYear>
+  </celebrity:Person>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

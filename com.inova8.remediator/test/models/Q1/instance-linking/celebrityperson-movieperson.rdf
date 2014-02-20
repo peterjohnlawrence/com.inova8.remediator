@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://inova8.com/instance-linking/celebrityperson-movieperson#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://inova8.com/instance-linking/celebrityperson-movieperson">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://inova8.com/schema/celebrity-schema"/>
+    <owl:imports rdf:resource="http://rdfs.org/ns/void"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+    <owl:imports rdf:resource="http://inova8.com/data/movies"/>
+    <owl:imports rdf:resource="http://inova8.com/data/celebrities"/>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://inova8.com/data/celebrities#JosephKennedy">
+    <owl:sameAs rdf:resource="http://inova8.com/data/movies#person_70"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/data/celebrities#JohnKennedy">
+    <owl:sameAs rdf:resource="http://inova8.com/data/movies#person_53"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/data/celebrities#JacquelineBouvier">
+    <owl:sameAs rdf:resource="http://inova8.com/data/movies#person_61"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/data/celebrities#RobertKennedy">
+    <owl:sameAs rdf:resource="http://inova8.com/data/movies#person_52"/>
+  </rdf:Description>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

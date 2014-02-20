@@ -1,0 +1,10 @@
+PREFIX publisher-schema: <http://inova8.com/Q2/publisher-schema#>
+prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?name
+WHERE
+{
+?x publisher-schema:name ?name.
+?x rdf:type publisher-schema:Science .
+?x rdf:type publisher-schema:Pocket .
+}

@@ -1,0 +1,42 @@
+SELECT  ?name
+WHERE
+  {   { SERVICE <http://rdfs.org/ns/void#Book>
+          {   { ?x <http://inova8.com/Q2/book-schema#name> ?name .
+                ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/book-schema#Mathematics>
+              }
+            UNION
+              { ?x <http://inova8.com/Q2/book-schema#name> ?name .
+                ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/publishing/src#Popular>
+              }}
+      }
+    UNION
+      { SERVICE <http://rdfs.org/ns/void#Publisher>
+          {   {   {   {   { ?x <http://inova8.com/Q2/publisher-schema#name> ?name .
+                            ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Computer> .
+                            ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Pocket>
+                          }
+                        UNION
+                          { ?x <http://inova8.com/Q2/publisher-schema#name> ?name .
+                            ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Mathematics> .
+                            ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Pocket>
+                          }
+                      }
+                    UNION
+                      { ?x <http://inova8.com/Q2/publisher-schema#name> ?name .
+                        ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#NewPublication> .
+                        ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Pocket>
+                      }
+                  }
+                UNION
+                  { ?x <http://inova8.com/Q2/publisher-schema#name> ?name .
+                    ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Popular> .
+                    ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Pocket>
+                  }
+              }
+            UNION
+              { ?x <http://inova8.com/Q2/publisher-schema#name> ?name .
+                ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Science> .
+                ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Pocket>
+              }}
+      }
+  }

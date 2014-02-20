@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:kennedy-void="http://inova8.com/void/kennedy-void#"
+    xmlns="http://inova8.com/people/void/unnamed1#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:book-void="http://inova8.com/void/book-void#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://inova8.com/people/void/statistics">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://rdfs.org/ns/void"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://rdfs.org/ns/void#Book">
+    <void:properties rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >7</void:properties>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >1</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:property rdf:resource="http://inova8.com/schema/book-schema#publishedBy"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >14</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >4</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/book-schema#writtenBy"/>
+    </void:propertyPartition>
+    <void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >15</void:distinctSubjects>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >10</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/book-schema#title"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >9</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/book-schema#isbn"/>
+    </void:propertyPartition>
+    <void:classes rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</void:classes>
+    <void:classPartition rdf:parseType="Resource">
+      <void:class rdf:resource="http://inova8.com/schema/book-schema#Publisher"/>
+    </void:classPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >1</void:entities>
+      <void:class rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    </void:classPartition>
+    <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >60</void:triples>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >4</void:entities>
+      <void:class rdf:resource="http://inova8.com/schema/book-schema#Author"/>
+    </void:classPartition>
+    <void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >8</void:distinctObjects>
+    <void:classPartition>
+      <void:Dataset>
+        <void:class rdf:resource="http://inova8.com/schema/book-schema#Book"/>
+        <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >5</void:entities>
+      </void:Dataset>
+    </void:classPartition>
+    <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >15</void:entities>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >10</void:entities>
+      <void:class rdf:resource="http://inova8.com/schema/book-schema#Book"/>
+    </void:classPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >1</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2002/07/owl#imports"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:property rdf:resource="http://inova8.com/schema/book-schema#publicationDate"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >3</void:triples>
+      <void:property rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    </void:propertyPartition>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rdfs.org/ns/void#Movie">
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >4</void:entities>
+      <void:class rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </void:classPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >39</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/movie-schema#person_birthdate"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >1</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+    </void:propertyPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >1</void:entities>
+      <void:class rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    </void:classPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >2032</void:entities>
+      <void:class rdf:resource="http://inova8.com/schema/movie-schema#Movie"/>
+    </void:classPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >5</void:entities>
+      <void:class rdf:resource="http://www.w3.org/2002/07/owl#OntologyProperty"/>
+    </void:classPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >2290</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </void:propertyPartition>
+    <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >11609</void:triples>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >70</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/movie-schema#person_Name"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >2030</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/movie-schema#movie_Title"/>
+    </void:propertyPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >4</void:entities>
+      <void:class rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    </void:classPartition>
+    <void:classes rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >14</void:classes>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >70</void:entities>
+      <void:class rdf:resource="http://inova8.com/schema/movie-schema#Person"/>
+    </void:classPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >11</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/movie-schema#releaseYear"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >2020</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/movie-schema#movie_mID"/>
+    </void:propertyPartition>
+    <void:properties rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >22</void:properties>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >22</void:entities>
+      <void:class rdf:resource="http://inova8.com/schema/movie-schema#PersonPortrayal"/>
+    </void:classPartition>
+    <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2295</void:entities>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >22</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/movie-schema#produces"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >3</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+    </void:propertyPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >44</void:entities>
+      <void:class rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    </void:classPartition>
+    <void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2296</void:distinctSubjects>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >14</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >15</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#domain"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >14</void:triples>
+      <void:property rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >1</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2002/07/owl#imports"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >40</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/movie-schema#person_pID"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >12</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/movie-schema#portrayingMovie"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >2029</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/movie-schema#playsin"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >4</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/movie-schema#portrayedPerson"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:property rdf:resource="http://purl.org/dc/elements/1.1/creator"/>
+    </void:propertyPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >1</void:entities>
+      <void:class rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    </void:classPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >11</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    </void:propertyPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >7</void:entities>
+      <void:class rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    </void:classPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >8</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    </void:propertyPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >9</void:entities>
+      <void:class rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    </void:classPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >117</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    </void:propertyPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >6</void:entities>
+      <void:class rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </void:classPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >38</void:entities>
+      <void:class rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </void:classPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >74</void:entities>
+      <void:class rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </void:classPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >23</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/movie-schema#playedBy"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >1</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
+    </void:propertyPartition>
+    <void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2098</void:distinctObjects>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rdfs.org/ns/void#Kennedy">
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >74</void:entities>
+      <void:class rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+    </void:classPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >1</void:entities>
+      <void:class rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    </void:classPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >18</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#photo"/>
+    </void:propertyPartition>
+    <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >80</void:entities>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >42</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#middleName"/>
+    </void:propertyPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >2</void:entities>
+      <void:class rdf:resource="http://inova8.com/schema/kennedy-schema#Gender"/>
+    </void:classPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >35</void:entities>
+      <void:class rdf:resource="http://inova8.com/schema/kennedy-schema#Profession"/>
+    </void:classPartition>
+    <void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >8</void:distinctObjects>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >2</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#ivyLeague"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >7</void:triples>
+      <void:property rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    </void:propertyPartition>
+    <void:classes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >9</void:classes>
+    <void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >50</void:distinctSubjects>
+    <void:properties rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >82</void:properties>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >17</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#middleInitial"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >52</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#firstName"/>
+    </void:propertyPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >1</void:entities>
+      <void:class rdf:resource="http://inova8.com/schema/kennedy-schema#Matriarch"/>
+    </void:classPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:class rdf:parseType="Resource">
+      </void:class>
+    </void:classPartition>
+    <void:classPartition>
+      <void:Dataset>
+        <void:class rdf:resource="http://inova8.com/schema/kennedy-schema#Person"/>
+        <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >42</void:entities>
+      </void:Dataset>
+    </void:classPartition>
+    <void:distinctSubjects rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >132</void:distinctSubjects>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >1</void:entities>
+      <void:class rdf:resource="http://inova8.com/schema/kennedy-schema#Patriarch"/>
+    </void:classPartition>
+    <void:propertyPartition>
+      <void:Dataset>
+        <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#child"/>
+        <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >24</void:triples>
+      </void:Dataset>
+    </void:propertyPartition>
+    <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1071</void:triples>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >35</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#profession"/>
+    </void:propertyPartition>
+    <void:distinctObjects rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >157</void:distinctObjects>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >3</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#suffix"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >2</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#gender"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >14</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#parent"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >1</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >1</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2002/07/owl#imports"/>
+    </void:propertyPartition>
+    <void:classPartition rdf:parseType="Resource">
+      <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >18</void:entities>
+      <void:class rdf:resource="http://inova8.com/schema/kennedy-schema#College"/>
+    </void:classPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >18</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#almaMater"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >37</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#lastName"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >75</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#name"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >54</void:triples>
+      <void:property rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >38</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#birthYear"/>
+    </void:propertyPartition>
+    <void:properties rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >20</void:properties>
+    <void:classes rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >7</void:classes>
+    <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >420</void:triples>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >16</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#deathYear"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >39</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#child"/>
+    </void:propertyPartition>
+    <void:propertyPartition rdf:parseType="Resource">
+      <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+      >67</void:triples>
+      <void:property rdf:resource="http://inova8.com/schema/kennedy-schema#spouse"/>
+    </void:propertyPartition>
+    <void:entities rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >132</void:entities>
+  </rdf:Description>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

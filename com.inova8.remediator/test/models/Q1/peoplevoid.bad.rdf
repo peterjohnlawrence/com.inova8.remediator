@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://inova8.com/people/void/bad#"
+    xmlns:people-kennedy="http://inova8.com/mapping/people-kennedy#"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:movie-void="http://inova8.com/void/movie-void#"
+    xmlns:movie-book="http://inova8.com/linking/movie-book#"
+    xmlns:kennedy-book="http://inova8.com/linking/kennedy-book#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:people-void="http://inova8.com/void/people-void#"
+    xmlns:people-movie="http://inova8.com/mapping/people-movie#"
+    xmlns:kennedy-void="http://inova8.com/void/kennedy-void#"
+    xmlns:people-book="http://inova8.com/mapping/people-book#"
+    xmlns:kennedy-movie="http://inova8.com/linking/kennedy-movie#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:book-void="http://inova8.com/void/book-void#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://inova8.com/people/void/bad">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://inova8.com/void/kennedy-void"/>
+    <owl:imports rdf:resource="http://rdfs.org/ns/void"/>
+    <owl:imports rdf:resource="http://inova8.com/void/movie-void"/>
+    <owl:imports rdf:resource="http://inova8.com/void/book-void"/>
+    <owl:imports rdf:resource="http://inova8.com/void/people-void"/>  
+	<owl:imports rdf:resource="http://inova8.com/void/missing"/>  
+	<owl:imports rdf:resource="http://inova8.com/people/void/statistics"/> 
+	</owl:Ontology>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

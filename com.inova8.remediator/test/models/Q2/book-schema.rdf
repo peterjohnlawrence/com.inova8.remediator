@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:book-schema="http://inova8.com/Q2/book-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://inova8.com/Q2/book-schema">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Person">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Person</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Mathematics">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mathematics</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Bestseller">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Textbook"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bestseller</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Textbook">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Textbook</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Publisher">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Publisher</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Biography">
+    <rdfs:subClassOf rdf:resource="#Textbook"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Biography</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="Literature">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Literature</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Textbook"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="publishes">
+    <rdfs:domain rdf:resource="#Publisher"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >publishes</rdfs:label>
+    <rdfs:range rdf:resource="#Textbook"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="author">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >author</rdfs:label>
+    <rdfs:domain rdf:resource="#Textbook"/>
+    <rdfs:range rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="editorialReview">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >editorial review</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/publishing/src#review"/>
+    <rdfs:domain rdf:resource="http://inova8.com/publishing/trg#Textbook"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="size">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >size</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="#Textbook"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="price">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >price</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="#Textbook"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="customerReview">
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/publishing/src#review"/>
+    <rdfs:domain rdf:resource="http://inova8.com/publishing/trg#Textbook"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >customer review</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="title">
+    <rdfs:domain rdf:resource="http://inova8.com/publishing/trg#Textbook"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://inova8.com/publishing/src#name"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >title</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >name</rdfs:label>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:DatatypeProperty>
+  <rdf:Description rdf:about="http://inova8.com/publishing/src#Pocket">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="#size"/>
+            <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >14</owl:hasValue>
+          </owl:Restriction>
+          <rdf:Description rdf:about="http://inova8.com/publishing/trg#Textbook"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/publishing/src#publisher">
+    <owl:inverseOf rdf:resource="#publishes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/publishing/src#Popular">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Bestseller"/>
+          <owl:Class rdf:about="#Mathematics"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </rdf:Description>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

@@ -1,0 +1,4 @@
+(bgp
+  (triple ?Person <http://inova8.com/schema/people-schema#fullName> ?PersonName)
+  (triple ?Person <http://inova8.com/schema/people-schema#hasChild> ?Child)
+)

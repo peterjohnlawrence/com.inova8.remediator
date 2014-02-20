@@ -1,0 +1,9 @@
+(bgp
+  (triple ?Person <http://inova8.com/schema/people-schema#hasChild> ?Child)
+  (triple ?Person <http://inova8.com/schema/people-schema#hasSpouse> ?Spouse)
+  (triple ?Child <http://inova8.com/schema/people-schema#hasCollege> ?College)
+  (triple ?Child <http://inova8.com/schema/people-schema#PlaysIn> ?Movie)
+  (triple ?Person <http://inova8.com/schema/people-schema#PlaysIn> ?Movie2)
+  (triple ?Book <http://inova8.com/schema/people-schema#bookAuthor> ?Child)
+  (triple ?Movie <http://inova8.com/schema/movie-schema#movie_Title> ?MovieTitle)
+)

@@ -1,0 +1,18 @@
+(sequence
+  (union
+    (service <http://rdfs.org/ns/void#Book>
+      (slice _ 10
+        (project (?name)
+          (bgp (triple ?x <http://inova8.com/Q2/book-schema#name> ?name)))))
+    (service <http://rdfs.org/ns/void#Publisher>
+      (slice _ 10
+        (project (?name)
+          (filter (regex ?author "Dante")
+            (join
+              (union
+                (bgp (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Poetry>))
+                (bgp (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://inova8.com/Q2/publisher-schema#Autobiography>)))
+              (bgp
+                (triple ?x <http://inova8.com/Q2/publisher-schema#author> ?author)
+                (triple ?x <http://inova8.com/Q2/publisher-schema#name> ?name)
+              ))))))))

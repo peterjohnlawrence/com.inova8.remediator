@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:book-schema="http://inova8.com/Q2/book-schema#"
+    xmlns:publisher-schema="http://inova8.com/Q2/publisher-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://inova8.com/Q2/publisher-schema">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Created with TopBraid Composer</owl:versionInfo>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Publisher">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Publisher</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Product">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Product</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Science">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Science</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Book"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="NewPublication">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Computer"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Mathematics">
+    <rdfs:subClassOf rdf:resource="#Science"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Book">
+    <rdfs:subClassOf rdf:resource="#Product"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Novel">
+    <rdfs:subClassOf rdf:resource="#Book"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Poetry">
+    <rdfs:subClassOf rdf:resource="#Book"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Autobiography">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Autobiography</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Biography"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CD">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CD</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Product"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Popular">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Popular</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Science"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Biography">
+    <rdfs:subClassOf rdf:resource="#Book"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Drama</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#Computer">
+    <rdfs:subClassOf rdf:resource="#Science"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Pocket">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Pocket</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#Book"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="publisher">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >publisher</rdfs:label>
+    <rdfs:domain rdf:resource="#Book"/>
+    <rdfs:range rdf:resource="#Publisher"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="id">
+    <rdfs:domain rdf:resource="#Product"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >name</rdfs:label>
+    <rdfs:domain rdf:resource="#Product"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="price">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >price</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="#Product"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="author">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >author</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Book"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="review">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >review</rdfs:label>
+    <rdfs:domain rdf:resource="#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->
