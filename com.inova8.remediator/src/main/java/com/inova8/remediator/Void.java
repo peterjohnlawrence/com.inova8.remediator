@@ -256,7 +256,7 @@ class Void {
 				RDFNode ep = soln.get("sparqlEndPoint");
 				OntResource sparqlEndPoint=null;
 				if(ep.isResource()){
-					sparqlEndPoint = (OntResource) ep.asResource();
+					sparqlEndPoint = ep.asResource().as(OntResource.class);
 				}else if(ep.isLiteral()){
 					try{
 						URI sparqlEndPointURI = new URI(ep.asLiteral().getString());

@@ -8,29 +8,29 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xml:base="http://inova8.com/void/people-void">
   <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://rdfs.org/ns/void"/>
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Created with TopBraid Composer</owl:versionInfo>
-    <owl:imports rdf:resource="http://rdfs.org/ns/void"/>
   </owl:Ontology>
   <void:Linkset rdf:about="http://rdfs.org/ns/void#People-Book">
-    <void:vocabulary rdf:resource="http://inova8.com/mapping/people-book"/>
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >People-Book</rdfs:label>
+    <void:vocabulary rdf:resource="http://inova8.com/mapping/people-book"/>
   </void:Linkset>
-  <void:Linkset rdf:about="http://rdfs.org/ns/void#People-Kennedy">
-    <void:vocabulary rdf:resource="http://inova8.com/mapping/people-kennedy"/>
+  <void:Linkset rdf:about="http://rdfs.org/ns/void#People-Celebrity">
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >People-Kennedy</rdfs:label>
+    >People-Celebrity</rdfs:label>
+    <void:vocabulary rdf:resource="http://inova8.com/mapping/people-celebrity"/>
   </void:Linkset>
   <void:Linkset rdf:about="http://rdfs.org/ns/void#People-Movie">
-    <void:vocabulary rdf:resource="http://inova8.com/mapping/people-movie"/>
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >People-Movie</rdfs:label>
+    <void:vocabulary rdf:resource="http://inova8.com/mapping/people-movie"/>
   </void:Linkset>
   <void:Dataset rdf:about="http://rdfs.org/ns/void#People">
-    <void:vocabulary rdf:resource="http://inova8.com/schema/people-schema"/>
     <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >People</rdfs:label>
+    <void:vocabulary rdf:resource="http://inova8.com/schema/people-schema"/>
   </void:Dataset>
 </rdf:RDF>
 

@@ -27,6 +27,10 @@ import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.shared.PrefixMapping;
+import com.hp.hpl.jena.sparql.algebra.Op;
+import com.hp.hpl.jena.sparql.algebra.Transformer;
+import com.hp.hpl.jena.sparql.algebra.op.OpService;
+import com.hp.hpl.jena.sparql.algebra.op.OpUnion;
 import com.hp.hpl.jena.sparql.core.Var;
 import com.inova8.requiem.rewriter.Clause;
 import com.inova8.requiem.rewriter.FunctionalTerm;
@@ -34,7 +38,7 @@ import com.inova8.requiem.rewriter.Term;
 import com.inova8.requiem.rewriter.TermFactory;
 import com.inova8.requiem.rewriter.Variable;
 
-class Dataset {
+class Dataset implements Comparable<Dataset> {
 	private static final String HTTP_WWW_W3_ORG_1999_02_22_RDF_SYNTAX_NS_TYPE = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type";
 	private static final Integer DEFAULT_DISTINCTSUBJECTS = 100;
 	private static final Integer DEFAULT_CLASSES = 10;
@@ -852,5 +856,48 @@ class Dataset {
 		} else {
 			return null;
 		}
+	}
+	public void createQueryClauses(RemediatorQuery remediatorQuery, QueryVars queryVars) {
+
+			for (QueryClause datasetClause : this.getQueryClauses()) {
+				datasetClause.createQueryClause( remediatorQuery,  queryVars);		
+			}
+
+	}
+	public OpService getMergedJoin(  QueryClauses queryClauses,RemediatorQuery remediatorQuery,
+			QueryVars globalQueryVars)
+	{
+		Node datasetServiceNode;
+		try {
+			datasetServiceNode = NodeFactory.createURI(this
+					.getSparqlEndPoint().toString());
+		} catch (Exception e) {
+			Log.warn(this,
+					"Invalid dataset endpoint: " + dataset.toString()
+							+ ". URI used instead");
+			datasetServiceNode = NodeFactory.createURI(this.dataset.getURI());
+		}
+		Op priorOp;
+
+		Iterator<QueryClause> queryClauseIterator = queryClauses.iterator();
+		if (queryClauses.size() > 1) {
+			QueryClause priorQueryClause = queryClauseIterator.next();
+			priorOp = priorQueryClause.createQueryClause( remediatorQuery,	 globalQueryVars);
+			OpUnion priorOpUnion = null;
+			QueryClause nextQueryClause;
+			while (queryClauseIterator.hasNext()) {
+				nextQueryClause = queryClauseIterator.next();
+				priorOpUnion = new OpUnion(priorOp, nextQueryClause.createQueryClause( remediatorQuery,	 globalQueryVars));
+				priorOp = priorOpUnion;
+			}
+		} else {
+			priorOp =queryClauseIterator.next().createQueryClause( remediatorQuery,	 globalQueryVars);
+			}
+		return new OpService(datasetServiceNode,	priorOp, false);
+	}
+
+	@Override
+	public int compareTo(Dataset o) {
+		return dataset.toString().compareTo(o.getDataset().toString());
 	}
 }

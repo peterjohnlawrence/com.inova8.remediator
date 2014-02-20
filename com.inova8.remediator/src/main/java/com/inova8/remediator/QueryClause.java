@@ -8,6 +8,8 @@ import com.hp.hpl.jena.graph.NodeFactory;
 import com.hp.hpl.jena.graph.Triple;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.sparql.algebra.Op;
+import com.hp.hpl.jena.sparql.algebra.Transformer;
 import com.hp.hpl.jena.sparql.algebra.op.OpService;
 import com.inova8.requiem.rewriter.Clause;
 import com.inova8.requiem.rewriter.FunctionalTerm;
@@ -23,7 +25,7 @@ public class QueryClause extends Clause implements Comparable<QueryClause>{
 	private Double optimizerCost;
 	private int optimizerCount;
 	private QueryVar optimizerVar;
-	private OpService opService;
+	//private Op opService;
 
 	public QueryClause(Clause clause, Dataset dataset) {
 		super(clause.getBody(), clause.getHead());
@@ -240,23 +242,34 @@ public class QueryClause extends Clause implements Comparable<QueryClause>{
 		return clauseVariables;
 	}
 
-	public OpService getOpService() {
-		return opService;
-	}
-
-	public void setOpService(OpService opService) {
-		this.opService = opService;
-	}
+//	public Op getOpService() {
+//		return opService;
+//	}
+//
+//	public void setOpService(Op substitutedOperations) {
+//		this.opService = substitutedOperations;
+//	}
 
 
 
 	@Override
 	public String toString() {
-		return "QueryClause [dataset=" + dataset + ", clause=" + super.toString() + "]";
-	}
+		return "QueryClause ["+ super.toString() + "]";
+		}
 
 	@Override
-	public int compareTo(QueryClause arg0) {
-	        return this.toString().compareTo(arg0.toString());
+	public int compareTo(QueryClause queryClause) {
+	        return this.toString().compareTo(queryClause.toString());
+	}
+	public Op createQueryClause(RemediatorQuery remediatorQuery,
+			QueryVars globalQueryVars) {
+		Substituter substituter = new Substituter(globalQueryVars,
+				this, remediatorQuery.getSimplifiedTriples());
+		Op substitutedOperations = Transformer.transform(substituter,
+				remediatorQuery.getOperations());
+		//this.setOpService(
+		//		substitutedOperations);
+		return substitutedOperations;		
+		
 	}
 }

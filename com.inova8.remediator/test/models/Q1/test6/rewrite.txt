@@ -1,6 +1,6 @@
-SELECT *
+SELECT  *
 WHERE
-    {   SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/kennedys>  {       
-         ?Person <http://inova8.com/schema/kennedy-schema#child> ?Child .
-         ?Person <http://inova8.com/schema/kennedy-schema#name>  "Edward Kennedy" }
-}
+  { SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/celebrities>
+      { ?Person <http://inova8.com/schema/celebrity-schema#name> "Edward Kennedy" .
+        ?Person <http://inova8.com/schema/celebrity-schema#child> ?Child}
+  }

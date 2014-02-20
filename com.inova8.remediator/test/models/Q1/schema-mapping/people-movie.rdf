@@ -3,16 +3,16 @@
     xmlns:people="http://inova8.com/schema/people-schema#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns="http://inova8.com/mapping/people-movie#"
-    xmlns:movies="http://inova8.com/schema/movie-schema#"
+    xmlns:movie="http://inova8.com/schema/movie-schema#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xml:base="http://inova8.com/mapping/people-movie">
   <owl:Ontology rdf:about="">
-    <owl:imports rdf:resource="http://inova8.com/schema/movie-schema"/>
+    <owl:imports rdf:resource="http://inova8.com/schema/people-schema"/>
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Created with TopBraid Composer</owl:versionInfo>
-    <owl:imports rdf:resource="http://inova8.com/schema/people-schema"/>
+    <owl:imports rdf:resource="http://inova8.com/schema/movie-schema"/>
   </owl:Ontology>
   <rdf:Description rdf:about="http://inova8.com/schema/movie-schema#PersonPortrayal">
     <rdfs:subClassOf rdf:resource="http://inova8.com/schema/people-schema#Portrayal"/>
@@ -20,11 +20,11 @@
   <rdf:Description rdf:about="http://inova8.com/schema/movie-schema#playsin">
     <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#PlaysIn"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://inova8.com/schema/movie-schema#Movie">
-    <rdfs:subClassOf rdf:resource="http://inova8.com/schema/people-schema#Movie"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://inova8.com/schema/movie-schema#produces">
     <rdfs:subPropertyOf rdf:resource="http://inova8.com/schema/people-schema#hasProduced"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inova8.com/schema/movie-schema#Movie">
+    <rdfs:subClassOf rdf:resource="http://inova8.com/schema/people-schema#Movie"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://inova8.com/schema/movie-schema#Person">
     <rdfs:subClassOf rdf:resource="http://inova8.com/schema/people-schema#Person"/>

@@ -1,21 +1,16 @@
-SELECT * 
-WHERE  {
-    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/books> {
-        ?Book <http://inova8.com/schema/book-schema#writtenBy> ?DS1Child 
-    }
-     SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/instance-linking/kennedyperson-bookauthor> {
-        ?DS3Child <http://www.w3.org/2002/07/owl#sameAs> ?DS1Child 
-    }
-    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/kennedys> {
-        ?DS3Child <http://inova8.com/schema/kennedy-schema#almaMater> ?College .
-        ?Person <http://inova8.com/schema/kennedy-schema#child> ?DS3Child .
-        ?Person <http://inova8.com/schema/kennedy-schema#spouse> ?Spouse 
-    }
-     SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/instance-linking/kennedyperson-movieperson> {
-        ?DS3Child <http://www.w3.org/2002/07/owl#sameAs> ?DS2Child 
-    }
-    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/movies> {
-        ?Movie <http://inova8.com/schema/movie-schema#movie_Title> "Alexander the Great" .
-        ?DS2Child <http://inova8.com/schema/movie-schema#playsin> ?Movie 
-    }
-}
+SELECT  *
+WHERE
+  { SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/books>
+      { ?Book <http://inova8.com/schema/book-schema#writtenBy> ?DS1Child}
+    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/instance-linking/kennedyperson-bookauthor>
+      { ?DS3Child <http://www.w3.org/2002/07/owl#sameAs> ?DS1Child}
+    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/celebrities>
+      { ?Person <http://inova8.com/schema/celebrity-schema#child> ?DS3Child .
+        ?Person <http://inova8.com/schema/celebrity-schema#spouse> ?Spouse .
+        ?DS3Child <http://inova8.com/schema/celebrity-schema#almaMater> ?College}
+    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/instance-linking/kennedyperson-movieperson>
+      { ?DS3Child <http://www.w3.org/2002/07/owl#sameAs> ?DS2Child}
+    SERVICE <http://localhost:8083/tbl/sparql?default-graph-uri=http://inova8.com/data/movies>
+      { ?DS2Child <http://inova8.com/schema/movie-schema#playsin> ?Movie .
+        ?Movie <http://inova8.com/schema/movie-schema#movie_Title> "Alexander the Great"}
+  }

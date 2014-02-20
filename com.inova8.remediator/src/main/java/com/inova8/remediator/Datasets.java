@@ -5,6 +5,8 @@ import java.util.Collection;
 
 import org.apache.jena.atlas.logging.Log;
 
+import com.hp.hpl.jena.graph.Node;
+import com.hp.hpl.jena.graph.NodeFactory;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntResource;
 import com.hp.hpl.jena.query.Query;
@@ -13,6 +15,9 @@ import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.sparql.algebra.Op;
+import com.hp.hpl.jena.sparql.algebra.Transformer;
+import com.hp.hpl.jena.sparql.algebra.op.OpService;
 
 public class Datasets extends ArrayList<Dataset> {
 
@@ -191,6 +196,12 @@ public class Datasets extends ArrayList<Dataset> {
 					"Unable to execute propertyPartitionStatisticsQuery " + query);
 		} finally {
 			qexec.close();
+		}
+	}
+
+	public void createDatasetQueryClauses(RemediatorQuery remediatorQuery, QueryVars queryVars) {
+		for (Dataset dataset : this) {
+			dataset.createQueryClauses(remediatorQuery, queryVars);
 		}
 	}
 

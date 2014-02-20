@@ -33,6 +33,7 @@ public class RemediatorQuery {
 		this.simplifiedOperations = Transformer.transform(simplifier, this.originalOperations);
 		//Create lookup for simplified operations
 		for(Triple triple:((OpBGP)this.simplifiedOperations).getPattern().getList()){
+			//TODO Should only put in relevant operations for this dataset.
 			simplifiedTriples.put(triple.hashCode(), triple);
 		}
 	}
